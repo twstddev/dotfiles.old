@@ -29,14 +29,20 @@ filetype indent on
 " Enable syntax highlighting by default
 syntax on
 
+" Don't add empty lines at the end of files
+set binary
+set noeol
+
 " Insert 4 spaces when Tab is pressed
 set softtabstop=4
+" Set tab width to 4 spaces
+set tabstop=4
 " Use 4 spaces when you press >>, << or ==
 set shiftwidth=4
-" Expand tabs to spaces
-set expandtab
 " Copy the indentation from the previous line when starting a new line
 set autoindent 
+" Expand tabs to spaces
+set expandtab
 
 " Enable syntax highlighting
 syntax on
@@ -115,10 +121,6 @@ set clipboard=unnamed
 
 " Set fast terminal connection by default, no improve user experience
 set ttyfast
-
-" Don't add empty lines at the end of files
-set binary
-set noeol
 
 " Centralise temporary files location
 set backupdir=~/.vim/backups
