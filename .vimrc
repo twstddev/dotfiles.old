@@ -37,6 +37,83 @@ Plugin 'MaxSt/FlatColor'
 Plugin 'baskerville/bubblegum'
 Plugin 'jordwalke/flatlandia'
 
+" GUI widgets
+" Lean & mean status/tabline for vim that's light as air
+Plugin 'bling/vim-airline'
+
+" ==============
+" Utility helpers for other plugins
+" ==============
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+
+" ======
+" Editor
+" ======
+
+" File explorer for vim
+Plugin 'scrooloose/nerdtree'
+
+" A plugin for visually displaying indent levels
+Plugin 'nathanaelkane/vim-indent-guides'
+
+" A syntax checking plugin
+Plugin 'scrooloose/syntastic'
+
+" Provides automatic closing of quotes, parenthesis, brackets, etc.
+Plugin 'Raimondi/delimitMate'
+
+" Allows you to use <Tab> for all your insert completion needs
+Plugin 'ervandew/supertab'
+
+" Plugin for intensely orgasmic commenting
+Plugin 'scrooloose/nerdcommenter'
+
+" Plugin provides mappings to easily delete, change and add such surroundings in pairs
+Plugin 'tpope/vim-surround'
+
+" Snippets files for various programming languages
+Plugin 'honza/vim-snippets'
+
+" Provides a much simpler way to use some motions
+Plugin 'easymotion/vim-easymotion'
+
+" Enable repeating supported plugin maps with .
+Plugin 'tpope/vim-repeat'
+
+" Plugin to visualize your Vim undo tree
+Plugin 'sjl/gundo.vim'
+
+" Plugin that simplifies the transition between multiline and single-line code
+Plugin 'AndrewRadev/splitjoin.vim'
+
+" Plugin that allows you to visually select increasingly larger regions of text  using the same key combination.
+" Plugin 'terryma/vim-expand-region'
+
+" Extended % matching for HTML, LaTeX, and many other languages
+Plugin 'tmhedberg/matchit'
+
+" Script for text filtering and alignment
+Plugin 'godlygeek/tabular'
+
+" Easy text exchange operator
+Plugin 'tommcdo/vim-exchange'
+
+" Multiple cursors and selection support
+Plugin 'terryma/vim-multiple-cursors'
+
+" Fuzzy file, buffer, mru, tag, etc finder
+Plugin 'ctrlpvim/ctrlp.vim'
+
+" Vim plugin for the_silver_searcher, 'ag'
+Plugin 'rking/ag.vim'
+
+" Add snippets support to Vim
+Plugin 'Shougo/neosnippet.vim'
+
+" Add autocomplete
+Plugin 'Shougo/neocomplete.vim'
+
 call vundle#end()
 
 " =============
@@ -233,5 +310,85 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 " =====================
 " Plugins configuration {
 " =====================
+
+" Airline
+let g:airline_powerline_fonts = 1
+
+" NERDTree
+" Enable on Ctrl + N
+map <C-n> :NERDTreeToggle<CR>
+" Change current directory to the chosen root directory in NERDTree
+let g:NERDTreeChDirMode = 2
+
+" Syntastic
+" Suggested defaults
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+
+" Supertab
+" Initialize autocomplete with supertab
+let g:SuperTabContextDefaultCompletionType = "<c-n>"
+let g:SuperTabDefaultCompletionType = "context"
+set completeopt-=preview
+
+" Easymotion
+" Rebind easymotion to single leader
+map <Leader> <Plug>(easymotion-prefix)
+
+" Gundo
+nnoremap <Leader>u :GundoToggle<CR>
+
+" Multiple Cursors
+let g:multi_cursor_use_default_mapping=0
+let g:multi_cursor_next_key='<C-m>'
+let g:multi_cursor_prev_key='<C-p>'
+let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<C-c>'
+
+" CtrlP
+let g:ctrlp_working_path_mode = 'rw'
+
+" Ag
+if executable('ag')
+    " Use ag over grep
+    set grepprg=ag\ --nogroup\ --nocolor
+
+    " Use ag in CtrlP for listing files. Lightning fast and respects
+    " .gitignore
+    let g:ctrlp_user_command = 'ag -l --nocolor -g "" %s '
+
+    " ag is fast enough that CtrlP doesn't need to cache
+    let g:ctrlp_use_caching = 0
+endif
+
+" bind \ (backward slash) to grep shortcut
+"command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+nnoremap <leader>g :Ag!<SPACE>
+
+" bind K to grep word under cursor
+nnoremap K :Ag! <cword><CR>
+
+" Neosnippet
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+xmap <C-k> <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+            \ "\<Plug>(neosnippet_expand_or_jump)"
+            \: pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+            \ "\<Plug>(neosnippet_expand_or_jump)"
+            \: "\<TAB>"
+
+let g:neosnippet#enable_snipmate_compatibility = 1
+
+" Neocomplete
+" Enable neocomplete on startup
+let g:neocomplete#enable_at_startup = 1
 
 " }
