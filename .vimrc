@@ -8,6 +8,35 @@ filetype off
 " Add Vundle to runtime path
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+
+" =========
+" Appearance
+" =========
+" Colors
+Plugin 'goatslacker/mango.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'morhetz/gruvbox'
+Plugin 'sjl/badwolf'
+Plugin 'chriskempson/vim-tomorrow-theme'
+Plugin 'w0ng/vim-hybrid'
+Plugin 'junegunn/seoul256.vim'
+Plugin 'zeis/vim-kolor'
+Plugin 'noahfrederick/vim-hemisu'
+Plugin 'vim-scripts/Colour-Sampler-Pack'
+Plugin 'daylerees/colour-schemes', { 'rtp': 'vim/' }
+Plugin 'petelewis/vim-evolution'
+Plugin 'joshdick/onedark.vim'
+Plugin 'mkarmona/materialbox'
+Plugin 'DrowsySaturn/VIvid.vim'
+Plugin 'gilgigilgil/anderson.vim'
+Plugin 'jdkanani/vim-material-theme'
+Plugin 'cdmedia/itg_flat_vim'
+Plugin 'gosukiwi/vim-atom-dark'
+Plugin 'MaxSt/FlatColor'
+Plugin 'baskerville/bubblegum'
+Plugin 'jordwalke/flatlandia'
+
 call vundle#end()
 
 " =============
@@ -114,7 +143,7 @@ map <leader>l <C-w>l
 " Use dark background by default
 set background=dark
 " Set color scheme
-:colorscheme desert
+:colorscheme badwolf
 
 " Use system clipboard (make sure vim has clipboard support enabled)
 set clipboard=unnamed
@@ -185,7 +214,7 @@ set textwidth=80
 set colorcolumn=+1
 
 " Set default shell to zsh
-set shell=zsh
+"set shell=zsh
 
 " Don't update the display while running macros
 set lazyredraw
@@ -198,5 +227,11 @@ set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 " Reload vimrc
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
+" }
+
+" =====================
+" Plugins configuration {
+" =====================
 
 " }
