@@ -190,6 +190,10 @@ set shell=zsh
 " Don't update the display while running macros
 set lazyredraw
 
+" Displays whitespaces
+set list
+set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
+
 " Edit vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 " Reload vimrc
