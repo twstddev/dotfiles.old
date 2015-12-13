@@ -131,6 +131,17 @@ Plugin 'leafgarland/typescript-vim'
 " Tern plugin for Vim
 "Plugin 'ternjs/tern_for_vim'
 
+" Ruby
+
+" Vim/Ruby Configuration Files
+Plugin 'vim-ruby/vim-ruby'
+" Ruby on Rails power tools
+Plugin 'tpope/vim-rails'
+" Wisely add 'end' in ruby, endfunction/endif/more
+Plugin 'tpope/vim-endwise'
+" Refactoring tool for Ruby in vim
+Plugin 'ecomba/vim-ruby-refactoring'
+
 " Misc
 
 " A vim plugin for working with mustache and handlebars templates
@@ -143,6 +154,10 @@ Plugin 'elzr/vim-json'
 Plugin 'digitaltoad/vim-jade'
 " Syntax highlighting, matching rules and mappings for the original Markdown and extensions
 Plugin 'plasticboy/vim-markdown'
+" Vim runtime files for Haml, Sass, and SCSS
+Plugin 'tpope/vim-haml'
+" CoffeeScript support for vim
+Plugin 'kchmck/vim-coffee-script'
 
 call vundle#end()
 
