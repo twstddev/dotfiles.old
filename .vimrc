@@ -50,69 +50,99 @@ Plugin 'tomtom/tlib_vim'
 " ======
 " Editor
 " ======
-
 " File explorer for vim
 Plugin 'scrooloose/nerdtree'
-
 " A plugin for visually displaying indent levels
 Plugin 'nathanaelkane/vim-indent-guides'
-
 " A syntax checking plugin
 Plugin 'scrooloose/syntastic'
-
 " Provides automatic closing of quotes, parenthesis, brackets, etc.
 Plugin 'Raimondi/delimitMate'
-
 " Allows you to use <Tab> for all your insert completion needs
 Plugin 'ervandew/supertab'
-
 " Plugin for intensely orgasmic commenting
 Plugin 'scrooloose/nerdcommenter'
-
 " Plugin provides mappings to easily delete, change and add such surroundings in pairs
 Plugin 'tpope/vim-surround'
-
 " Snippets files for various programming languages
 Plugin 'honza/vim-snippets'
-
 " Provides a much simpler way to use some motions
 Plugin 'easymotion/vim-easymotion'
-
 " Enable repeating supported plugin maps with .
 Plugin 'tpope/vim-repeat'
-
 " Plugin to visualize your Vim undo tree
 Plugin 'sjl/gundo.vim'
-
 " Plugin that simplifies the transition between multiline and single-line code
 Plugin 'AndrewRadev/splitjoin.vim'
-
 " Plugin that allows you to visually select increasingly larger regions of text  using the same key combination.
 " Plugin 'terryma/vim-expand-region'
-
 " Extended % matching for HTML, LaTeX, and many other languages
 Plugin 'tmhedberg/matchit'
-
 " Script for text filtering and alignment
 Plugin 'godlygeek/tabular'
-
 " Easy text exchange operator
 Plugin 'tommcdo/vim-exchange'
-
 " Multiple cursors and selection support
 Plugin 'terryma/vim-multiple-cursors'
-
 " Fuzzy file, buffer, mru, tag, etc finder
 Plugin 'ctrlpvim/ctrlp.vim'
-
 " Vim plugin for the_silver_searcher, 'ag'
 Plugin 'rking/ag.vim'
-
 " Add snippets support to Vim
 Plugin 'Shougo/neosnippet.vim'
-
 " Add autocomplete
 Plugin 'Shougo/neocomplete.vim'
+
+" ===================
+" Syntax and languages
+" ===================
+
+" HTML/CSS
+
+" Provides support for expanding abbreviations similar
+Plugin 'mattn/emmet-vim'
+" HTML5 + inline SVG omnicomplete function, indent and syntax for Vim
+Plugin 'othree/html5.vim'
+" Vim syntax for LESS
+Plugin 'groenewege/vim-less'
+" Highlight colors in css files
+Plugin 'skammer/vim-css-color'
+" Vim syntax file for scss (Sassy CSS)
+Plugin 'cakebaker/scss-syntax.vim'
+" Add CSS3 syntax support to vim's built-in `syntax/css.vim`
+Plugin 'hail2u/vim-css3-syntax'
+
+" Javascript
+
+" Enhanced javascript syntax file for Vim
+Plugin 'jelera/vim-javascript-syntax'
+" Vastly improved Javascript indentation and syntax support in Vim
+Plugin 'pangloss/vim-javascript'
+" Syntax for JavaScript libraries
+Plugin 'othree/javascript-libraries-syntax.vim'
+" Tools and environment to make Vim superb for developing with Node.js
+Plugin 'moll/vim-node'
+" React JSX syntax highlighting and indenting for vim
+Plugin 'mxw/vim-jsx'
+" Jasmine Plugin for Vim
+Plugin 'claco/jasmine.vim'
+" Typescript syntax files for Vim
+Plugin 'leafgarland/typescript-vim'
+" Tern plugin for Vim
+"Plugin 'ternjs/tern_for_vim'
+
+" Misc
+
+" A vim plugin for working with mustache and handlebars templates
+Plugin 'mustache/vim-mustache-handlebars'
+" Make vim more Puppet friendly
+Plugin 'rodjek/vim-puppet'
+" A better JSON for Vim
+Plugin 'elzr/vim-json'
+" Vim syntax highlighting for Jade templates
+Plugin 'digitaltoad/vim-jade'
+" Syntax highlighting, matching rules and mappings for the original Markdown and extensions
+Plugin 'plasticboy/vim-markdown'
 
 call vundle#end()
 
@@ -287,8 +317,8 @@ set nojoinspaces
 set report=0
 
 " Display separator at 80 characters width
-set textwidth=80
-set colorcolumn=+1
+"set textwidth=80
+"set colorcolumn=+1
 
 " Set default shell to zsh
 "set shell=zsh
@@ -312,7 +342,7 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 " =====================
 
 " Airline
-let g:airline_powerline_fonts = 1
+"let g:airline_powerline_fonts = 1
 
 " NERDTree
 " Enable on Ctrl + N
@@ -388,7 +418,27 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 let g:neosnippet#enable_snipmate_compatibility = 1
 
 " Neocomplete
-" Enable neocomplete on startup
+" enable neocomplete on startup
 let g:neocomplete#enable_at_startup = 1
+
+" Emmet
+imap <C-e> <C-y>,
+
+" Vim-json
+let g:vim_json_syntax_conceal = 0
+
+" Vim-javascript
+"Enable HTML/CSS highlighting in JS
+let g:javascript_enable_domhtmlcss=1
+
+" Vim-javascript-libraries-syntax
+let g:used_javascript_libs = 'underscore,backbone,angularjs,react,jasmine,chai'
+
+" Ternjs for vim
+map <leader>td :TernDefPreview<CR>
+map <leader>tD :TernDocBrowse<CR>
+map <leader>tt :TernType<CR>
+map <leader>tr :TernRefs<CR>
+map <leader>tR :TernRename<CR>
 
 " }
