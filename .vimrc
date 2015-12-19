@@ -36,6 +36,7 @@ Plugin 'gosukiwi/vim-atom-dark'
 Plugin 'MaxSt/FlatColor'
 Plugin 'baskerville/bubblegum'
 Plugin 'jordwalke/flatlandia'
+Plugin 'whatyouhide/vim-gotham'
 
 " GUI widgets
 " Lean & mean status/tabline for vim that's light as air
@@ -90,8 +91,72 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'rking/ag.vim'
 " Add snippets support to Vim
 Plugin 'Shougo/neosnippet.vim'
+" Aims to be a concise vim script that implements some of TextMate's snippets features in Vim
+" Plugin 'msanders/snipmate.vim'
 " Add autocomplete
 Plugin 'Shougo/neocomplete.vim'
+" A quick notetaking plugin 
+Plugin 'fmoralesc/vim-pad'
+" Plugin maintains a history of previous yanks, changes and deletes
+Plugin 'vim-scripts/YankRing.vim'
+" Execute URLs, footnotes, open emails, organize ideas
+Plugin 'vim-scripts/utl.vim'
+" A simple Vim plugin to switch segments of text with predefined replacements
+Plugin 'AndrewRadev/switch.vim'
+" Asynchronous build and test dispatcher
+Plugin 'tpope/vim-dispatch'
+" Vim interface to Web API
+"Plugin 'mattn/webapi-vim'
+" A simple function navigator for ctrlp.vim
+Plugin 'tacahiroy/ctrlp-funky'
+" Super simple vim plugin to show the list of buffers in the command bar
+Plugin 'bling/vim-bufferline'
+" Easily search for, substitute, and abbreviate multiple variants of a word
+Plugin 'tpope/vim-abolish'
+" Create your own text objects
+Plugin 'kana/vim-textobj-user'
+" Text objects for indented blocks of lines
+Plugin 'kana/vim-textobj-indent'
+" Smart selection of the closest text object
+Plugin 'gcmt/wildfire.vim'
+" Better Rainbow Parentheses
+Plugin 'kien/rainbow_parentheses.vim'
+" Vim plugin that displays tags in a window, ordered by scope
+Plugin 'majutsushi/tagbar'
+" Automated tag file generation and syntax highlighting of tags in Vim
+"Plugin 'xolox/vim-easytags'
+" The ultimate snippet solution for Vim
+"Plugin 'SirVer/ultisnips'
+" A code-completion engine for Vim
+"Plugin 'Valloric/YouCompleteMe'
+" Shows 'Nth match out of M' at every search (index of match+total # matches)
+Plugin 'vim-scripts/IndexedSearch'
+" Start a * or # search from a visual block
+Plugin 'nelstrom/vim-visual-star-search'
+" Global search and replace for VI
+Plugin 'skwp/greplace.vim'
+" Text objects for functions
+Plugin 'kana/vim-textobj-function'
+" Underscore text-object for Vim
+Plugin 'lucapette/vim-textobj-underscore'
+" A Vim plugin for looking up documentation
+Plugin 'keith/investigate.vim'
+" Plugin for vim to enabling opening a file in a given line
+Plugin 'bogado/file-line'
+" Automatically discover and 'properly' update ctags files on save
+Plugin 'craigemery/vim-autotag'
+
+" ===========
+" Git support
+" ===========
+" A Git wrapper so awesome, it should be illegal
+Plugin 'tpope/vim-fugitive'
+" A Vim plugin which shows a git diff in the gutter (sign column) and stages/reverts hunks
+Plugin 'airblade/vim-gitgutter'
+" This is a vimscript for creating gists
+Plugin 'mattn/gist-vim'
+" A 'gitk clone' plugin for the text editor Vim
+Plugin 'gregsexton/gitv'
 
 " ===================
 " Syntax and languages
@@ -130,6 +195,8 @@ Plugin 'claco/jasmine.vim'
 Plugin 'leafgarland/typescript-vim'
 " Tern plugin for Vim
 "Plugin 'ternjs/tern_for_vim'
+" Text objects for functions in javascript.
+Plugin 'thinca/vim-textobj-function-javascript'
 
 " Ruby
 
@@ -141,6 +208,12 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-endwise'
 " Refactoring tool for Ruby in vim
 Plugin 'ecomba/vim-ruby-refactoring'
+" A custom text object for selecting ruby blocks
+Plugin 'nelstrom/vim-textobj-rubyblock'
+" Vim plugin that searches http://apidock.com Ruby, Rails, and RSpec docs from within Vim
+Plugin 'mileszs/apidock.vim'
+" This plugin allows rapid toggling between the two different styles of ruby blocks
+Plugin 'jgdavey/vim-blockle'
 
 " Misc
 
@@ -158,6 +231,8 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'tpope/vim-haml'
 " CoffeeScript support for vim
 Plugin 'kchmck/vim-coffee-script'
+" Vim Cucumber runtime files
+Plugin 'tpope/vim-cucumber'
 
 call vundle#end()
 
@@ -364,6 +439,8 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 map <C-n> :NERDTreeToggle<CR>
 " Change current directory to the chosen root directory in NERDTree
 let g:NERDTreeChDirMode = 2
+" Show the bookmarks tree on startup
+let NERDTreeShowBookmarks = 1
 
 " Syntastic
 " Suggested defaults
