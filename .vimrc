@@ -98,7 +98,7 @@ Plugin 'Shougo/neocomplete.vim'
 " A quick notetaking plugin 
 Plugin 'fmoralesc/vim-pad'
 " Plugin maintains a history of previous yanks, changes and deletes
-Plugin 'vim-scripts/YankRing.vim'
+"Plugin 'vim-scripts/YankRing.vim'
 " Execute URLs, footnotes, open emails, organize ideas
 Plugin 'vim-scripts/utl.vim'
 " A simple Vim plugin to switch segments of text with predefined replacements
@@ -472,7 +472,10 @@ let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<C-c>'
 
 " CtrlP
+" Set searching from current pwd
 let g:ctrlp_working_path_mode = 'rw'
+" Don't jump to already open window
+let g:ctrlp_switch_buffer = 0
 
 " Ag
 if executable('ag')
@@ -532,5 +535,8 @@ map <leader>tD :TernDocBrowse<CR>
 map <leader>tt :TernType<CR>
 map <leader>tr :TernRefs<CR>
 map <leader>tR :TernRename<CR>
+
+" Autotag
+let g:autotagExcludeSuffixes = "tml.xml.text.txt.vim"
 
 " }
