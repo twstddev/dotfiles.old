@@ -145,6 +145,14 @@ Plugin 'keith/investigate.vim'
 Plugin 'bogado/file-line'
 " Automatically discover and 'properly' update ctags files on save
 Plugin 'craigemery/vim-autotag'
+" Adds font icons (glyphs ★♨☢) to programming languages, libraries, and web
+" developer filetypes
+"Plugin 'ryanoasis/vim-devicons'
+" Vim plugin for showing all your <Leader> mappings in a readable table
+" including the descriptions
+Plugin 'ktonga/vim-follow-my-lead'
+" Argumentative aids with manipulating and moving between function arguments
+Plugin 'PeterRincker/vim-argumentative'
 
 " ===========
 " Git support
@@ -157,6 +165,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'mattn/gist-vim'
 " A 'gitk clone' plugin for the text editor Vim
 Plugin 'gregsexton/gitv'
+" Vim Git runtime files
+Plugin 'tpope/vim-git'
 
 " ===================
 " Syntax and languages
@@ -197,6 +207,10 @@ Plugin 'leafgarland/typescript-vim'
 "Plugin 'ternjs/tern_for_vim'
 " Text objects for functions in javascript.
 Plugin 'thinca/vim-textobj-function-javascript'
+" List of JavaScript ES6 snippets and syntax highlighting for vim
+Plugin 'isRuslan/vim-es6'
+" Generate JSDoc to your JavaScript code
+Plugin 'heavenshell/vim-jsdoc'
 
 " Ruby
 
@@ -450,6 +464,10 @@ set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
+" Make sure icons are enabled
+"let g:syntastic_enable_signs = 1
+"let g:syntastic_error_symbol='✗'
+"let g:syntastic_warning_symbol='⚠'
 
 " Supertab
 " Initialize autocomplete with supertab
@@ -460,12 +478,21 @@ set completeopt-=preview
 " Easymotion
 " Rebind easymotion to single leader
 map <Leader> <Plug>(easymotion-prefix)
+" Some letters are very hard to differentiate. Make easymotion to use symbols
+" only from the given range
+let g:EasyMotion_keys='asdfjkoweriop'
 
 " Gundo
 nnoremap <Leader>u :GundoToggle<CR>
+" Open Gundo tree on the right
+let g:gundo_right = 1
+" Close Gundo window when reverting
+let g:gundo_close_on_revert = 1
 
 " Multiple Cursors
 let g:multi_cursor_use_default_mapping=0
+" Switch to multicursor mode with ,mc
+let g:multi_cursor_start_key = ',mc'
 let g:multi_cursor_next_key='<C-m>'
 let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-x>'
@@ -476,8 +503,14 @@ let g:multi_cursor_quit_key='<C-c>'
 let g:ctrlp_working_path_mode = 'rw'
 " Don't jump to already open window
 let g:ctrlp_switch_buffer = 0
+" Add funky extensions
+let g:ctrlp_extensions = ['funky']
 
-" Ag
+" CtrlP Funky
+" Enable function search on ,cf
+nnoremap <C-f> :CtrlPFunky<Cr>
+
+" Ag (the_silver_searcher)
 if executable('ag')
     " Use ag over grep
     set grepprg=ag\ --nogroup\ --nocolor
@@ -515,6 +548,24 @@ let g:neosnippet#enable_snipmate_compatibility = 1
 " Neocomplete
 " enable neocomplete on startup
 let g:neocomplete#enable_at_startup = 1
+" Disable AutoComplPop
+let g:acp_enableAtStartup = 0
+" When a capital letter is included switch to case sensitive
+let g:neocomplete#enable_smart_case = 1
+" Set default completion list to maximum 15 entries
+let g:neocomplete#max_list = 15
+" Define keyword.
+if !exists('g:neocomplete#keyword_patterns')
+    let g:neocomplete#keyword_patterns = {}
+endif
+let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 
 " Emmet
 imap <C-e> <C-y>,
@@ -538,5 +589,43 @@ map <leader>tR :TernRename<CR>
 
 " Autotag
 let g:autotagExcludeSuffixes = "tml.xml.text.txt.vim"
+
+" Gitgutter
+let g:gitgutter_map_keys = 0
+
+" Surround
+" Wrap the token under the cursor in #{}
+let g:surround_35 = "#{\r}"
+
+" Tagbar
+nnoremap <silent> <leader>to :TagbarToggle<CR>
+
+" Fugitive
+" Mappings
+nnoremap <silent> <leader>Gs :Gstatus<CR>
+nnoremap <silent> <leader>Gd :Gdiff<CR>
+nnoremap <silent> <leader>Gc :Gcommit<CR>
+nnoremap <silent> <leader>Gb :Gblame<CR>
+nnoremap <silent> <leader>Gl :Glog<CR>
+nnoremap <silent> <leader>Gp :Git push<CR>
+nnoremap <silent> <leader>Gr :Gread<CR>
+nnoremap <silent> <leader>Gw :Gwrite<CR>
+nnoremap <silent> <leader>Ge :Gedit<CR>
+nnoremap <silent> <leader>Gg :SignifyToggle<CR>
+
+" Indent guides
+" Set guides width to a narrow value
+let g:indent_guides_guide_size = 1
+let g:indent_guides_enable_on_vim_startup = 1
+
+" Delimitmate
+" Expand Spaces
+let g:delimitMate_expand_space = 1
+" Expand Enters
+let g:delimitMate_expand_cr = 1
+
+" Follow My Lead
+" Show leader shortcuts from plugins as well
+let g:fml_all_sources = 1
 
 " }

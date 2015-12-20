@@ -1,6 +1,8 @@
 " Remove toolbar and menu from the GUI
 set guioptions-=m
 set guioptions-=T
+" Make tabs look the same as in terminal
+set guioptions-=e
 
 " Use console dialogs
 set guioptions+=c
