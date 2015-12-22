@@ -155,6 +155,8 @@ Plugin 'ktonga/vim-follow-my-lead'
 Plugin 'PeterRincker/vim-argumentative'
 " Run your tests at the speed of thought
 Plugin 'janko-m/vim-test'
+" Plugin to toggle, display and navigate marks
+Plugin 'kshenoy/vim-signature'
 
 " ===========
 " Git support
