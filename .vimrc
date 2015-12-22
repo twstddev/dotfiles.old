@@ -482,9 +482,6 @@ set completeopt-=preview
 " Easymotion
 " Rebind easymotion to single leader
 map <Leader> <Plug>(easymotion-prefix)
-" Some letters are very hard to differentiate. Make easymotion to use symbols
-" only from the given range
-let g:EasyMotion_keys='asdfjkoweriop'
 
 " Gundo
 nnoremap <Leader>u :GundoToggle<CR>
