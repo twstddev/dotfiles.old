@@ -110,7 +110,7 @@ Plugin 'tpope/vim-dispatch'
 " A simple function navigator for ctrlp.vim
 Plugin 'tacahiroy/ctrlp-funky'
 " Super simple vim plugin to show the list of buffers in the command bar
-Plugin 'bling/vim-bufferline'
+"Plugin 'bling/vim-bufferline'
 " Easily search for, substitute, and abbreviate multiple variants of a word
 Plugin 'tpope/vim-abolish'
 " Create your own text objects
@@ -153,6 +153,8 @@ Plugin 'craigemery/vim-autotag'
 Plugin 'ktonga/vim-follow-my-lead'
 " Argumentative aids with manipulating and moving between function arguments
 Plugin 'PeterRincker/vim-argumentative'
+" Run your tests at the speed of thought
+Plugin 'janko-m/vim-test'
 
 " ===========
 " Git support
@@ -211,6 +213,8 @@ Plugin 'thinca/vim-textobj-function-javascript'
 Plugin 'isRuslan/vim-es6'
 " Generate JSDoc to your JavaScript code
 Plugin 'heavenshell/vim-jsdoc'
+" AngularJS with Vim
+Plugin 'burnettk/vim-angular'
 
 " Ruby
 
@@ -354,7 +358,7 @@ map <leader>l <C-w>l
 " Use dark background by default
 set background=dark
 " Set color scheme
-:colorscheme badwolf
+:colorscheme anokha
 
 " Use system clipboard (make sure vim has clipboard support enabled)
 set clipboard=unnamed
