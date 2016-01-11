@@ -360,7 +360,7 @@ map <leader>l <C-w>l
 " Use dark background by default
 set background=dark
 " Set color scheme
-:colorscheme anokha
+:colorscheme badwolf
 
 " Use system clipboard (make sure vim has clipboard support enabled)
 set clipboard=unnamed
@@ -470,6 +470,7 @@ set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
+let g:syntastic_disabled_filetypes = ["java"]
 " Make sure icons are enabled
 "let g:syntastic_enable_signs = 1
 "let g:syntastic_error_symbol='✗'
