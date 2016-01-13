@@ -20,9 +20,19 @@ antigen bundle last-working-dir
 antigen bundle mvn
 # Add npm aliases and completion
 antigen bundle npm
+# Enhanced tmux support
+antigen bundle tmux
+# Enhanced tmuxinator support
+antigen bundle tmuxinator
+# Add vagrant completion
+antigen bundle vagrant
+# Add vi like behaviour
+antigen bundle vi-mode
 
 # Fish-like syntax highlighting bundle
 antigen bundle zsh-users/zsh-syntax-highlighting
+# Add plugin that helps remembering aliases
+antigen bundle djui/alias-tips
 
 # Set default theme
 antigen theme af-magic
