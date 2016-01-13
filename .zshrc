@@ -1,5 +1,5 @@
 # Load antigen
-source .antigen/antigen.zsh
+source ~/.antigen/antigen.zsh
 
 # Use oh-my-zsh as default repository
 antigen use oh-my-zsh
@@ -14,8 +14,6 @@ antigen bundle bundler
 antigen bundle gem
 # Add aliases and functions for git
 antigen bundle git
-# Keeps track of the last used directory and automatically jumps to it for new shells
-antigen bundle last-working-dir
 # Add maven aliases and completion
 antigen bundle mvn
 # Add npm aliases and completion
