@@ -7,4 +7,4 @@
 * Install silver searcher - https://github.com/ggreer/the_silver_searcher
 
 ## ZSH
-* Clone antigen into the .antigen folder - https://github.com/zsh-users/antigen
+* Clone antigen into the .antigen folder and create a symlink to it in your HOME folder - https://github.com/zsh-users/antigen
