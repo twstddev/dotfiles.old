@@ -7,6 +7,9 @@ antigen use oh-my-zsh
 # Fish-like syntax highlighting bundle
 antigen bundle zsh-users/zsh-syntax-highlighting
 
+# Set default theme
+antigen theme af-magic
+
 # Tell antigen that you are done.
 antigen apply
 
