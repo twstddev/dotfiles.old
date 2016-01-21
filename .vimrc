@@ -159,6 +159,36 @@ Plugin 'janko-m/vim-test'
 Plugin 'kshenoy/vim-signature'
 " Improved incremental searching for Vim
 Plugin 'haya14busa/incsearch.vim'
+" Hyperfocus-writing in Vim
+Plugin 'junegunn/limelight.vim'
+" Vim plugin that provides additional text objects
+Plugin 'wellle/targets.vim'
+" A vim plugin to perform diffs on blocks of code
+Plugin 'AndrewRadev/linediff.vim'
+" Edit large files quickly
+Plugin 'vim-scripts/LargeFile'
+" Swap your windows without ruining your layout
+Plugin 'wesQ3/vim-windowswap'
+" A Vim plugin that always highlights the enclosing html/xml tags
+Plugin 'Valloric/MatchTagAlways'
+" Distraction-free writing in Vim
+Plugin 'junegunn/goyo.vim'
+" Multi-language DBGP debugger client for Vim
+" Plugin 'joonty/vdebug'
+" Changes Vim working directory to project root (identified by presence of known directory or file)
+Plugin 'airblade/vim-rooter'
+" Pasting in Vim with indentation adjusted to destination context
+Plugin 'sickill/vim-pasta'
+" Make gvim-only colorschemes work transparently in terminal vim
+Plugin 'godlygeek/csapprox'
+" Elegant buffer explorer - takes very little screen space
+"Plugin 'fholgado/minibufexpl.vim'
+" Always have a nice view for vim split windows!
+"Plugin 'zhaocai/GoldenView.Vim'
+" Vim plugin to dim inactive windows
+"Plugin 'blueyed/vim-diminactive'
+" A powerful color tool in vim
+Plugin 'Rykka/colorv.vim'
 
 " ===========
 " Git support
@@ -173,6 +203,8 @@ Plugin 'mattn/gist-vim'
 Plugin 'gregsexton/gitv'
 " Vim Git runtime files
 Plugin 'tpope/vim-git'
+" A git commit browser for vim. Extends fugitive.vim
+Plugin 'int3/vim-extradite'
 
 " ===================
 " Syntax and languages
@@ -219,6 +251,8 @@ Plugin 'isRuslan/vim-es6'
 Plugin 'heavenshell/vim-jsdoc'
 " AngularJS with Vim
 Plugin 'burnettk/vim-angular'
+" Snippets files for AngularJS including JavaScript, HTML, CoffeeScript and HAML
+Plugin 'matthewsimo/angular-vim-snippets'
 
 " Ruby
 
@@ -245,6 +279,8 @@ Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'rodjek/vim-puppet'
 " A better JSON for Vim
 Plugin 'elzr/vim-json'
+" JSON manipulation and pretty printing
+Plugin 'tpope/vim-jdaddy'
 " Vim syntax highlighting for Jade templates
 Plugin 'digitaltoad/vim-jade'
 " Syntax highlighting, matching rules and mappings for the original Markdown and extensions
