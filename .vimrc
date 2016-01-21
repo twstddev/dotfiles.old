@@ -157,6 +157,8 @@ Plugin 'PeterRincker/vim-argumentative'
 Plugin 'janko-m/vim-test'
 " Plugin to toggle, display and navigate marks
 Plugin 'kshenoy/vim-signature'
+" Improved incremental searching for Vim
+Plugin 'haya14busa/incsearch.vim'
 
 " ===========
 " Git support
@@ -360,7 +362,7 @@ map <leader>l <C-w>l
 " Use dark background by default
 set background=dark
 " Set color scheme
-:colorscheme badwolf
+:colorscheme dejavu
 
 " Use system clipboard (make sure vim has clipboard support enabled)
 set clipboard=unnamed
@@ -632,4 +634,8 @@ let g:delimitMate_expand_cr = 1
 " Show leader shortcuts from plugins as well
 let g:fml_all_sources = 1
 
+" Incsearch
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
 " }
