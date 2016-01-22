@@ -43,6 +43,12 @@ Plugin 'wellsjo/wellsokai.vim'
 Plugin 'duythinht/inori'
 Plugin 'nice/sweater'
 Plugin 'john2x/flatui.vim'
+Plugin 'raphamorim/lucario', { 'rtp': 'vim/' }
+Plugin 'ronny/birds-of-paradise.vim'
+Plugin 'hhff/SpacegrayEighties.vim'
+Plugin 'KabbAmine/yowish.vim'
+Plugin 'crusoexia/vim-dream'
+Plugin 'tristen/superman'
 " Lean & mean status/tabline for vim that's light as air
 Plugin 'paranoida/vim-airlineish'
 
@@ -218,6 +224,8 @@ Plugin 'chrisbra/vim-diff-enhanced'
 "Plugin 'ludovicchabant/vim-gutentags'
 " Easily open locally modified files in your git-versioned projects
 Plugin 'jasoncodes/ctrlp-modified.vim'
+" Wrap and unwrap function arguments, lists, and dictionaries in Vim
+Plugin 'FooSoft/vim-argwrap'
 
 " ===========
 " Git support
@@ -307,6 +315,8 @@ Plugin 'mileszs/apidock.vim'
 Plugin 'jgdavey/vim-blockle'
 " Ruby code completion
 Plugin 'osyo-manga/vim-monster'
+" Better rspec syntax highlighting for Vim
+Plugin 'keith/rspec.vim'
 
 " Misc
 
