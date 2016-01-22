@@ -37,6 +37,14 @@ Plugin 'MaxSt/FlatColor'
 Plugin 'baskerville/bubblegum'
 Plugin 'jordwalke/flatlandia'
 Plugin 'whatyouhide/vim-gotham'
+Plugin 'blerins/flattown'
+Plugin 'yosiat/oceanic-next-vim'
+Plugin 'wellsjo/wellsokai.vim'
+Plugin 'duythinht/inori'
+Plugin 'nice/sweater'
+Plugin 'john2x/flatui.vim'
+" Lean & mean status/tabline for vim that's light as air
+Plugin 'paranoida/vim-airlineish'
 
 " GUI widgets
 " Lean & mean status/tabline for vim that's light as air
@@ -47,6 +55,7 @@ Plugin 'bling/vim-airline'
 " ==============
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
+Plugin 'xolox/vim-misc'
 
 " ======
 " Editor
@@ -189,6 +198,26 @@ Plugin 'godlygeek/csapprox'
 "Plugin 'blueyed/vim-diminactive'
 " A powerful color tool in vim
 Plugin 'Rykka/colorv.vim'
+" CtrlP extension for fuzzy-search in tag matches
+Plugin 'ivalkeen/vim-ctrlp-tjump'
+" Peekaboo extends " and @ in normal mode and <CTRL-R> in insert mode so you can see the contents of the registers
+"Plugin 'junegunn/vim-peekaboo'
+" Highlight cursor word
+Plugin 'osyo-manga/vim-brightest'
+" Extension for ctrlp.vim, to have a command palette like sublime text 2
+Plugin 'fisadev/vim-ctrlp-cmdpalette'
+" Vim global plugin for doing single, multi-patch or diff code reviews
+Plugin 'junkblocker/patchreview-vim'
+" Vim plugin to quickly switch between buffers
+Plugin 'troydm/easybuffer.vim'
+" Easy text manupilation for vim
+Plugin 't9md/vim-textmanip'
+" Better Diff options for Vim
+Plugin 'chrisbra/vim-diff-enhanced'
+" A Vim plugin that manages your tag files NOTE: Compare later against easytags
+"Plugin 'ludovicchabant/vim-gutentags'
+" Easily open locally modified files in your git-versioned projects
+Plugin 'jasoncodes/ctrlp-modified.vim'
 
 " ===========
 " Git support
@@ -205,6 +234,8 @@ Plugin 'gregsexton/gitv'
 Plugin 'tpope/vim-git'
 " A git commit browser for vim. Extends fugitive.vim
 Plugin 'int3/vim-extradite'
+" Fugitive extension to manage and merge Git branches
+Plugin 'idanarye/vim-merginal'
 
 " ===================
 " Syntax and languages
@@ -253,6 +284,10 @@ Plugin 'heavenshell/vim-jsdoc'
 Plugin 'burnettk/vim-angular'
 " Snippets files for AngularJS including JavaScript, HTML, CoffeeScript and HAML
 Plugin 'matthewsimo/angular-vim-snippets'
+" Various snippets for developing node.js from vim
+Plugin 'jamescarr/snipmate-nodejs'
+" Lightweight bag of Vim utilities for Backbone - snipmate snippets, templates and omnicompletion
+Plugin 'mklabs/vim-backbone'
 
 " Ruby
 
@@ -270,6 +305,8 @@ Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'mileszs/apidock.vim'
 " This plugin allows rapid toggling between the two different styles of ruby blocks
 Plugin 'jgdavey/vim-blockle'
+" Ruby code completion
+Plugin 'osyo-manga/vim-monster'
 
 " Misc
 
@@ -491,6 +528,7 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " Airline
 "let g:airline_powerline_fonts = 1
+let g:airline_theme = "airlineish"
 
 " NERDTree
 " Enable on Ctrl + N
