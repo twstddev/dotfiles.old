@@ -1,6 +1,9 @@
 " Remove toolbar and menu from the GUI
 set guioptions-=m
 set guioptions-=T
+" Hide scrollbars
+set guioptions-=r
+set guioptions-=L
 " Make tabs look the same as in terminal
 set guioptions-=e
 
