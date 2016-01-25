@@ -598,7 +598,7 @@ let g:ctrlp_extensions = ['funky']
 
 " CtrlP Funky
 " Enable function search on ,cf
-nnoremap <C-f> :CtrlPFunky<Cr>
+"nnoremap <C-f> :CtrlPFunky<Cr>
 
 " Ag (the_silver_searcher)
 if executable('ag')
