@@ -445,7 +445,7 @@ map <leader>l <C-w>l
 " Use dark background by default
 set background=dark
 " Set color scheme
-:colorscheme dejavu
+:colorscheme desertex
 
 " Use system clipboard (make sure vim has clipboard support enabled)
 set clipboard=unnamed
@@ -657,6 +657,15 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 
+" Add autocomplete for ruby
+let g:neocomplete#sources#omni#input_patterns = {
+            \"ruby" : '[^. *\t]\.\w*\|\h\w*::'
+            \}
+let g:rubycomplete_buffer_loading = 1
+let g:rubycomplete_classes_in_global = 1
+let g:rubycomplete_rails = 1
+let g:rubycomplete_load_gemfile = 1
+
 " Emmet
 imap <C-e> <C-y>,
 
@@ -722,4 +731,8 @@ let g:fml_all_sources = 1
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
+
+" Eclim
+" Windows version requires this to be set specifically
+let g:EclimBaseDir = "~/.vim"
 " }
