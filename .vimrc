@@ -445,7 +445,7 @@ map <leader>l <C-w>l
 " Use dark background by default
 set background=dark
 " Set color scheme
-:colorscheme desertex
+:colorscheme flatcolor
 
 " Use system clipboard (make sure vim has clipboard support enabled)
 set clipboard=unnamed
@@ -547,6 +547,8 @@ map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeChDirMode = 2
 " Show the bookmarks tree on startup
 let NERDTreeShowBookmarks = 1
+" Always delete buffer for removed file
+let NERDTreeAutoDeleteBuffer = 1
 
 " Syntastic
 " Suggested defaults
