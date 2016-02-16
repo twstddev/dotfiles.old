@@ -52,10 +52,6 @@ Plugin 'tristen/superman'
 " Lean & mean status/tabline for vim that's light as air
 Plugin 'paranoida/vim-airlineish'
 
-" GUI widgets
-" Lean & mean status/tabline for vim that's light as air
-Plugin 'bling/vim-airline'
-
 " ==============
 " Utility helpers for other plugins
 " ==============
@@ -78,6 +74,8 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'ervandew/supertab'
 " Plugin for intensely orgasmic commenting
 Plugin 'scrooloose/nerdcommenter'
+" Lean & mean status/tabline for vim that's light as air
+Plugin 'bling/vim-airline'
 " Plugin provides mappings to easily delete, change and add such surroundings in pairs
 Plugin 'tpope/vim-surround'
 " Snippets files for various programming languages
@@ -718,6 +716,8 @@ nnoremap <silent> <leader>Gg :SignifyToggle<CR>
 " Set guides width to a narrow value
 let g:indent_guides_guide_size = 1
 let g:indent_guides_enable_on_vim_startup = 1
+" Disable guides for nerdtree
+let g:indent_guides_exclude_filetypes = ["help", "nerdtree"]
 
 " Delimitmate
 " Expand Spaces
