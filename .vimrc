@@ -70,16 +70,14 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'scrooloose/syntastic'
 " Provides automatic closing of quotes, parenthesis, brackets, etc.
 Plugin 'Raimondi/delimitMate'
-" Allows you to use <Tab> for all your insert completion needs
-Plugin 'ervandew/supertab'
 " Plugin for intensely orgasmic commenting
 Plugin 'scrooloose/nerdcommenter'
-" Lean & mean status/tabline for vim that's light as air
-Plugin 'bling/vim-airline'
 " Plugin provides mappings to easily delete, change and add such surroundings in pairs
 Plugin 'tpope/vim-surround'
 " Snippets files for various programming languages
 Plugin 'honza/vim-snippets'
+" Add snippets support to Vim
+Plugin 'Shougo/neosnippet.vim'
 " Provides a much simpler way to use some motions
 Plugin 'easymotion/vim-easymotion'
 " Enable repeating supported plugin maps with .
@@ -102,12 +100,12 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ctrlpvim/ctrlp.vim'
 " Vim plugin for the_silver_searcher, 'ag'
 Plugin 'rking/ag.vim'
-" Add snippets support to Vim
-Plugin 'Shougo/neosnippet.vim'
 " Aims to be a concise vim script that implements some of TextMate's snippets features in Vim
 " Plugin 'msanders/snipmate.vim'
 " Add autocomplete
 Plugin 'Shougo/neocomplete.vim'
+" Allows you to use <Tab> for all your insert completion needs
+Plugin 'ervandew/supertab'
 " A quick notetaking plugin 
 Plugin 'fmoralesc/vim-pad'
 " Plugin maintains a history of previous yanks, changes and deletes
@@ -224,6 +222,8 @@ Plugin 'chrisbra/vim-diff-enhanced'
 Plugin 'jasoncodes/ctrlp-modified.vim'
 " Wrap and unwrap function arguments, lists, and dictionaries in Vim
 Plugin 'FooSoft/vim-argwrap'
+" Lean & mean status/tabline for vim that's light as air
+Plugin 'bling/vim-airline'
 
 " ===========
 " Git support
