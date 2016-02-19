@@ -697,8 +697,12 @@ let g:autotagExcludeSuffixes = "tml.xml.text.txt.vim"
 let g:gitgutter_map_keys = 0
 
 " Surround
-" Wrap the token under the cursor in #{}
+" Wrap the token under the cursor in #{} ( use # )
 let g:surround_35 = "#{\r}"
+" Wrap the token under the cursor in <% %> ( use % )
+let g:surround_37 = "<% \r %>"
+" Wrap the token under the cursor in <%= %> ( use = )
+let g:surround_61 = "<%= \r %>"
 
 " Tagbar
 nnoremap <silent> <leader>to :TagbarToggle<CR>
