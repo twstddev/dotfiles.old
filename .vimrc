@@ -76,8 +76,8 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-surround'
 " Snippets files for various programming languages
 Plugin 'honza/vim-snippets'
-" Add snippets support to Vim
-Plugin 'Shougo/neosnippet.vim'
+" The ultimate snippet solution for Vim
+Plugin 'SirVer/ultisnips'
 " Provides a much simpler way to use some motions
 Plugin 'easymotion/vim-easymotion'
 " Enable repeating supported plugin maps with .
@@ -100,8 +100,6 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ctrlpvim/ctrlp.vim'
 " Vim plugin for the_silver_searcher, 'ag'
 Plugin 'rking/ag.vim'
-" Aims to be a concise vim script that implements some of TextMate's snippets features in Vim
-" Plugin 'msanders/snipmate.vim'
 " Add autocomplete
 Plugin 'Shougo/neocomplete.vim'
 " Allows you to use <Tab> for all your insert completion needs
@@ -136,8 +134,6 @@ Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'majutsushi/tagbar'
 " Automated tag file generation and syntax highlighting of tags in Vim
 "Plugin 'xolox/vim-easytags'
-" The ultimate snippet solution for Vim
-"Plugin 'SirVer/ultisnips'
 " A code-completion engine for Vim
 "Plugin 'Valloric/YouCompleteMe'
 " Shows 'Nth match out of M' at every search (index of match+total # matches)
@@ -624,20 +620,9 @@ nnoremap <leader>g :Ag!<SPACE>
 " bind K to grep word under cursor
 nnoremap K :Ag! <cword><CR>
 
-" Neosnippet
-imap <C-k> <Plug>(neosnippet_expand_or_jump)
-smap <C-k> <Plug>(neosnippet_expand_or_jump)
-xmap <C-k> <Plug>(neosnippet_expand_target)
-
-" SuperTab like snippets behavior.
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-            \ "\<Plug>(neosnippet_expand_or_jump)"
-            \: pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-            \ "\<Plug>(neosnippet_expand_or_jump)"
-            \: "\<TAB>"
-
-let g:neosnippet#enable_snipmate_compatibility = 1
+" UltiSnips
+let g:UltiSnipsEnableSnipMate = 1
+let g:UltiSnipsExpandTrigger = "<c-j>"
 
 " Neocomplete
 " enable neocomplete on startup
