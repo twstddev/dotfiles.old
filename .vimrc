@@ -575,6 +575,10 @@ nmap s <Plug>(easymotion-overwin-f)
 
 " Gundo
 nnoremap <Leader>u :GundoToggle<CR>
+" Make preview window a bit bigger
+let g:gundo_preview_height = 25
+" Refresh preview window manually (helps with gundo performance)
+let g:gundo_auto_preview = 0
 " Open Gundo tree on the right
 let g:gundo_right = 1
 " Close Gundo window when reverting
