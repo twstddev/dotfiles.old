@@ -571,6 +571,7 @@ set completeopt-=preview
 " Easymotion
 " Rebind easymotion to single leader
 let g:EasyMotion_smartcase = 1
+nmap s <Plug>(easymotion-overwin-f)
 
 " Gundo
 nnoremap <Leader>u :GundoToggle<CR>
