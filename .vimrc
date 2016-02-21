@@ -87,7 +87,7 @@ Plugin 'sjl/gundo.vim'
 " Plugin that simplifies the transition between multiline and single-line code
 Plugin 'AndrewRadev/splitjoin.vim'
 " Plugin that allows you to visually select increasingly larger regions of text  using the same key combination.
-" Plugin 'terryma/vim-expand-region'
+Plugin 'terryma/vim-expand-region'
 " Extended % matching for HTML, LaTeX, and many other languages
 Plugin 'tmhedberg/matchit'
 " Script for text filtering and alignment
@@ -735,4 +735,8 @@ map g/ <Plug>(incsearch-stay)
 " Eclim
 " Windows version requires this to be set specifically
 let g:EclimBaseDir = "~/.vim"
+
+" Expand region (vim-expand-region)
+map <leader>ee <Plug>(expand_region_expand)
+map <leader>es <Plug>(expand_region_shrink)
 " }
