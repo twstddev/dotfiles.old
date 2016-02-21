@@ -742,4 +742,8 @@ map <leader>es <Plug>(expand_region_shrink)
 
 " Matchit
 let b:match_ignorecase = 1
+
+" Tabularize
+nmap <leader>ta :Tabularize /
+vmap <leader>ta :Tabularize /
 " }
