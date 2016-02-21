@@ -587,8 +587,8 @@ let g:gundo_close_on_revert = 1
 
 " Multiple Cursors
 let g:multi_cursor_use_default_mapping=0
-" Switch to multicursor mode with ,mc
-let g:multi_cursor_start_key = ',mc'
+let g:multi_cursor_start_key = 'g<C-m>'
+let g:multi_cursor_start_word_key = '<C-m>'
 let g:multi_cursor_next_key='<C-m>'
 let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-x>'
