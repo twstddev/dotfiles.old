@@ -739,4 +739,7 @@ let g:EclimBaseDir = "~/.vim"
 " Expand region (vim-expand-region)
 map <leader>ee <Plug>(expand_region_expand)
 map <leader>es <Plug>(expand_region_shrink)
+
+" Matchit
+let b:match_ignorecase = 1
 " }
