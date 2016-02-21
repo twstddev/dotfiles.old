@@ -101,11 +101,9 @@ Plugin 'ctrlpvim/ctrlp.vim'
 " Vim plugin for the_silver_searcher, 'ag'
 Plugin 'rking/ag.vim'
 " Automated tag file generation and syntax highlighting of tags in Vim
-Plugin 'xolox/vim-easytags'
-" Automatically discover and 'properly' update ctags files on save
-Plugin 'craigemery/vim-autotag'
+"Plugin 'xolox/vim-easytags'
 " A Vim plugin that manages your tag files NOTE: Compare later against easytags
-Plugin 'ludovicchabant/vim-gutentags'
+"Plugin 'ludovicchabant/vim-gutentags'
 " Vim plugin that displays tags in a window, ordered by scope
 Plugin 'majutsushi/tagbar'
 " Add autocomplete
@@ -218,6 +216,8 @@ Plugin 'chrisbra/vim-diff-enhanced'
 Plugin 'jasoncodes/ctrlp-modified.vim'
 " Wrap and unwrap function arguments, lists, and dictionaries in Vim
 Plugin 'FooSoft/vim-argwrap'
+" Projectionist provides granular project configuration using "projections".
+"Plugin 'tpope/vim-projectionist'
 " Lean & mean status/tabline for vim that's light as air
 Plugin 'bling/vim-airline'
 
