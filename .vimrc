@@ -100,10 +100,20 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ctrlpvim/ctrlp.vim'
 " Vim plugin for the_silver_searcher, 'ag'
 Plugin 'rking/ag.vim'
+" Automated tag file generation and syntax highlighting of tags in Vim
+Plugin 'xolox/vim-easytags'
+" Automatically discover and 'properly' update ctags files on save
+Plugin 'craigemery/vim-autotag'
+" A Vim plugin that manages your tag files NOTE: Compare later against easytags
+Plugin 'ludovicchabant/vim-gutentags'
+" Vim plugin that displays tags in a window, ordered by scope
+Plugin 'majutsushi/tagbar'
 " Add autocomplete
 Plugin 'Shougo/neocomplete.vim'
 " Allows you to use <Tab> for all your insert completion needs
 Plugin 'ervandew/supertab'
+" A code-completion engine for Vim
+"Plugin 'Valloric/YouCompleteMe'
 " A quick notetaking plugin 
 Plugin 'fmoralesc/vim-pad'
 " Plugin maintains a history of previous yanks, changes and deletes
@@ -130,12 +140,6 @@ Plugin 'kana/vim-textobj-indent'
 Plugin 'gcmt/wildfire.vim'
 " Better Rainbow Parentheses
 Plugin 'kien/rainbow_parentheses.vim'
-" Vim plugin that displays tags in a window, ordered by scope
-Plugin 'majutsushi/tagbar'
-" Automated tag file generation and syntax highlighting of tags in Vim
-"Plugin 'xolox/vim-easytags'
-" A code-completion engine for Vim
-"Plugin 'Valloric/YouCompleteMe'
 " Shows 'Nth match out of M' at every search (index of match+total # matches)
 Plugin 'vim-scripts/IndexedSearch'
 " Start a * or # search from a visual block
@@ -150,8 +154,6 @@ Plugin 'lucapette/vim-textobj-underscore'
 Plugin 'keith/investigate.vim'
 " Plugin for vim to enabling opening a file in a given line
 Plugin 'bogado/file-line'
-" Automatically discover and 'properly' update ctags files on save
-Plugin 'craigemery/vim-autotag'
 " Adds font icons (glyphs ★♨☢) to programming languages, libraries, and web
 " developer filetypes
 "Plugin 'ryanoasis/vim-devicons'
@@ -212,8 +214,6 @@ Plugin 'troydm/easybuffer.vim'
 Plugin 't9md/vim-textmanip'
 " Better Diff options for Vim
 Plugin 'chrisbra/vim-diff-enhanced'
-" A Vim plugin that manages your tag files NOTE: Compare later against easytags
-"Plugin 'ludovicchabant/vim-gutentags'
 " Easily open locally modified files in your git-versioned projects
 Plugin 'jasoncodes/ctrlp-modified.vim'
 " Wrap and unwrap function arguments, lists, and dictionaries in Vim
