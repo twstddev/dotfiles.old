@@ -629,10 +629,10 @@ endif
 
 " bind \ (backward slash) to grep shortcut
 "command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
-nnoremap <leader>g :Ag!<SPACE>
+nnoremap <leader>g :LAg!<SPACE>
 
 " bind K to grep word under cursor
-nnoremap K :Ag! <cword><CR>
+nnoremap K :LAg! <cword><CR>
 
 " UltiSnips
 let g:UltiSnipsEnableSnipMate = 1
