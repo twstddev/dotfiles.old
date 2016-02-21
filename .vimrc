@@ -600,7 +600,15 @@ let g:ctrlp_working_path_mode = 'rw'
 " Don't jump to already open window
 let g:ctrlp_switch_buffer = 0
 " Add funky extensions
-let g:ctrlp_extensions = ['funky']
+let g:ctrlp_extensions = ['funky','tag','buffertag','changes']
+" Files that represent a project root
+let g:ctrlp_root_markers = [".project"]
+" Create shortcuts for ctrlp helpers
+nnoremap <leader>cb :CtrlPBuffer<Cr>
+nnoremap <leader>cr :CtrlPMRU<Cr>
+nnoremap <leader>cT :CtrlPTag<Cr>
+nnoremap <leader>ct :CtrlPBufTag<Cr>
+nnoremap <leader>cc :CtrlPChange<Cr>
 
 " CtrlP Funky
 " Enable function search on ,cf
