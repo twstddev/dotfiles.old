@@ -100,9 +100,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ctrlpvim/ctrlp.vim'
 " Vim plugin for the_silver_searcher, 'ag'
 Plugin 'rking/ag.vim'
-" Automated tag file generation and syntax highlighting of tags in Vim
-"Plugin 'xolox/vim-easytags'
-" A Vim plugin that manages your tag files NOTE: Compare later against easytags
+" A Vim plugin that manages your tag files
 "Plugin 'ludovicchabant/vim-gutentags'
 " Vim plugin that displays tags in a window, ordered by scope
 Plugin 'majutsushi/tagbar'
