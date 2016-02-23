@@ -101,7 +101,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 " Vim plugin for the_silver_searcher, 'ag'
 Plugin 'rking/ag.vim'
 " A Vim plugin that manages your tag files
-"Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'ludovicchabant/vim-gutentags'
 " Vim plugin that displays tags in a window, ordered by scope
 Plugin 'majutsushi/tagbar'
 " Add autocomplete
@@ -753,4 +753,11 @@ let b:match_ignorecase = 1
 " Tabularize
 nmap <leader>ta :Tabularize /
 vmap <leader>ta :Tabularize /
+
+" Gutentags
+set statusline+=%{gutentags#statusline('[Generating\ tags]')}
+let g:gutentags_project_root = [".gtags"]
+" By some reason on windows ctags ignore wildcard
+let g:gutentags_exclude = ["*.min.js"]
+
 " }
