@@ -183,7 +183,7 @@ Plugin 'junegunn/goyo.vim'
 " Changes Vim working directory to project root (identified by presence of known directory or file)
 Plugin 'airblade/vim-rooter'
 " Pasting in Vim with indentation adjusted to destination context
-Plugin 'sickill/vim-pasta'
+"Plugin 'sickill/vim-pasta'
 " Make gvim-only colorschemes work transparently in terminal vim
 Plugin 'godlygeek/csapprox'
 " Elegant buffer explorer - takes very little screen space
@@ -702,7 +702,11 @@ let g:surround_37 = "<% \r %>"
 let g:surround_61 = "<%= \r %>"
 
 " Tagbar
-nnoremap <silent> <leader>to :TagbarToggle<CR>
+nnoremap <silent> <leader>tb :TagbarToggle<CR>
+" Close tagbar when a tag is selected
+let g:tagbar_autoclose = 1
+" Bring cursor focus to tagbar automatically
+let g:tagbar_autofocus = 1
 
 " Fugitive
 " Mappings
