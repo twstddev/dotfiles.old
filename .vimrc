@@ -182,7 +182,9 @@ Plugin 'junegunn/goyo.vim'
 " Plugin 'joonty/vdebug'
 " Changes Vim working directory to project root (identified by presence of known directory or file)
 Plugin 'airblade/vim-rooter'
-" Pasting in Vim with indentation adjusted to destination context
+" Pasting in Vim with indentation adjusted to destination context (currently
+" there is an issue with tagbar and preview mode being bound to P. tagbar
+" filetype must be added to the exclude list in the pasta configuration)
 "Plugin 'sickill/vim-pasta'
 " Make gvim-only colorschemes work transparently in terminal vim
 Plugin 'godlygeek/csapprox'
