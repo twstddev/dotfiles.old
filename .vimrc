@@ -738,4 +738,15 @@ let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_cache_omnifunc = 0
 " Goto within the same buffer
 let g:ycm_goto_buffer_command = 'same-buffer'
+" Configure shortcuts
+nnoremap <leader>jg :YcmCompleter GoTo<CR>
+nnoremap <leader>jdc :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>jdf :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>jr :YcmCompleter GoToReferences<CR>
+nnoremap <leader>ji :YcmCompleter GoToImplementation<CR>
+nnoremap <leader>jt :YcmCompleter GetType<CR>
+nnoremap <leader>jp :YcmCompleter GetParent<CR>
+nnoremap <leader>jd :YcmCompleter GetDoc<CR>
+nnoremap <leader>jR :YcmCompleter RefactorRename<SPACE>
+
 " }
