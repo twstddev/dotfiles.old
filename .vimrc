@@ -746,7 +746,7 @@ nnoremap <leader>jr :YcmCompleter GoToReferences<CR>
 nnoremap <leader>ji :YcmCompleter GoToImplementation<CR>
 nnoremap <leader>jt :YcmCompleter GetType<CR>
 nnoremap <leader>jp :YcmCompleter GetParent<CR>
-nnoremap <leader>jd :YcmCompleter GetDoc<CR>
+nnoremap <leader>jD :YcmCompleter GetDoc<CR>
 nnoremap <leader>jR :YcmCompleter RefactorRename<SPACE>
 
 " }
