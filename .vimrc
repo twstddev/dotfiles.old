@@ -106,10 +106,8 @@ Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'majutsushi/tagbar'
 " A code-completion engine for Vim
 Plugin 'Valloric/YouCompleteMe'
-" A quick notetaking plugin 
-Plugin 'fmoralesc/vim-pad'
 " Plugin maintains a history of previous yanks, changes and deletes
-"Plugin 'vim-scripts/YankRing.vim'
+Plugin 'vim-scripts/YankRing.vim'
 " Execute URLs, footnotes, open emails, organize ideas
 Plugin 'vim-scripts/utl.vim'
 " A simple Vim plugin to switch segments of text with predefined replacements
@@ -329,6 +327,10 @@ Plugin 'kchmck/vim-coffee-script'
 " Vim Cucumber runtime files
 Plugin 'tpope/vim-cucumber'
 
+" Keep track of interesting plugins, which are not necessary at the moment
+" A quick notetaking plugin
+"Plugin 'fmoralesc/vim-pad'
+
 call vundle#end()
 
 " =============
@@ -435,7 +437,7 @@ map <leader>l <C-w>l
 " Use dark background by default
 set background=dark
 " Set color scheme
-:colorscheme flatcolor
+:colorscheme freya
 
 " Use system clipboard (make sure vim has clipboard support enabled)
 set clipboard=unnamed
@@ -748,5 +750,16 @@ nnoremap <leader>jt :YcmCompleter GetType<CR>
 nnoremap <leader>jp :YcmCompleter GetParent<CR>
 nnoremap <leader>jD :YcmCompleter GetDoc<CR>
 nnoremap <leader>jR :YcmCompleter RefactorRename<SPACE>
+
+"Yankring
+let g:yankring_history_dir = "~/.vim/history"
+let g:yankring_history_file = "yank"
+let g:yankring_max_history = 25
+let g:yankring_replace_n_pkey = "<leader>yj"
+let g:yankring_replace_n_nkey = "<leader>yk"
+
+nnoremap <silent> <leader>ys :YRShow<CR>
+" just in case for console vim
+nnoremap <silent> <leader>yc :YRCheckClipboard<CR>
 
 " }
