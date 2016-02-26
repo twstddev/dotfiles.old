@@ -1,0 +1,29 @@
+{
+    "ecmaVersion": 6,
+    "libs": [
+        "browser",
+        "jquery",
+        "chai",
+        "underscore"
+    ],
+    "loadEagerly": [
+    ],
+    "dontLoad": [
+    ],
+    "plugins": {
+        "webpack" : {},
+        "complete_strings": {},
+        "node": {},
+        "lint": {},
+        "angular": {},
+        "requirejs": {
+            "baseURL" : "./",
+            "paths" : {}
+        },
+        "modules": {},
+        "es_modules": {},
+        "doc_comment": {
+            "fullDocs": true
+        }
+    }
+}
