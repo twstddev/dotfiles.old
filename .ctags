@@ -8,7 +8,7 @@
 --exclude=tmp
 
 --extra=+q
---fields=+i+a+S
+--fields=+i+a+S+l
 
 --languages=-javascript
 

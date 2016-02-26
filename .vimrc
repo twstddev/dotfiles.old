@@ -104,12 +104,8 @@ Plugin 'rking/ag.vim'
 Plugin 'ludovicchabant/vim-gutentags'
 " Vim plugin that displays tags in a window, ordered by scope
 Plugin 'majutsushi/tagbar'
-" Add autocomplete
-Plugin 'Shougo/neocomplete.vim'
-" Allows you to use <Tab> for all your insert completion needs
-Plugin 'ervandew/supertab'
 " A code-completion engine for Vim
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 " A quick notetaking plugin 
 Plugin 'fmoralesc/vim-pad'
 " Plugin maintains a history of previous yanks, changes and deletes
@@ -308,7 +304,7 @@ Plugin 'mileszs/apidock.vim'
 " This plugin allows rapid toggling between the two different styles of ruby blocks
 Plugin 'jgdavey/vim-blockle'
 " Ruby code completion
-Plugin 'osyo-manga/vim-monster'
+"Plugin 'osyo-manga/vim-monster'
 " Better rspec syntax highlighting for Vim
 Plugin 'keith/rspec.vim'
 
@@ -562,12 +558,6 @@ let g:syntastic_mode_map = {
 "let g:syntastic_error_symbol='✗'
 "let g:syntastic_warning_symbol='⚠'
 
-" Supertab
-" Initialize autocomplete with supertab
-let g:SuperTabContextDefaultCompletionType = "<c-n>"
-let g:SuperTabDefaultCompletionType = "context"
-set completeopt-=preview
-
 " Easymotion
 " Rebind easymotion to single leader
 let g:EasyMotion_smartcase = 1
@@ -637,37 +627,6 @@ nnoremap K :LAg! <cword><CR>
 " UltiSnips
 let g:UltiSnipsEnableSnipMate = 1
 let g:UltiSnipsExpandTrigger = "<c-j>"
-
-" Neocomplete
-" enable neocomplete on startup
-let g:neocomplete#enable_at_startup = 1
-" Disable AutoComplPop
-let g:acp_enableAtStartup = 0
-" When a capital letter is included switch to case sensitive
-let g:neocomplete#enable_smart_case = 1
-" Set default completion list to maximum 15 entries
-let g:neocomplete#max_list = 15
-" Define keyword.
-if !exists('g:neocomplete#keyword_patterns')
-    let g:neocomplete#keyword_patterns = {}
-endif
-let g:neocomplete#keyword_patterns['default'] = '\h\w*'
-" Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-
-" Add autocomplete for ruby
-let g:neocomplete#sources#omni#input_patterns = {
-            \"ruby" : '[^. *\t]\.\w*\|\h\w*::'
-            \}
-let g:rubycomplete_buffer_loading = 1
-let g:rubycomplete_classes_in_global = 1
-let g:rubycomplete_rails = 1
-let g:rubycomplete_load_gemfile = 1
 
 " Emmet
 imap <C-e> <C-y>,
@@ -766,4 +725,17 @@ let g:gutentags_project_root = [".gtags"]
 " By some reason on windows ctags ignore wildcard
 let g:gutentags_exclude = ["*.min.js"]
 
+" Youcompleteme
+set completeopt-=preview
+" Display suggestions on first character
+let g:ycm_min_num_of_chars_for_completion = 1
+" Collect information from tags as well
+let g:ycm_collect_identifiers_from_tags_files = 1
+" Collect information from the programming language syntax keywords known to
+" vim
+let g:ycm_seed_identifiers_with_syntax = 1
+" Make others onmicompletion engines work better with YCM
+let g:ycm_cache_omnifunc = 0
+" Goto within the same buffer
+let g:ycm_goto_buffer_command = 'same-buffer'
 " }
