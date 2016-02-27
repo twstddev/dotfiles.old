@@ -86,8 +86,6 @@ Plugin 'tpope/vim-repeat'
 Plugin 'sjl/gundo.vim'
 " Plugin that simplifies the transition between multiline and single-line code
 Plugin 'AndrewRadev/splitjoin.vim'
-" Plugin that allows you to visually select increasingly larger regions of text  using the same key combination.
-Plugin 'terryma/vim-expand-region'
 " Extended % matching for HTML, LaTeX, and many other languages
 Plugin 'tmhedberg/matchit'
 " Script for text filtering and alignment
@@ -112,10 +110,6 @@ Plugin 'vim-scripts/YankRing.vim'
 Plugin 'tpope/vim-dispatch'
 " A simple function navigator for ctrlp.vim
 Plugin 'tacahiroy/ctrlp-funky'
-" Create your own text objects
-Plugin 'kana/vim-textobj-user'
-" Text objects for indented blocks of lines
-Plugin 'kana/vim-textobj-indent'
 " Smart selection of the closest text object
 Plugin 'gcmt/wildfire.vim'
 " Better Rainbow Parentheses
@@ -204,6 +198,15 @@ Plugin 'FooSoft/vim-argwrap'
 "Plugin 'tpope/vim-projectionist'
 " Lean & mean status/tabline for vim that's light as air
 Plugin 'bling/vim-airline'
+
+" ============
+" Text Objects
+" ============
+" Create your own text objects
+Plugin 'kana/vim-textobj-user'
+" Text objects for indented blocks of lines
+" ii, ai, iI, aI
+Plugin 'kana/vim-textobj-indent'
 
 " ===========
 " Git support
@@ -713,10 +716,6 @@ map g/ <Plug>(incsearch-stay)
 " Eclim
 " Windows version requires this to be set specifically
 let g:EclimBaseDir = "~/.vim"
-
-" Expand region (vim-expand-region)
-map <leader>ee <Plug>(expand_region_expand)
-map <leader>es <Plug>(expand_region_shrink)
 
 " Matchit
 let b:match_ignorecase = 1
