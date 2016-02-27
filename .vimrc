@@ -780,4 +780,13 @@ nnoremap <leader>do :Copen<CR>
 " Collect mappings from all sources
 let g:fml_all_sources = 1
 
+" Argumentative
+" Just a list of provided bindings for reference
+" [, go to previous argument boundary
+" ], go to next argument boundary
+" <, shift current argument left
+" >, shift current argument right
+" a, 'an argument' text object
+" i, 'inner argument' text object
+
 " }
