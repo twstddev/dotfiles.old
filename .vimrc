@@ -110,8 +110,6 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-scripts/YankRing.vim'
 " Asynchronous build and test dispatcher
 Plugin 'tpope/vim-dispatch'
-" Vim interface to Web API
-"Plugin 'mattn/webapi-vim'
 " A simple function navigator for ctrlp.vim
 Plugin 'tacahiroy/ctrlp-funky'
 " Super simple vim plugin to show the list of buffers in the command bar
@@ -330,6 +328,8 @@ Plugin 'tpope/vim-cucumber'
 "Plugin 'vim-scripts/utl.vim'
 " A simple Vim plugin to switch segments of text with predefined replacements
 "Plugin 'AndrewRadev/switch.vim'
+" Vim interface to Web API
+"Plugin 'mattn/webapi-vim'
 
 call vundle#end()
 
@@ -604,7 +604,15 @@ nnoremap <leader>cC :CtrlPChange<Cr>
 
 " CtrlP Funky
 " Enable function search on ,cf
-"nnoremap <C-f> :CtrlPFunky<Cr>
+nnoremap <leader>cf :CtrlPFunky<Cr>
+" Enable syntax highlighting in the ctrlp window
+let g:ctrlp_funky_syntax_highlight = 1
+" Include ruby class definitions
+let g:ctrlp_funky_ruby_classes = 1
+" Include ruby module definitions
+let g:ctrlp_funky_ruby_modules = 1
+" Include rspec definitions 
+let g:ctrlp_funky_ruby_rspec = 1
 
 " Ag (the_silver_searcher)
 if executable('ag')
