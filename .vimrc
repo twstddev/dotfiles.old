@@ -799,4 +799,12 @@ nmap <silent> <leader>tsv :TestVisit<CR>
 " Execute tests through dispatch
 let test#strategy = 'dispatch'
 
+" Signature
+" A list of useful mappings
+" dmx remove mark 'x'
+" m- delete all marks from the current line
+" m<space> delete all marks from the current buffer
+" m/ open location of all marks from the current buffer
+" m<BS> remove all marks
+
 " }
