@@ -715,9 +715,23 @@ let g:delimitMate_expand_cr = 1
 let g:fml_all_sources = 1
 
 " Incsearch
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
+map / <Plug>(incsearch-forward)
+map ? <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
+" Enable automatic nohl
+let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)zv:ShowSearchIndex<CR>
+map N  <Plug>(incsearch-nohl-N)zv:ShowSearchIndex<CR>
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
+" Make it play nicely with indexed-search
+let g:indexed_search_mappings = 0
+augroup incsearch-indexed
+    autocmd!
+    autocmd User IncSearchLeave ShowSearchIndex
+augroup END
 
 " Eclim
 " Windows version requires this to be set specifically
