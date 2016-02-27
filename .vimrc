@@ -112,25 +112,12 @@ Plugin 'tpope/vim-dispatch'
 Plugin 'tacahiroy/ctrlp-funky'
 " Smart selection of the closest text object
 Plugin 'gcmt/wildfire.vim'
-" Better Rainbow Parentheses
-Plugin 'kien/rainbow_parentheses.vim'
-" Shows 'Nth match out of M' at every search (index of match+total # matches)
-Plugin 'vim-scripts/IndexedSearch'
+" Show 'Match 123 of 456 /search term/' in Vim searches
+Plugin 'henrik/vim-indexed-search'
 " Start a * or # search from a visual block
 Plugin 'nelstrom/vim-visual-star-search'
-" Global search and replace for VI
-Plugin 'skwp/greplace.vim'
-" Text objects for functions
-Plugin 'kana/vim-textobj-function'
-" Underscore text-object for Vim
-Plugin 'lucapette/vim-textobj-underscore'
 " A Vim plugin for looking up documentation
 Plugin 'keith/investigate.vim'
-" Plugin for vim to enabling opening a file in a given line
-Plugin 'bogado/file-line'
-" Adds font icons (glyphs ★♨☢) to programming languages, libraries, and web
-" developer filetypes
-"Plugin 'ryanoasis/vim-devicons'
 " Vim plugin for showing all your <Leader> mappings in a readable table
 " including the descriptions
 Plugin 'ktonga/vim-follow-my-lead'
@@ -159,6 +146,8 @@ Plugin 'junegunn/goyo.vim'
 " Multi-language DBGP debugger client for Vim
 " Plugin 'joonty/vdebug'
 " Changes Vim working directory to project root (identified by presence of known directory or file)
+" There seems to be a bug that doesn't really change cwd and some plugins stop
+" working (easygrep, ycm - ternjs)
 Plugin 'airblade/vim-rooter'
 " Pasting in Vim with indentation adjusted to destination context (currently
 " there is an issue with tagbar and preview mode being bound to P. tagbar
@@ -198,6 +187,10 @@ Plugin 'FooSoft/vim-argwrap'
 "Plugin 'tpope/vim-projectionist'
 " Lean & mean status/tabline for vim that's light as air
 Plugin 'bling/vim-airline'
+" Fast and Easy Find and Replace Across Multiple Files
+" Come back to it later and try to resolve the issue with Ag on windows, where
+" it doesn't recognize --ignore parameter
+"Plugin 'dkprice/vim-easygrep'
 
 " ============
 " Text Objects
@@ -207,6 +200,12 @@ Plugin 'kana/vim-textobj-user'
 " Text objects for indented blocks of lines
 " ii, ai, iI, aI
 Plugin 'kana/vim-textobj-indent'
+" Text objects for functions
+" if, af, iF, aF
+Plugin 'kana/vim-textobj-function'
+" Underscore text-object for Vim
+" i_, a_
+Plugin 'lucapette/vim-textobj-underscore'
 
 " ===========
 " Git support
@@ -329,6 +328,13 @@ Plugin 'tpope/vim-cucumber'
 "Plugin 'AndrewRadev/switch.vim'
 " Vim interface to Web API
 "Plugin 'mattn/webapi-vim'
+" Better Rainbow Parentheses
+"Plugin 'kien/rainbow_parentheses.vim'
+" Adds font icons (glyphs ★♨☢) to programming languages, libraries, and web
+" developer filetypes
+"Plugin 'ryanoasis/vim-devicons'
+" Plugin for vim to enabling opening a file in a given line
+"Plugin 'bogado/file-line'
 
 call vundle#end()
 
@@ -768,5 +774,10 @@ nnoremap <silent> <leader>yc :YRCheckClipboard<CR>
 nnoremap <leader>ds :Dispatch<SPACE>
 nnoremap <leader>dS :Dispatch!<SPACE>
 nnoremap <leader>do :Copen<CR>
+
+" Followmylead
+" Default mapping for the plugin is <leader>fml
+" Collect mappings from all sources
+let g:fml_all_sources = 1
 
 " }
