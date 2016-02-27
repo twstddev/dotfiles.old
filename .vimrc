@@ -824,4 +824,12 @@ let test#strategy = 'dispatch'
 " Wildfire
 map <SPACE> <Plug>(wildfire-fuel)
 
+" Limelight
+" Dim unfocused text
+let g:limelight_default_coefficient = 0.75
+nmap <leader>ll :Limelight!!<CR>
+" Focus on selection
+nmap <Leader>lf <Plug>(Limelight)
+xmap <Leader>lf <Plug>(Limelight)
+
 " }
