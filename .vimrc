@@ -821,4 +821,7 @@ let test#strategy = 'dispatch'
 " m/ open location of all marks from the current buffer
 " m<BS> remove all marks
 
+" Wildfire
+map <SPACE> <Plug>(wildfire-fuel)
+
 " }
