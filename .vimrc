@@ -789,4 +789,14 @@ let g:fml_all_sources = 1
 " a, 'an argument' text object
 " i, 'inner argument' text object
 
+" vim-test
+nmap <silent> <leader>tsn :TestNearest<CR>
+nmap <silent> <leader>tsf :TestFile<CR>
+nmap <silent> <leader>tsa :TestSuite<CR>
+nmap <silent> <leader>tsl :TestLast<CR>
+nmap <silent> <leader>tsv :TestVisit<CR>
+
+" Execute tests through dispatch
+let test#strategy = 'dispatch'
+
 " }
