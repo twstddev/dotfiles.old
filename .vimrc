@@ -112,10 +112,6 @@ Plugin 'vim-scripts/YankRing.vim'
 Plugin 'tpope/vim-dispatch'
 " A simple function navigator for ctrlp.vim
 Plugin 'tacahiroy/ctrlp-funky'
-" Super simple vim plugin to show the list of buffers in the command bar
-"Plugin 'bling/vim-bufferline'
-" Easily search for, substitute, and abbreviate multiple variants of a word
-Plugin 'tpope/vim-abolish'
 " Create your own text objects
 Plugin 'kana/vim-textobj-user'
 " Text objects for indented blocks of lines
@@ -596,7 +592,7 @@ let g:ctrlp_extensions = ['funky','tag','buffertag','changes']
 " Files that represent a project root
 let g:ctrlp_root_markers = [".project"]
 " Create shortcuts for ctrlp helpers
-nnoremap <leader>cb :CtrlPBuffer<Cr>
+nnoremap <leader>cB :CtrlPBuffer<Cr>
 nnoremap <leader>cr :CtrlPMRU<Cr>
 nnoremap <leader>cT :CtrlPTag<Cr>
 nnoremap <leader>ct :CtrlPBufTag<Cr>
