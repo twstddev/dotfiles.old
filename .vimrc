@@ -108,10 +108,6 @@ Plugin 'majutsushi/tagbar'
 Plugin 'Valloric/YouCompleteMe'
 " Plugin maintains a history of previous yanks, changes and deletes
 Plugin 'vim-scripts/YankRing.vim'
-" Execute URLs, footnotes, open emails, organize ideas
-Plugin 'vim-scripts/utl.vim'
-" A simple Vim plugin to switch segments of text with predefined replacements
-Plugin 'AndrewRadev/switch.vim'
 " Asynchronous build and test dispatcher
 Plugin 'tpope/vim-dispatch'
 " Vim interface to Web API
@@ -330,6 +326,10 @@ Plugin 'tpope/vim-cucumber'
 " Keep track of interesting plugins, which are not necessary at the moment
 " A quick notetaking plugin
 "Plugin 'fmoralesc/vim-pad'
+" Execute URLs, footnotes, open emails, organize ideas
+"Plugin 'vim-scripts/utl.vim'
+" A simple Vim plugin to switch segments of text with predefined replacements
+"Plugin 'AndrewRadev/switch.vim'
 
 call vundle#end()
 
@@ -600,7 +600,7 @@ nnoremap <leader>cb :CtrlPBuffer<Cr>
 nnoremap <leader>cr :CtrlPMRU<Cr>
 nnoremap <leader>cT :CtrlPTag<Cr>
 nnoremap <leader>ct :CtrlPBufTag<Cr>
-nnoremap <leader>cc :CtrlPChange<Cr>
+nnoremap <leader>cC :CtrlPChange<Cr>
 
 " CtrlP Funky
 " Enable function search on ,cf
@@ -757,9 +757,13 @@ let g:yankring_history_file = "yank"
 let g:yankring_max_history = 25
 let g:yankring_replace_n_pkey = "<leader>yj"
 let g:yankring_replace_n_nkey = "<leader>yk"
-
 nnoremap <silent> <leader>ys :YRShow<CR>
 " just in case for console vim
 nnoremap <silent> <leader>yc :YRCheckClipboard<CR>
+
+" Dispatch
+nnoremap <leader>ds :Dispatch<SPACE>
+nnoremap <leader>dS :Dispatch!<SPACE>
+nnoremap <leader>do :Copen<CR>
 
 " }
