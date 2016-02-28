@@ -143,8 +143,6 @@ Plugin 'wesQ3/vim-windowswap'
 Plugin 'Valloric/MatchTagAlways'
 " Distraction-free writing in Vim
 Plugin 'junegunn/goyo.vim'
-" Multi-language DBGP debugger client for Vim
-" Plugin 'joonty/vdebug'
 " Changes Vim working directory to project root (identified by presence of known directory or file)
 " There seems to be a bug that doesn't really change cwd and some plugins stop
 " working (easygrep, ycm - ternjs)
@@ -152,7 +150,7 @@ Plugin 'airblade/vim-rooter'
 " Pasting in Vim with indentation adjusted to destination context (currently
 " there is an issue with tagbar and preview mode being bound to P. tagbar
 " filetype must be added to the exclude list in the pasta configuration)
-"Plugin 'sickill/vim-pasta'
+Plugin 'sickill/vim-pasta'
 " Make gvim-only colorschemes work transparently in terminal vim
 Plugin 'godlygeek/csapprox'
 " Elegant buffer explorer - takes very little screen space
@@ -332,6 +330,8 @@ Plugin 'tpope/vim-cucumber'
 "Plugin 'ryanoasis/vim-devicons'
 " Plugin for vim to enabling opening a file in a given line
 "Plugin 'bogado/file-line'
+" Multi-language DBGP debugger client for Vim
+" Plugin 'joonty/vdebug'
 
 call vundle#end()
 
@@ -847,5 +847,12 @@ nmap <leader>Ldr :LinediffReset<CR>
 " Goyo
 nnoremap <leader>Go :Goyo<CR>
 let g:goyo_width = '60%'
+
+" Rooter
+let g:rooter_patterns = ['.tern-project', 'Gemfile', '.git', '.git/', '_darcs/', '.hg/', '.bzr/', '.svn/']
+let g:rooter_change_directory_for_non_project_files = 1
+
+" Pasta
+let g:pasta_disabled_filetypes = ["python", "coffee", "markdown", "yaml", "slim", "nerdtree", "tagbar"]
 
 " }
