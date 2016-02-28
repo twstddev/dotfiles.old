@@ -844,4 +844,8 @@ nmap <leader>Ldr :LinediffReset<CR>
 " Use <leader>ww to mark a window to swap and then use the same mapping on
 " another window to swap the two
 
+" Goyo
+nnoremap <leader>Go :Goyo<CR>
+let g:goyo_width = '60%'
+
 " }
