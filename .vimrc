@@ -829,4 +829,10 @@ nmap <leader>LL :Limelight!!<CR>
 nmap <Leader>Lf <Plug>(Limelight)
 xmap <Leader>Lf <Plug>(Limelight)
 
+" Targets
+" Reference of the useful text objects and hints
+" include 'n' to match the closest next object: cin)
+" include 'l' to match the closest last object: cil)
+" 'a' text object to match function arguments
+
 " }
