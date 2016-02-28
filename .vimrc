@@ -203,9 +203,6 @@ Plugin 'kana/vim-textobj-indent'
 " Text objects for functions
 " if, af, iF, aF
 Plugin 'kana/vim-textobj-function'
-" Underscore text-object for Vim
-" i_, a_
-Plugin 'lucapette/vim-textobj-underscore'
 
 " ===========
 " Git support
