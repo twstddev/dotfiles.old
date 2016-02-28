@@ -840,4 +840,8 @@ xmap <leader>Ldf :Linediff<CR>
 xmap <leader>Ldr :LinediffReset<CR>
 nmap <leader>Ldr :LinediffReset<CR>
 
+" Windowswap
+" Use <leader>ww to mark a window to swap and then use the same mapping on
+" another window to swap the two
+
 " }
