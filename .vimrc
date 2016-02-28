@@ -835,4 +835,9 @@ xmap <Leader>Lf <Plug>(Limelight)
 " include 'l' to match the closest last object: cil)
 " 'a' text object to match function arguments
 
+" Linediff
+xmap <leader>Ldf :Linediff<CR>
+xmap <leader>Ldr :LinediffReset<CR>
+nmap <leader>Ldr :LinediffReset<CR>
+
 " }
