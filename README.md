@@ -9,6 +9,7 @@
 * Install needed syntax checkers - https://github.com/scrooloose/syntastic/wiki/Syntax-Checkers
 * Install ctags - http://ctags.sourceforge.net
 * Install youcompleteme with needed completers - https://github.com/Valloric/YouCompleteMe
+* Install font from - https://github.com/ryanoasis/nerd-fonts ( make sure to install Deja Vu Sans Mono for Windows )
 
 ## ZSH
 * Clone antigen into the .antigen folder and create a symlink to it in your HOME folder - https://github.com/zsh-users/antigen
