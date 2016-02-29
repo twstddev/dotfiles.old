@@ -163,10 +163,14 @@ Plugin 'FooSoft/vim-argwrap'
 Plugin 'tpope/vim-projectionist'
 " Lean & mean status/tabline for vim that's light as air
 Plugin 'bling/vim-airline'
+" A collection of themes for vim-airline
+Plugin 'vim-airline/vim-airline-themes'
 " Fast and Easy Find and Replace Across Multiple Files
 " Come back to it later and try to resolve the issue with Ag on windows, where
 " it doesn't recognize --ignore parameter
 "Plugin 'dkprice/vim-easygrep'
+"A plugin of NERDTree showing git status
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 " ============
 " Text Objects
