@@ -170,8 +170,6 @@ Plugin 'vim-airline/vim-airline-themes'
 " Come back to it later and try to resolve the issue with Ag on windows, where
 " it doesn't recognize --ignore parameter
 "Plugin 'dkprice/vim-easygrep'
-"A plugin of NERDTree showing git status
-Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 " ============
 " Text Objects
@@ -562,6 +560,8 @@ endfunction
 let g:airline#extensions#tabline#enabled = 1
 " Show number of splits and tab number
 let g:airline#extensions#tabline#tab_nr_type = 2
+" Don't show buffers with a single tab
+let g:airline#extensions#tabline#show_buffers = 0
 " Set some default mappings for navigation
 let g:airline#extensions#tabline#buffer_idx_mode = 1
 nmap <leader>1 <Plug>AirlineSelectTab1
@@ -773,6 +773,8 @@ augroup END
 " Eclim
 " Windows version requires this to be set specifically
 let g:EclimBaseDir = "~/.vim"
+" Play nicely with YouCompleteMe
+let g:EclimCompletionMethod = 'omnifunc'
 
 " Matchit
 let b:match_ignorecase = 1
