@@ -523,6 +523,15 @@ nmap <silent> <leader>ev :e $MYVIMRC<CR>
 " Reload vimrc
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
+" Don't highlight cursor line in inactive windows
+augroup CursorLine
+    au!
+    au VimEnter * setlocal cursorline
+    au WinEnter * setlocal cursorline
+    au BufWinEnter * setlocal cursorline
+    au WinLeave * setlocal nocursorline
+augroup END
+
 " }
 
 " =====================
@@ -532,6 +541,13 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 " Airline
 "let g:airline_powerline_fonts = 1
 let g:airline_theme = "airlineish"
+let g:airline_theme_patch_func = 'AirlineThemePatch'
+function! AirlineThemePatch(palette)
+  if g:airline_theme == 'airlineish'
+    let s:IA = [ '#eeeeee' , '#4F5A5C' , 233 , 67 , '' ]
+    let a:palette.inactive = airline#themes#generate_color_map(s:IA, s:IA, s:IA)
+  endif
+endfunction
 
 " NERDTree
 " Enable on Ctrl + N
