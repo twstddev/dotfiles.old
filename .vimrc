@@ -160,7 +160,7 @@ Plugin 'jasoncodes/ctrlp-modified.vim'
 " Wrap and unwrap function arguments, lists, and dictionaries in Vim
 Plugin 'FooSoft/vim-argwrap'
 " Projectionist provides granular project configuration using "projections".
-"Plugin 'tpope/vim-projectionist'
+Plugin 'tpope/vim-projectionist'
 " Lean & mean status/tabline for vim that's light as air
 Plugin 'bling/vim-airline'
 " Fast and Easy Find and Replace Across Multiple Files
