@@ -775,6 +775,78 @@ augroup END
 let g:EclimBaseDir = "~/.vim"
 " Play nicely with YouCompleteMe
 let g:EclimCompletionMethod = 'omnifunc'
+" Update eclipse local history for better experience while pairing with Java programmers who use Eclipse
+let g:EclimKeepLocalHistory = 1
+" Useful mappings
+nnoremap <leader>epr :ProjectRefresh<CR>
+nnoremap <leader>epR :ProjectRefreshAll<CR>
+" List current project warnings and errors
+nnoremap <leader>epP :ProjectProblems<CR>
+" List only project errors
+nnoremap <leader>epp :ProjectProblems!<CR>
+" Build current Eclipse project
+nnoremap <leader>epb :ProjectBuild<CR>
+" Run current Eclipse project
+nnoremap <leader>epx :ProjectRun<CR>
+" Show list of run configurations for the current project
+nnoremap <leader>epX :ProjectRunList<CR>
+" Display suggestions for the currently highlighted error
+nnoremap <leader>ejC :JavaCorrect<CR>
+" Create or update JavaDoc comment
+nnoremap <leader>ejdc :JavaDocComment<CR>
+" Preview JavaDoc for the word under cursor
+nnoremap <leader>ejdp :JavaDocPreview<CR>
+" Format current line or selection, to format the whole file do :%JavaFormat
+nnoremap <leader>ejf :JavaFormat<CR>
+" Rename symbol under cursor
+nnoremap <leader>ejrr :JavaRename<SPACE>
+" Move top level class or interface
+nnoremap <leader>ejrm :JavaMove<SPACE>
+" Undo refactoring changes
+nnoremap <leader>ejru :RefactorUndo<CR>
+" Show class hierarchy
+nnoremap <leader>ejh :JavaHierarchy<CR>
+" Show call hierarchy
+nnoremap <leader>ejch :JavaCallHierarchy<CR>
+" Show call hierarchy with calees
+nnoremap <leader>ejcH :JavaCallHierarchy!<CR>
+" Import package for the symbol under cursor
+nnoremap <leader>eji :JavaImport<CR>
+" Organize all imports
+nnoremap <leader>ejI :JavaImportOrganize<CR>
+" Create new Generic
+nnoremap <leader>ejN :JavaNew<SPACE>
+" Create new Class
+nnoremap <leader>ejnc :JavaNew class<SPACE>
+" Create new Interface
+nnoremap <leader>ejni :JavaNew interface<SPACE>
+" Create new Abstract
+nnoremap <leader>ejna :JavaNew abstract<SPACE>
+" Create new Enum
+nnoremap <leader>ejne :JavaNew enum<SPACE>
+" Generate constructor. As well works with selection that covers class fields
+nnoremap <leader>ejgc :JavaConstructor<CR>
+xnoremap <leader>ejgc :JavaConstructor<CR>
+" Generate getter and setter for the field under cursor
+nnoremap <leader>ejga :JavaGetSet<CR>
+" Generate getter for the field under cursor
+nnoremap <leader>ejgg :JavaGet<CR>
+" Generate setter for the field under cursor
+nnoremap <leader>ejgs :JavaSet<CR>
+" Generate implementation
+nnoremap <leader>ejgi :JavaImpl<CR>
+" Generate delegate
+nnoremap <leader>ejgd :JavaDelegate<CR>
+" Perform a generic Java Search
+nnoremap <leader>ejS :JavaSearch -p<space>
+" Perform generic search for the symbol under cursor
+nnoremap <leader>ejsa :JavaSearch -x all<CR>
+" Search for declaration
+nnoremap <leader>ejsd :JavaSearch -x declaration<CR>
+" Search for implementation
+nnoremap <leader>ejsi :JavaSearch -x implementors<CR>
+" Search for references
+nnoremap <leader>ejsr :JavaSearch -x references<CR>
 
 " Matchit
 let b:match_ignorecase = 1
