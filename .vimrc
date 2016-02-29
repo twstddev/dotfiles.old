@@ -147,26 +147,12 @@ Plugin 'junegunn/goyo.vim'
 " There seems to be a bug that doesn't really change cwd and some plugins stop
 " working (easygrep, ycm - ternjs)
 Plugin 'airblade/vim-rooter'
-" Pasting in Vim with indentation adjusted to destination context (currently
-" there is an issue with tagbar and preview mode being bound to P. tagbar
-" filetype must be added to the exclude list in the pasta configuration)
+" Pasting in Vim with indentation adjusted to destination context
 Plugin 'sickill/vim-pasta'
 " Make gvim-only colorschemes work transparently in terminal vim
 Plugin 'godlygeek/csapprox'
 " CtrlP extension for fuzzy-search in tag matches
 Plugin 'ivalkeen/vim-ctrlp-tjump'
-" Peekaboo extends " and @ in normal mode and <CTRL-R> in insert mode so you can see the contents of the registers
-"Plugin 'junegunn/vim-peekaboo'
-" Highlight cursor word
-Plugin 'osyo-manga/vim-brightest'
-" Extension for ctrlp.vim, to have a command palette like sublime text 2
-Plugin 'fisadev/vim-ctrlp-cmdpalette'
-" Vim global plugin for doing single, multi-patch or diff code reviews
-Plugin 'junkblocker/patchreview-vim'
-" Vim plugin to quickly switch between buffers
-Plugin 'troydm/easybuffer.vim'
-" Easy text manupilation for vim
-Plugin 't9md/vim-textmanip'
 " Better Diff options for Vim
 Plugin 'chrisbra/vim-diff-enhanced'
 " Easily open locally modified files in your git-versioned projects
@@ -211,6 +197,8 @@ Plugin 'tpope/vim-git'
 Plugin 'int3/vim-extradite'
 " Fugitive extension to manage and merge Git branches
 Plugin 'idanarye/vim-merginal'
+" Vim global plugin for doing single, multi-patch or diff code reviews
+Plugin 'junkblocker/patchreview-vim'
 
 " ===================
 " Syntax and languages
@@ -330,6 +318,14 @@ Plugin 'tpope/vim-cucumber'
 "Plugin 'blueyed/vim-diminactive'
 " A powerful color tool in vim
 "Plugin 'Rykka/colorv.vim'
+" Peekaboo extends " and @ in normal mode and <CTRL-R> in insert mode so you can see the contents of the registers
+"Plugin 'junegunn/vim-peekaboo'
+" Highlight cursor word
+"Plugin 'osyo-manga/vim-brightest'
+" Extension for ctrlp.vim, to have a command palette like sublime text 2
+"Plugin 'fisadev/vim-ctrlp-cmdpalette'
+" Easy text manupilation for vim
+"Plugin 't9md/vim-textmanip'
 
 call vundle#end()
 
@@ -858,5 +854,12 @@ nnoremap <c-]> :CtrlPtjump<cr>
 vnoremap <c-]> :CtrlPtjumpVisual<cr>
 " Behave as the default shortcut by default
 let g:ctrlp_tjump_only_silent = 1
+
+" Ctrlp modified
+nnoremap <leader>cg :CtrlPBranch<CR>
+nnoremap <leader>cG :CtrlPModified<CR>
+
+" Argwrap
+nnoremap <silent> <leader>aw :ArgWrap<CR>
 
 " }
