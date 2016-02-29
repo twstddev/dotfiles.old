@@ -49,6 +49,7 @@ Plugin 'hhff/SpacegrayEighties.vim'
 Plugin 'KabbAmine/yowish.vim'
 Plugin 'crusoexia/vim-dream'
 Plugin 'tristen/superman'
+Plugin 'AlessandroYorba/Sierra'
 " Lean & mean status/tabline for vim that's light as air
 Plugin 'paranoida/vim-airlineish'
 
