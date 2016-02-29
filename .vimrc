@@ -153,14 +153,6 @@ Plugin 'airblade/vim-rooter'
 Plugin 'sickill/vim-pasta'
 " Make gvim-only colorschemes work transparently in terminal vim
 Plugin 'godlygeek/csapprox'
-" Elegant buffer explorer - takes very little screen space
-"Plugin 'fholgado/minibufexpl.vim'
-" Always have a nice view for vim split windows!
-"Plugin 'zhaocai/GoldenView.Vim'
-" Vim plugin to dim inactive windows
-"Plugin 'blueyed/vim-diminactive'
-" A powerful color tool in vim
-Plugin 'Rykka/colorv.vim'
 " CtrlP extension for fuzzy-search in tag matches
 Plugin 'ivalkeen/vim-ctrlp-tjump'
 " Peekaboo extends " and @ in normal mode and <CTRL-R> in insert mode so you can see the contents of the registers
@@ -332,6 +324,12 @@ Plugin 'tpope/vim-cucumber'
 "Plugin 'bogado/file-line'
 " Multi-language DBGP debugger client for Vim
 " Plugin 'joonty/vdebug'
+" Always have a nice view for vim split windows!
+"Plugin 'zhaocai/GoldenView.Vim'
+" Vim plugin to dim inactive windows
+"Plugin 'blueyed/vim-diminactive'
+" A powerful color tool in vim
+"Plugin 'Rykka/colorv.vim'
 
 call vundle#end()
 
@@ -439,7 +437,7 @@ map <leader>l <C-w>l
 " Use dark background by default
 set background=dark
 " Set color scheme
-:colorscheme freya
+:colorscheme gloom
 
 " Use system clipboard (make sure vim has clipboard support enabled)
 set clipboard=unnamed
@@ -854,5 +852,11 @@ let g:rooter_change_directory_for_non_project_files = 1
 
 " Pasta
 let g:pasta_disabled_filetypes = ["python", "coffee", "markdown", "yaml", "slim", "nerdtree", "tagbar"]
+
+" Ctrlp tjump
+nnoremap <c-]> :CtrlPtjump<cr>
+vnoremap <c-]> :CtrlPtjumpVisual<cr>
+" Behave as the default shortcut by default
+let g:ctrlp_tjump_only_silent = 1
 
 " }
