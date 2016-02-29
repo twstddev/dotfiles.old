@@ -17,7 +17,7 @@ set vb t_vb=
 if has ( "gui_macvim" )
     set guifont=Menlo:h12
 else
-    set guifont=Lucida_Console:h9
+    set guifont=DejaVu_Sans_Mono_For_Powerline:h9:cANSI,Lucida_Console:h9
 endif
 
 "Remember size and position of the window

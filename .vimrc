@@ -438,7 +438,7 @@ map <leader>l <C-w>l
 " Use dark background by default
 set background=dark
 " Set color scheme
-:colorscheme gloom
+:colorscheme flatcolor
 
 " Use system clipboard (make sure vim has clipboard support enabled)
 set clipboard=unnamed
@@ -539,15 +539,40 @@ augroup END
 " =====================
 
 " Airline
-"let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1
 let g:airline_theme = "airlineish"
 let g:airline_theme_patch_func = 'AirlineThemePatch'
 function! AirlineThemePatch(palette)
   if g:airline_theme == 'airlineish'
+    " change inactive line background color
     let s:IA = [ '#eeeeee' , '#4F5A5C' , 233 , 67 , '' ]
     let a:palette.inactive = airline#themes#generate_color_map(s:IA, s:IA, s:IA)
+
+    " Change tabline colors
+    let g:airline#themes#airlineish#palette.tabline = {
+                \ 'airline_tab':     [ '#ffffff' , '#423B52' ,  15 , 200  , '' ],
+                \ 'airline_tabsel':  [ '#ffffff' , '#875fd7' ,  15 , 98  , '' ],
+                \ 'airline_tabtype': [ '#ffffff' , '#875fd7' ,  15 , 98  , '' ],
+                \ 'airline_tabfill': [ '#ffffff' , '#121212' ,  15 , 233 , '' ],
+                \ 'airline_tabmod':  [ '#ffffff' , '#ff5f5f' ,  15 , 33  , '' ]
+                \ }
   endif
 endfunction
+" Enable airline tabline for better tabs
+let g:airline#extensions#tabline#enabled = 1
+" Show number of splits and tab number
+let g:airline#extensions#tabline#tab_nr_type = 2
+" Set some default mappings for navigation
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+nmap <leader>1 <Plug>AirlineSelectTab1
+nmap <leader>2 <Plug>AirlineSelectTab2
+nmap <leader>3 <Plug>AirlineSelectTab3
+nmap <leader>4 <Plug>AirlineSelectTab4
+nmap <leader>5 <Plug>AirlineSelectTab5
+nmap <leader>6 <Plug>AirlineSelectTab6
+nmap <leader>7 <Plug>AirlineSelectTab7
+nmap <leader>8 <Plug>AirlineSelectTab8
+nmap <leader>9 <Plug>AirlineSelectTab9
 
 " NERDTree
 " Enable on Ctrl + N
