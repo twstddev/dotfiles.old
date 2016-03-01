@@ -15,7 +15,7 @@ set vb t_vb=
 
 "Set font to better one
 if has ( "gui_macvim" )
-    set guifont=Menlo:h12
+    set guifont=DejaVu_Sans_Mono_For_Powerline:h12,Menlo:h12
 else
     set guifont=DejaVu_Sans_Mono_For_Powerline:h9:cANSI,Lucida_Console:h9
 endif
