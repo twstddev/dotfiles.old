@@ -238,8 +238,6 @@ Plugin 'mxw/vim-jsx'
 Plugin 'claco/jasmine.vim'
 " Typescript syntax files for Vim
 Plugin 'leafgarland/typescript-vim'
-" Tern plugin for Vim
-"Plugin 'ternjs/tern_for_vim'
 " Text objects for functions in javascript.
 Plugin 'thinca/vim-textobj-function-javascript'
 " List of JavaScript ES6 snippets and syntax highlighting for vim
@@ -691,14 +689,7 @@ let g:vim_json_syntax_conceal = 0
 let g:javascript_enable_domhtmlcss=1
 
 " Vim-javascript-libraries-syntax
-let g:used_javascript_libs = 'underscore,backbone,angularjs,react,jasmine,chai'
-
-" Ternjs for vim
-map <leader>td :TernDefPreview<CR>
-map <leader>tD :TernDocBrowse<CR>
-map <leader>tt :TernType<CR>
-map <leader>tr :TernRefs<CR>
-map <leader>tR :TernRename<CR>
+let g:used_javascript_libs = 'underscore,backbone,angularjs,react,jasmine,chai,angularui,angularuirouter,requirejs,flux,jquery'
 
 " Autotag
 let g:autotagExcludeSuffixes = "tml.xml.text.txt.vim"
@@ -981,5 +972,52 @@ nnoremap <leader>cG :CtrlPModified<CR>
 
 " Argwrap
 nnoremap <silent> <leader>aw :ArgWrap<CR>
+
+" Markdown
+" Don't fold by default
+let g:vim_markdown_folding_disabled = 1
+
+" Jsx
+" Allow Jsx in javascript files
+let g:jsx_ext_required = 0
+
+" Jsdoc
+nnoremap <leader>Jsd :JsDoc<CR>
+
+" Vim-ruby
+" Reference of text objects
+" am, im target method
+" aM, iM target class
+" Hihglight ruby operators
+let ruby_operators = 1
+" Enable ruby completion
+let g:rubycomplete_buffer_loading = 1
+" Parse classes and methods
+let g:rubycomplete_classes_in_global = 3
+" Enable rails completion
+let g:rubycomplete_rails = 1
+" Parse gemfile too
+let g:rubycomplete_load_gemfile = 1
+
+" Vim textobject rubyblock
+" Reference text objects
+" ir, ar target ruby block ( anything that has end )
+
+" Rubyrefactoring
+" Reference to useful mappings
+" ,rap add a parameter to method
+" ,rec extract constant
+" ,relv extract local variable
+" ,rit inline temp
+" ,rrlv rename local variable (visual or under cursor)
+" ,rriv rename instance variable(visual)
+" ,rem extract method (visual)
+
+" Rails
+" Display development logs
+nnoremap <leader>ral :Rlog<CR>
+" Extract part of view->partial, helper->helper or controller -> concern
+" Provide a name
+nnoremap <leader>rax :Rextract<space>
 
 " }
