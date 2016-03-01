@@ -191,17 +191,13 @@ Plugin 'tpope/vim-fugitive'
 " A Vim plugin which shows a git diff in the gutter (sign column) and stages/reverts hunks
 Plugin 'airblade/vim-gitgutter'
 " This is a vimscript for creating gists
-Plugin 'mattn/gist-vim'
+"Plugin 'mattn/gist-vim'
 " A 'gitk clone' plugin for the text editor Vim
 Plugin 'gregsexton/gitv'
 " Vim Git runtime files
 Plugin 'tpope/vim-git'
-" A git commit browser for vim. Extends fugitive.vim
-Plugin 'int3/vim-extradite'
 " Fugitive extension to manage and merge Git branches
 Plugin 'idanarye/vim-merginal'
-" Vim global plugin for doing single, multi-patch or diff code reviews
-Plugin 'junkblocker/patchreview-vim'
 
 " ===================
 " Syntax and languages
@@ -696,6 +692,9 @@ let g:autotagExcludeSuffixes = "tml.xml.text.txt.vim"
 
 " Gitgutter
 let g:gitgutter_map_keys = 0
+" Realtime mode causes to many cmd popups on windows. Let's just disable it
+let g:gitgutter_realtime = 0
+let g:gitgutter_eager = 0
 
 " Surround
 " Wrap the token under the cursor in #{} ( use # )
@@ -719,11 +718,11 @@ nnoremap <silent> <leader>Gd :Gdiff<CR>
 nnoremap <silent> <leader>Gc :Gcommit<CR>
 nnoremap <silent> <leader>Gb :Gblame<CR>
 nnoremap <silent> <leader>Gl :Glog<CR>
-nnoremap <silent> <leader>Gp :Git push<CR>
+nnoremap <silent> <leader>GL :Gpull<CR>
+nnoremap <silent> <leader>Gp :Gpush<CR>
 nnoremap <silent> <leader>Gr :Gread<CR>
 nnoremap <silent> <leader>Gw :Gwrite<CR>
 nnoremap <silent> <leader>Ge :Gedit<CR>
-nnoremap <silent> <leader>Gg :SignifyToggle<CR>
 
 " Indent guides
 " Set guides width to a narrow value
@@ -1019,5 +1018,11 @@ nnoremap <leader>ral :Rlog<CR>
 " Extract part of view->partial, helper->helper or controller -> concern
 " Provide a name
 nnoremap <leader>rax :Rextract<space>
+
+" gitv
+" For the whole repository
+nnoremap <silent> <leader>GV :Gitv<CR>
+" For the current buffer only
+nnoremap <silent> <leader>Gv :Gitv!<CR>
 
 " }
