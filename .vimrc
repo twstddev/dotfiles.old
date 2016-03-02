@@ -24,7 +24,7 @@ Plugin 'junegunn/seoul256.vim'
 Plugin 'zeis/vim-kolor'
 Plugin 'noahfrederick/vim-hemisu'
 Plugin 'vim-scripts/Colour-Sampler-Pack'
-Plugin 'daylerees/colour-schemes', { 'rtp': 'vim/' }
+Plugin 'daylerees/colour-schemes', { 'rtp': 'vim' }
 Plugin 'petelewis/vim-evolution'
 Plugin 'joshdick/onedark.vim'
 Plugin 'mkarmona/materialbox'
@@ -43,7 +43,7 @@ Plugin 'wellsjo/wellsokai.vim'
 Plugin 'duythinht/inori'
 Plugin 'nice/sweater'
 Plugin 'john2x/flatui.vim'
-Plugin 'raphamorim/lucario', { 'rtp': 'vim/' }
+Plugin 'raphamorim/lucario', { 'rtp': 'vim' }
 Plugin 'ronny/birds-of-paradise.vim'
 Plugin 'hhff/SpacegrayEighties.vim'
 Plugin 'KabbAmine/yowish.vim'
@@ -430,7 +430,7 @@ map <leader>l <C-w>l
 " Use dark background by default
 set background=dark
 " Set color scheme
-:colorscheme flatcolor
+:colorscheme grunge
 
 " Use system clipboard (make sure vim has clipboard support enabled)
 set clipboard=unnamed
