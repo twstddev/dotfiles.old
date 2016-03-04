@@ -304,7 +304,7 @@ Plugin 'tpope/vim-cucumber'
 "Plugin 'kien/rainbow_parentheses.vim'
 " Adds font icons (glyphs ★♨☢) to programming languages, libraries, and web
 " developer filetypes
-"Plugin 'ryanoasis/vim-devicons'
+Plugin 'ryanoasis/vim-devicons'
 " Plugin for vim to enabling opening a file in a given line
 "Plugin 'bogado/file-line'
 " Multi-language DBGP debugger client for Vim
@@ -430,7 +430,7 @@ map <leader>l <C-w>l
 " Use dark background by default
 set background=dark
 " Set color scheme
-:colorscheme grunge
+:colorscheme gruvbox
 
 " Use system clipboard (make sure vim has clipboard support enabled)
 set clipboard=unnamed
@@ -1024,5 +1024,11 @@ nnoremap <leader>rax :Rextract<space>
 nnoremap <silent> <leader>GV :Gitv<CR>
 " For the current buffer only
 nnoremap <silent> <leader>Gv :Gitv!<CR>
+
+" Devicons
+" Reduce default padding in NERDtree
+let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
+" Required to remove dots in the icons. WTF???
+autocmd FileType nerdtree setlocal nolist
 
 " }
