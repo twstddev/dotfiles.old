@@ -304,7 +304,9 @@ Plugin 'tpope/vim-cucumber'
 "Plugin 'kien/rainbow_parentheses.vim'
 " Adds font icons (glyphs ★♨☢) to programming languages, libraries, and web
 " developer filetypes
-Plugin 'ryanoasis/vim-devicons'
+if !has('win32') && !has('win64')
+    Plugin 'ryanoasis/vim-devicons'
+endif
 " Plugin for vim to enabling opening a file in a given line
 "Plugin 'bogado/file-line'
 " Multi-language DBGP debugger client for Vim
