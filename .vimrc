@@ -597,6 +597,8 @@ let g:syntastic_loc_list_height = 5
 let g:syntastic_mode_map = {
     \ "mode": "active",
     \ "passive_filetypes": ["java"] }
+" For now keep tsc falling back to tsconfig.json
+let g:syntastic_typescript_tsc_fname = ''
 
 " Make sure icons are enabled
 "let g:syntastic_enable_signs = 1
