@@ -50,6 +50,9 @@ Plugin 'KabbAmine/yowish.vim'
 Plugin 'crusoexia/vim-dream'
 Plugin 'tristen/superman'
 Plugin 'AlessandroYorba/Sierra'
+Plugin 'AlessandroYorba/Alduin'
+Plugin 'atelierbram/vim-colors_duotones'
+Plugin 'ninja/sky'
 " Lean & mean status/tabline for vim that's light as air
 Plugin 'paranoida/vim-airlineish'
 
@@ -290,6 +293,8 @@ Plugin 'tpope/vim-haml'
 Plugin 'kchmck/vim-coffee-script'
 " Vim Cucumber runtime files
 Plugin 'tpope/vim-cucumber'
+" Maven syntax highlighting
+Plugin 'NLKNguyen/vim-maven-syntax'
 
 " Keep track of interesting plugins, which are not necessary at the moment
 " A quick notetaking plugin
@@ -876,6 +881,11 @@ nnoremap <leader>Jt :YcmCompleter GetType<CR>
 nnoremap <leader>Jp :YcmCompleter GetParent<CR>
 nnoremap <leader>JD :YcmCompleter GetDoc<CR>
 nnoremap <leader>JR :YcmCompleter RefactorRename<SPACE>
+" Enable omnicomplete for various languages
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
 "Yankring
 let g:yankring_history_dir = "~/.vim/history"
