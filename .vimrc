@@ -437,7 +437,7 @@ map <leader>l <C-w>l
 " Use dark background by default
 set background=dark
 " Set color scheme
-:colorscheme gruvbox
+:colorscheme kellys
 
 " Use system clipboard (make sure vim has clipboard support enabled)
 set clipboard=unnamed
@@ -870,7 +870,9 @@ let g:ycm_collect_identifiers_from_tags_files = 1
 " vim
 let g:ycm_seed_identifiers_with_syntax = 1
 " Make others onmicompletion engines work better with YCM
-let g:ycm_cache_omnifunc = 0
+" Have to keep it enabled for now, since the performance with eclim is just
+" way too bad
+let g:ycm_cache_omnifunc = 1
 " Goto within the same buffer
 let g:ycm_goto_buffer_command = 'same-buffer'
 " Configure shortcuts
