@@ -295,6 +295,8 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-cucumber'
 " Maven syntax highlighting
 Plugin 'NLKNguyen/vim-maven-syntax'
+" Support for plantuml syntax
+Plugin 'aklt/plantuml-syntax'
 
 " Keep track of interesting plugins, which are not necessary at the moment
 " A quick notetaking plugin
@@ -437,7 +439,7 @@ map <leader>l <C-w>l
 " Use dark background by default
 set background=dark
 " Set color scheme
-:colorscheme lucario
+:colorscheme oceanicnext
 
 " Use system clipboard (make sure vim has clipboard support enabled)
 set clipboard=unnamed
@@ -565,6 +567,8 @@ let g:airline#extensions#tabline#tab_nr_type = 2
 let g:airline#extensions#tabline#show_buffers = 0
 " Set some default mappings for navigation
 let g:airline#extensions#tabline#buffer_idx_mode = 1
+" Don't show open splits within the tab
+let g:airline#extensions#tabline#show_splits = 0
 nmap <leader>1 <Plug>AirlineSelectTab1
 nmap <leader>2 <Plug>AirlineSelectTab2
 nmap <leader>3 <Plug>AirlineSelectTab3

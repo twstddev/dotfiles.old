@@ -4,7 +4,6 @@
 --exclude=*.min.js
 --exclude=*.js.map
 --exclude=bower_components
---exclude=*.java
 --exclude=tmp
 
 --extra=+q
