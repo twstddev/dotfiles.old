@@ -53,6 +53,16 @@ Plugin 'AlessandroYorba/Sierra'
 Plugin 'AlessandroYorba/Alduin'
 Plugin 'atelierbram/vim-colors_duotones'
 Plugin 'ninja/sky'
+Plugin 'jacoborus/tender.vim'
+Plugin 'bcicen/vim-vice'
+Plugin 'dracula/vim'
+Plugin 'aereal/vim-colors-japanesque'
+Plugin 'rakr/vim-two-firewatch'
+Plugin 'tyrannicaltoucan/vim-deep-space'
+Plugin 'notpratheek/vim-luna'
+Plugin 'easysid/mod8.vim'
+Plugin 'jscappini/material.vim'
+Plugin 'trusktr/seti.vim'
 " Lean & mean status/tabline for vim that's light as air
 Plugin 'paranoida/vim-airlineish'
 
@@ -439,7 +449,7 @@ map <leader>l <C-w>l
 " Use dark background by default
 set background=dark
 " Set color scheme
-:colorscheme spacegrayeighties
+:colorscheme vivid
 
 " Use system clipboard (make sure vim has clipboard support enabled)
 set clipboard=unnamed
