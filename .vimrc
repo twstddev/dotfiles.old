@@ -312,7 +312,7 @@ Plugin 'aklt/plantuml-syntax'
 " Adds font icons (glyphs ★♨☢) to programming languages, libraries, and web
 " developer filetypes
 if !has('win32') && !has('win64')
-    Plugin 'ryanoasis/vim-devicons'
+    "Plugin 'ryanoasis/vim-devicons'
 endif
 " Plugin for vim to enabling opening a file in a given line
 "Plugin 'bogado/file-line'
@@ -439,7 +439,7 @@ map <leader>l <C-w>l
 " Use dark background by default
 set background=dark
 " Set color scheme
-:colorscheme oceanicnext
+:colorscheme spacegrayeighties
 
 " Use system clipboard (make sure vim has clipboard support enabled)
 set clipboard=unnamed
