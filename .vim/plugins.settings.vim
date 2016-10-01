@@ -163,9 +163,9 @@ let NERDTreeAutoDeleteBuffer = 1
 "" Emmet
 "imap <C-e> <C-y>,
 "
-"" Vim-json
+" Vim-json
 "let g:vim_json_syntax_conceal = 0
-"
+
 "" Vim-javascript
 ""Enable HTML/CSS highlighting in JS
 "let g:javascript_enable_domhtmlcss=1
@@ -327,10 +327,10 @@ let g:delimitMate_expand_cr = 1
 " Matchit
 let b:match_ignorecase = 1
 
-"" Tabularize
-"nmap <leader>ta :Tabularize /
-"vmap <leader>ta :Tabularize /
-"
+" Tabularize
+nmap <leader>ta :Tabularize /
+vmap <leader>ta :Tabularize /
+
 "" Gutentags
 "set statusline+=%{gutentags#statusline('[Generating\ tags]')}
 "let g:gutentags_project_root = [".gtags"]
@@ -448,6 +448,8 @@ let g:goyo_width = '60%'
 " Rooter
 let g:rooter_patterns = ['.tern-project', 'Gemfile', '.git', '.git/', '_darcs/', '.hg/', '.bzr/', '.svn/']
 let g:rooter_change_directory_for_non_project_files = 1
+" Stop echoing project directory
+let g:rooter_silent_chdir = 1
 
 " Pasta
 let g:pasta_disabled_filetypes = ["python", "coffee", "markdown", "yaml", "slim", "nerdtree", "tagbar"]
@@ -464,11 +466,11 @@ let g:pasta_disabled_filetypes = ["python", "coffee", "markdown", "yaml", "slim"
 "
 "" Argwrap
 "nnoremap <silent> <leader>aw :ArgWrap<CR>
-"
+
 "" Markdown
 "" Don't fold by default
 "let g:vim_markdown_folding_disabled = 1
-"
+
 "" Jsx
 "" Allow Jsx in javascript files
 "let g:jsx_ext_required = 0

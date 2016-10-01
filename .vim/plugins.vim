@@ -110,6 +110,9 @@ Plug 'airblade/vim-rooter'
 Plug 'sickill/vim-pasta'
 " Make gvim-only colorschemes work transparently in terminal vim
 Plug 'godlygeek/csapprox'
+" Script for text filtering and alignment ( keep it because some other plugins
+" require it. puppet )
+Plug 'godlygeek/tabular'
 "" A plugin for visually displaying indent levels
 "Plugin 'nathanaelkane/vim-indent-guides'
 "" A syntax checking plugin
@@ -122,8 +125,6 @@ Plug 'godlygeek/csapprox'
 "Plugin 'sjl/gundo.vim'
 "" Plugin that simplifies the transition between multiline and single-line code
 "Plugin 'AndrewRadev/splitjoin.vim'
-"" Script for text filtering and alignment
-"Plugin 'godlygeek/tabular'
 "" Easy text exchange operator
 "Plugin 'tommcdo/vim-exchange'
 "" Multiple cursors and selection support
@@ -175,19 +176,19 @@ Plug 'godlygeek/csapprox'
 "" Come back to it later and try to resolve the issue with Ag on windows, where
 "" it doesn't recognize --ignore parameter
 ""Plugin 'dkprice/vim-easygrep'
-"
-"" ============
-"" Text Objects
-"" ============
-"" Create your own text objects
-"Plugin 'kana/vim-textobj-user'
-"" Text objects for indented blocks of lines
-"" ii, ai, iI, aI
-"Plugin 'kana/vim-textobj-indent'
-"" Text objects for functions
-"" if, af, iF, aF
-"Plugin 'kana/vim-textobj-function'
-"
+
+" ============
+" Text Objects
+" ============
+" Create your own text objects
+Plug 'kana/vim-textobj-user'
+" Text objects for indented blocks of lines
+" ii, ai, iI, aI
+"Plug 'kana/vim-textobj-indent'
+" Text objects for functions
+" if, af, iF, aF
+"Plug 'kana/vim-textobj-function'
+
 "" ===========
 "" Git support
 "" ===========
@@ -277,26 +278,26 @@ Plug 'godlygeek/csapprox'
 "
 "" Misc
 "
+" Make vim more Puppet friendly
+Plug 'rodjek/vim-puppet'
+" CoffeeScript support for vim
+Plug 'kchmck/vim-coffee-script'
+" Vim Cucumber runtime files
+"Plug 'tpope/vim-cucumber'
+"" Maven syntax highlighting
+"Plugin 'NLKNguyen/vim-maven-syntax'
+" Syntax highlighting, matching rules and mappings for the original Markdown and extensions
+"Plug 'plasticboy/vim-markdown'
+" A better JSON for Vim ( Check for performance workarounds )
+"Plug 'elzr/vim-json'
 "" A vim plugin for working with mustache and handlebars templates
 "Plugin 'mustache/vim-mustache-handlebars'
-"" Make vim more Puppet friendly
-"Plugin 'rodjek/vim-puppet'
-"" A better JSON for Vim
-"Plugin 'elzr/vim-json'
 "" JSON manipulation and pretty printing
 "Plugin 'tpope/vim-jdaddy'
 "" Vim syntax highlighting for Jade templates
 "Plugin 'digitaltoad/vim-jade'
-"" Syntax highlighting, matching rules and mappings for the original Markdown and extensions
-"Plugin 'plasticboy/vim-markdown'
 "" Vim runtime files for Haml, Sass, and SCSS
 "Plugin 'tpope/vim-haml'
-"" CoffeeScript support for vim
-"Plugin 'kchmck/vim-coffee-script'
-"" Vim Cucumber runtime files
-"Plugin 'tpope/vim-cucumber'
-"" Maven syntax highlighting
-"Plugin 'NLKNguyen/vim-maven-syntax'
 "" Support for plantuml syntax
 "Plugin 'aklt/plantuml-syntax'
 "
