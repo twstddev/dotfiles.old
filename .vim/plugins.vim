@@ -86,12 +86,34 @@ Plug 'henrik/vim-indexed-search'
 Plug 'bling/vim-airline'
 " A collection of themes for vim-airline
 Plug 'vim-airline/vim-airline-themes'
+" Provides automatic closing of quotes, parenthesis, brackets, etc.
+Plug 'Raimondi/delimitMate'
+" Extended % matching for HTML, LaTeX, and many other languages
+Plug 'tmhedberg/matchit'
+" Plugin to toggle, display and navigate marks
+Plug 'kshenoy/vim-signature'
+" Plugin maintains a history of previous yanks, changes and deletes
+Plug 'vim-scripts/YankRing.vim'
+" Edit large files quickly
+Plug 'vim-scripts/LargeFile'
+" Hyperfocus-writing in Vim
+Plug 'junegunn/limelight.vim'
+" Vim plugin that provides additional text objects
+Plug 'wellle/targets.vim'
+" Distraction-free writing in Vim
+Plug 'junegunn/goyo.vim'
+" Changes Vim working directory to project root (identified by presence of known directory or file)
+" There seems to be a bug that doesn't really change cwd and some plugins stop
+" working (easygrep, ycm - ternjs)
+Plug 'airblade/vim-rooter'
+" Pasting in Vim with indentation adjusted to destination context
+Plug 'sickill/vim-pasta'
+" Make gvim-only colorschemes work transparently in terminal vim
+Plug 'godlygeek/csapprox'
 "" A plugin for visually displaying indent levels
 "Plugin 'nathanaelkane/vim-indent-guides'
 "" A syntax checking plugin
 "Plugin 'scrooloose/syntastic'
-"" Provides automatic closing of quotes, parenthesis, brackets, etc.
-"Plugin 'Raimondi/delimitMate'
 "" Snippets files for various programming languages
 "Plugin 'honza/vim-snippets'
 "" The ultimate snippet solution for Vim
@@ -100,8 +122,6 @@ Plug 'vim-airline/vim-airline-themes'
 "Plugin 'sjl/gundo.vim'
 "" Plugin that simplifies the transition between multiline and single-line code
 "Plugin 'AndrewRadev/splitjoin.vim'
-"" Extended % matching for HTML, LaTeX, and many other languages
-"Plugin 'tmhedberg/matchit'
 "" Script for text filtering and alignment
 "Plugin 'godlygeek/tabular'
 "" Easy text exchange operator
@@ -118,8 +138,6 @@ Plug 'vim-airline/vim-airline-themes'
 "Plugin 'majutsushi/tagbar'
 "" A code-completion engine for Vim
 "Plugin 'Valloric/YouCompleteMe'
-"" Plugin maintains a history of previous yanks, changes and deletes
-"Plugin 'vim-scripts/YankRing.vim'
 "" Asynchronous build and test dispatcher
 "Plugin 'tpope/vim-dispatch'
 "" A simple function navigator for ctrlp.vim
@@ -137,30 +155,12 @@ Plug 'vim-airline/vim-airline-themes'
 "Plugin 'PeterRincker/vim-argumentative'
 "" Run your tests at the speed of thought
 "Plugin 'janko-m/vim-test'
-"" Plugin to toggle, display and navigate marks
-"Plugin 'kshenoy/vim-signature'
-"" Hyperfocus-writing in Vim
-"Plugin 'junegunn/limelight.vim'
-"" Vim plugin that provides additional text objects
-"Plugin 'wellle/targets.vim'
 "" A vim plugin to perform diffs on blocks of code
 "Plugin 'AndrewRadev/linediff.vim'
-"" Edit large files quickly
-"Plugin 'vim-scripts/LargeFile'
 "" Swap your windows without ruining your layout
 "Plugin 'wesQ3/vim-windowswap'
 "" A Vim plugin that always highlights the enclosing html/xml tags
 "Plugin 'Valloric/MatchTagAlways'
-"" Distraction-free writing in Vim
-"Plugin 'junegunn/goyo.vim'
-"" Changes Vim working directory to project root (identified by presence of known directory or file)
-"" There seems to be a bug that doesn't really change cwd and some plugins stop
-"" working (easygrep, ycm - ternjs)
-"Plugin 'airblade/vim-rooter'
-"" Pasting in Vim with indentation adjusted to destination context
-"Plugin 'sickill/vim-pasta'
-"" Make gvim-only colorschemes work transparently in terminal vim
-"Plugin 'godlygeek/csapprox'
 "" CtrlP extension for fuzzy-search in tag matches
 "Plugin 'ivalkeen/vim-ctrlp-tjump'
 "" Better Diff options for Vim

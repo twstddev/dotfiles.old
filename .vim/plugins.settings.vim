@@ -60,7 +60,7 @@ let g:NERDTreeChDirMode = 2
 let NERDTreeShowBookmarks = 1
 " Always delete buffer for removed file
 let NERDTreeAutoDeleteBuffer = 1
-"
+
 "" Syntastic
 "" Suggested defaults
 "set statusline+=%#warningmsg#
@@ -217,12 +217,12 @@ let g:surround_61 = "<%= \r %>"
 "" Disable guides for nerdtree
 "let g:indent_guides_exclude_filetypes = ["help", "nerdtree"]
 "
-"" Delimitmate
-"" Expand Spaces
-"let g:delimitMate_expand_space = 1
-"" Expand Enters
-"let g:delimitMate_expand_cr = 1
-"
+" Delimitmate
+" Expand Spaces
+let g:delimitMate_expand_space = 1
+" Expand Enters
+let g:delimitMate_expand_cr = 1
+
 "" Follow My Lead
 "" Show leader shortcuts from plugins as well
 "let g:fml_all_sources = 1
@@ -323,10 +323,10 @@ let g:surround_61 = "<%= \r %>"
 "nnoremap <leader>ejsi :JavaSearch -x implementors<CR>
 "" Search for references
 "nnoremap <leader>ejsr :JavaSearch -x references<CR>
-"
-"" Matchit
-"let b:match_ignorecase = 1
-"
+
+" Matchit
+let b:match_ignorecase = 1
+
 "" Tabularize
 "nmap <leader>ta :Tabularize /
 "vmap <leader>ta :Tabularize /
@@ -368,16 +368,16 @@ let g:surround_61 = "<%= \r %>"
 "autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 "autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 "
-""Yankring
-"let g:yankring_history_dir = "~/.vim/history"
-"let g:yankring_history_file = "yank"
-"let g:yankring_max_history = 25
-"let g:yankring_replace_n_pkey = "<leader>yj"
-"let g:yankring_replace_n_nkey = "<leader>yk"
-"nnoremap <silent> <leader>ys :YRShow<CR>
-"" just in case for console vim
-"nnoremap <silent> <leader>yc :YRCheckClipboard<CR>
-"
+"Yankring
+let g:yankring_history_dir = "~/.vim/history"
+let g:yankring_history_file = "yank"
+let g:yankring_max_history = 25
+let g:yankring_replace_n_pkey = "<leader>yj"
+let g:yankring_replace_n_nkey = "<leader>yk"
+nnoremap <silent> <leader>ys :YRShow<CR>
+" just in case for console vim
+nnoremap <silent> <leader>yc :YRCheckClipboard<CR>
+
 "" Dispatch
 "nnoremap <leader>ds :Dispatch<SPACE>
 "nnoremap <leader>dS :Dispatch!<SPACE>
@@ -407,31 +407,31 @@ let g:surround_61 = "<%= \r %>"
 "" Execute tests through dispatch
 "let test#strategy = 'dispatch'
 "
-"" Signature
-"" A list of useful mappings
-"" dmx remove mark 'x'
-"" m- delete all marks from the current line
-"" m<space> delete all marks from the current buffer
-"" m/ open location of all marks from the current buffer
-"" m<BS> remove all marks
-"
+" Signature
+" A list of useful mappings
+" dmx remove mark 'x'
+" m- delete all marks from the current line
+" m<space> delete all marks from the current buffer
+" m/ open location of all marks from the current buffer
+" m<BS> remove all marks
+
 "" Wildfire
 "map <SPACE> <Plug>(wildfire-fuel)
 "
-"" Limelight
-"" Dim unfocused text
-"let g:limelight_default_coefficient = 0.75
-"nmap <leader>LL :Limelight!!<CR>
-"" Focus on selection
-"nmap <Leader>Lf <Plug>(Limelight)
-"xmap <Leader>Lf <Plug>(Limelight)
-"
-"" Targets
-"" Reference of the useful text objects and hints
-"" include 'n' to match the closest next object: cin)
-"" include 'l' to match the closest last object: cil)
-"" 'a' text object to match function arguments
-"
+" Limelight
+" Dim unfocused text
+let g:limelight_default_coefficient = 0.75
+nmap <leader>LL :Limelight!!<CR>
+" Focus on selection
+nmap <Leader>Lf <Plug>(Limelight)
+xmap <Leader>Lf <Plug>(Limelight)
+
+" Targets
+" Reference of the useful text objects and hints
+" include 'n' to match the closest next object: cin)
+" include 'l' to match the closest last object: cil)
+" 'a' text object to match function arguments
+
 "" Linediff
 "xmap <leader>Ldf :Linediff<CR>
 "xmap <leader>Ldr :LinediffReset<CR>
@@ -441,17 +441,17 @@ let g:surround_61 = "<%= \r %>"
 "" Use <leader>ww to mark a window to swap and then use the same mapping on
 "" another window to swap the two
 "
-"" Goyo
-"nnoremap <leader>Go :Goyo<CR>
-"let g:goyo_width = '60%'
-"
-"" Rooter
-"let g:rooter_patterns = ['.tern-project', 'Gemfile', '.git', '.git/', '_darcs/', '.hg/', '.bzr/', '.svn/']
-"let g:rooter_change_directory_for_non_project_files = 1
-"
-"" Pasta
-"let g:pasta_disabled_filetypes = ["python", "coffee", "markdown", "yaml", "slim", "nerdtree", "tagbar"]
-"
+" Goyo
+nnoremap <leader>Go :Goyo<CR>
+let g:goyo_width = '60%'
+
+" Rooter
+let g:rooter_patterns = ['.tern-project', 'Gemfile', '.git', '.git/', '_darcs/', '.hg/', '.bzr/', '.svn/']
+let g:rooter_change_directory_for_non_project_files = 1
+
+" Pasta
+let g:pasta_disabled_filetypes = ["python", "coffee", "markdown", "yaml", "slim", "nerdtree", "tagbar"]
+
 "" Ctrlp tjump
 "nnoremap <c-]> :CtrlPtjump<cr>
 "vnoremap <c-]> :CtrlPtjumpVisual<cr>
