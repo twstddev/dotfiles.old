@@ -204,15 +204,15 @@ Plug 'kana/vim-textobj-user'
 "Plugin 'tpope/vim-git'
 "" Fugitive extension to manage and merge Git branches
 "Plugin 'idanarye/vim-merginal'
-"
-"" ===================
-"" Syntax and languages
-"" ===================
-"
-"" HTML/CSS
-"
-"" Provides support for expanding abbreviations similar
-"Plugin 'mattn/emmet-vim'
+
+" ===================
+" Syntax and languages
+" ===================
+
+" HTML/CSS
+
+" Provides support for expanding abbreviations similar
+Plug 'mattn/emmet-vim'
 "" HTML5 + inline SVG omnicomplete function, indent and syntax for Vim
 "Plugin 'othree/html5.vim'
 "" Vim syntax for LESS

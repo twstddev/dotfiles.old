@@ -159,10 +159,10 @@ let NERDTreeAutoDeleteBuffer = 1
 "" UltiSnips
 "let g:UltiSnipsEnableSnipMate = 1
 "let g:UltiSnipsExpandTrigger = "<c-j>"
-"
-"" Emmet
-"imap <C-e> <C-y>,
-"
+
+" Emmet
+imap <C-e> <C-y>,
+
 " Vim-json
 "let g:vim_json_syntax_conceal = 0
 
