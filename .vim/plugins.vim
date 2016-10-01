@@ -78,6 +78,10 @@ Plug 'tpope/vim-surround'
 Plug 'justinmk/vim-sneak'
 " Enable repeating supported plugin maps with .
 Plug 'tpope/vim-repeat'
+" Show 'Match 123 of 456 /search term/' in Vim searches
+Plug 'henrik/vim-indexed-search'
+" Improved incremental searching for Vim
+"Plug 'haya14busa/incsearch.vim'
 "" A plugin for visually displaying indent levels
 "Plugin 'nathanaelkane/vim-indent-guides'
 "" A syntax checking plugin
@@ -118,8 +122,6 @@ Plug 'tpope/vim-repeat'
 "Plugin 'tacahiroy/ctrlp-funky'
 "" Smart selection of the closest text object
 "Plugin 'gcmt/wildfire.vim'
-"" Show 'Match 123 of 456 /search term/' in Vim searches
-"Plugin 'henrik/vim-indexed-search'
 "" Start a * or # search from a visual block
 "Plugin 'nelstrom/vim-visual-star-search'
 "" A Vim plugin for looking up documentation
@@ -133,8 +135,6 @@ Plug 'tpope/vim-repeat'
 "Plugin 'janko-m/vim-test'
 "" Plugin to toggle, display and navigate marks
 "Plugin 'kshenoy/vim-signature'
-"" Improved incremental searching for Vim
-"Plugin 'haya14busa/incsearch.vim'
 "" Hyperfocus-writing in Vim
 "Plugin 'junegunn/limelight.vim'
 "" Vim plugin that provides additional text objects

@@ -224,8 +224,8 @@ let g:surround_61 = "<%= \r %>"
 "map g/ <Plug>(incsearch-stay)
 "" Enable automatic nohl
 "let g:incsearch#auto_nohlsearch = 1
-"map n  <Plug>(incsearch-nohl-n)zv:ShowSearchIndex<CR>
-"map N  <Plug>(incsearch-nohl-N)zv:ShowSearchIndex<CR>
+"map <silent> n  <Plug>(incsearch-nohl-n)zv:ShowSearchIndex<CR>
+"map <silent> N  <Plug>(incsearch-nohl-N)zv:ShowSearchIndex<CR>
 "map *  <Plug>(incsearch-nohl-*)
 "map #  <Plug>(incsearch-nohl-#)
 "map g* <Plug>(incsearch-nohl-g*)
@@ -233,10 +233,10 @@ let g:surround_61 = "<%= \r %>"
 "" Make it play nicely with indexed-search
 "let g:indexed_search_mappings = 0
 "augroup incsearch-indexed
-"    autocmd!
-"    autocmd User IncSearchLeave ShowSearchIndex
+    "autocmd!
+    "autocmd User IncSearchLeave ShowSearchIndex
 "augroup END
-"
+
 "" Eclim
 "" Windows version requires this to be set specifically
 "let g:EclimBaseDir = "~/.vim"
