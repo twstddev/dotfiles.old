@@ -42,15 +42,15 @@
 "nmap <leader>8 <Plug>AirlineSelectTab8
 "nmap <leader>9 <Plug>AirlineSelectTab9
 "
-"" NERDTree
-"" Enable on Ctrl + N
-"map <C-n> :NERDTreeToggle<CR>
-"" Change current directory to the chosen root directory in NERDTree
-"let g:NERDTreeChDirMode = 2
-"" Show the bookmarks tree on startup
-"let NERDTreeShowBookmarks = 1
-"" Always delete buffer for removed file
-"let NERDTreeAutoDeleteBuffer = 1
+" NERDTree
+" Enable on Ctrl + N
+map <C-n> :NERDTreeToggle<CR>
+" Change current directory to the chosen root directory in NERDTree
+let g:NERDTreeChDirMode = 2
+" Show the bookmarks tree on startup
+let NERDTreeShowBookmarks = 1
+" Always delete buffer for removed file
+let NERDTreeAutoDeleteBuffer = 1
 "
 "" Syntastic
 "" Suggested defaults
@@ -73,12 +73,12 @@
 ""let g:syntastic_error_symbol='✗'
 ""let g:syntastic_warning_symbol='⚠'
 "
-"" Easymotion
-"" Rebind easymotion to single leader
+" Easymotion
+" Rebind easymotion to single leader
 "let g:EasyMotion_smartcase = 1
 "nmap s <Plug>(easymotion-s)
 "nmap S <Plug>(easymotion-overwin-f)
-"
+
 "" Gundo
 "nnoremap <Leader>u :GundoToggle<CR>
 "" Make preview window a bit bigger
@@ -173,14 +173,14 @@
 "let g:gitgutter_realtime = 0
 "let g:gitgutter_eager = 0
 "
-"" Surround
-"" Wrap the token under the cursor in #{} ( use # )
-"let g:surround_35 = "#{\r}"
-"" Wrap the token under the cursor in <% %> ( use % )
-"let g:surround_37 = "<% \r %>"
-"" Wrap the token under the cursor in <%= %> ( use = )
-"let g:surround_61 = "<%= \r %>"
-"
+" Surround
+" Wrap the token under the cursor in #{} ( use # )
+let g:surround_35 = "#{\r}"
+" Wrap the token under the cursor in <% %> ( use % )
+let g:surround_37 = "<% \r %>"
+" Wrap the token under the cursor in <%= %> ( use = )
+let g:surround_61 = "<%= \r %>"
+
 "" Tagbar
 "nnoremap <silent> <leader>tb :TagbarToggle<CR>
 "" Close tagbar when a tag is selected
@@ -514,5 +514,13 @@
 "let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
 "" Required to remove dots in the icons. WTF???
 "autocmd FileType nerdtree setlocal nolist
-"
+
+" Sneak
+" read case sensitivity property from the main settings
+let g:sneak#use_ic_scs = 1
+" Enforce streak mode
+let g:sneak#streak = 1
+nmap s <Plug>(SneakStreak)
+nmap S <Plug>(SneakStreakBackward)
+
 "" }

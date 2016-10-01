@@ -1,104 +1,93 @@
 call plug#begin('~/.vim/bundle')
-call plug#end()
 
-"" Disable vi mode
-"set nocompatible
-"
-"" Add Vundle for plugin management
-"" Following setup is taken from official vundle guide
-"filetype off
-"
-"" Add Vundle to runtime path
-"set rtp+=~/.vim/bundle/Vundle.vim
-"call vundle#begin()
-"Plugin 'gmarik/Vundle.vim'
-"
-"" =========
-"" Appearance
-"" =========
-"" Colors
-"Plugin 'goatslacker/mango.vim'
-"Plugin 'altercation/vim-colors-solarized'
-"Plugin 'morhetz/gruvbox'
-"Plugin 'sjl/badwolf'
-"Plugin 'chriskempson/vim-tomorrow-theme'
-"Plugin 'w0ng/vim-hybrid'
-"Plugin 'junegunn/seoul256.vim'
-"Plugin 'zeis/vim-kolor'
-"Plugin 'noahfrederick/vim-hemisu'
-"Plugin 'vim-scripts/Colour-Sampler-Pack'
-"Plugin 'daylerees/colour-schemes', { 'rtp': 'vim' }
-"Plugin 'petelewis/vim-evolution'
-"Plugin 'joshdick/onedark.vim'
-"Plugin 'mkarmona/materialbox'
-"Plugin 'DrowsySaturn/VIvid.vim'
-"Plugin 'gilgigilgil/anderson.vim'
-"Plugin 'jdkanani/vim-material-theme'
-"Plugin 'cdmedia/itg_flat_vim'
-"Plugin 'gosukiwi/vim-atom-dark'
-"Plugin 'MaxSt/FlatColor'
-"Plugin 'baskerville/bubblegum'
-"Plugin 'jordwalke/flatlandia'
-"Plugin 'whatyouhide/vim-gotham'
-"Plugin 'blerins/flattown'
-"Plugin 'yosiat/oceanic-next-vim'
-"Plugin 'wellsjo/wellsokai.vim'
-"Plugin 'duythinht/inori'
-"Plugin 'nice/sweater'
-"Plugin 'john2x/flatui.vim'
-"Plugin 'raphamorim/lucario', { 'rtp': 'vim' }
-"Plugin 'ronny/birds-of-paradise.vim'
-"Plugin 'hhff/SpacegrayEighties.vim'
-"Plugin 'KabbAmine/yowish.vim'
-"Plugin 'crusoexia/vim-dream'
-"Plugin 'tristen/superman'
-"Plugin 'AlessandroYorba/Sierra'
-"Plugin 'AlessandroYorba/Alduin'
-"Plugin 'atelierbram/vim-colors_duotones'
-"Plugin 'ninja/sky'
-"Plugin 'jacoborus/tender.vim'
-"Plugin 'bcicen/vim-vice'
-"Plugin 'dracula/vim'
-"Plugin 'aereal/vim-colors-japanesque'
-"Plugin 'rakr/vim-two-firewatch'
-"Plugin 'tyrannicaltoucan/vim-deep-space'
-"Plugin 'notpratheek/vim-luna'
-"Plugin 'easysid/mod8.vim'
-"Plugin 'jscappini/material.vim'
-"Plugin 'trusktr/seti.vim'
-"" Lean & mean status/tabline for vim that's light as air
-"Plugin 'paranoida/vim-airlineish'
-"
-"" ==============
-"" Utility helpers for other plugins
-"" ==============
-"Plugin 'MarcWeber/vim-addon-mw-utils'
-"Plugin 'tomtom/tlib_vim'
-"Plugin 'xolox/vim-misc'
-"
-"" ======
-"" Editor
-"" ======
-"" File explorer for vim
-"Plugin 'scrooloose/nerdtree'
+" =========
+" Appearance
+" =========
+" Colors
+Plug 'goatslacker/mango.vim'
+Plug 'altercation/vim-colors-solarized'
+Plug 'morhetz/gruvbox'
+Plug 'sjl/badwolf'
+Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'w0ng/vim-hybrid'
+Plug 'junegunn/seoul256.vim'
+Plug 'zeis/vim-kolor'
+Plug 'noahfrederick/vim-hemisu'
+Plug 'vim-scripts/Colour-Sampler-Pack'
+Plug 'daylerees/colour-schemes', { 'rtp': 'vim' }
+Plug 'petelewis/vim-evolution'
+Plug 'joshdick/onedark.vim'
+Plug 'mkarmona/materialbox'
+Plug 'DrowsySaturn/VIvid.vim'
+Plug 'gilgigilgil/anderson.vim'
+Plug 'jdkanani/vim-material-theme'
+Plug 'cdmedia/itg_flat_vim'
+Plug 'gosukiwi/vim-atom-dark'
+Plug 'MaxSt/FlatColor'
+Plug 'baskerville/bubblegum'
+Plug 'jordwalke/flatlandia'
+Plug 'whatyouhide/vim-gotham'
+Plug 'blerins/flattown'
+Plug 'yosiat/oceanic-next-vim'
+Plug 'wellsjo/wellsokai.vim'
+Plug 'duythinht/inori'
+Plug 'nice/sweater'
+Plug 'john2x/flatui.vim'
+Plug 'raphamorim/lucario'
+Plug 'ronny/birds-of-paradise.vim'
+Plug 'hhff/SpacegrayEighties.vim'
+Plug 'KabbAmine/yowish.vim'
+Plug 'crusoexia/vim-dream'
+Plug 'tristen/superman'
+Plug 'AlessandroYorba/Sierra'
+Plug 'AlessandroYorba/Alduin'
+Plug 'atelierbram/vim-colors_duotones'
+Plug 'ninja/sky'
+Plug 'jacoborus/tender.vim'
+Plug 'bcicen/vim-vice'
+Plug 'dracula/vim'
+Plug 'aereal/vim-colors-japanesque'
+Plug 'rakr/vim-two-firewatch'
+Plug 'tyrannicaltoucan/vim-deep-space'
+Plug 'notpratheek/vim-luna'
+Plug 'easysid/mod8.vim'
+Plug 'jscappini/material.vim'
+Plug 'trusktr/seti.vim'
+" Lean & mean status/tabline for vim that's light as air
+Plug 'paranoida/vim-airlineish'
+
+" ==============
+" Utility helpers for other plugins
+" ==============
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'xolox/vim-misc'
+
+" ======
+" Editor
+" ======
+" File explorer for vim
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+" Plugin for intensely orgasmic commenting
+Plug 'scrooloose/nerdcommenter'
+" Plugin provides mappings to easily delete, change and add such surroundings in pairs
+Plug 'tpope/vim-surround'
+" Provides a much simpler way to use some motions
+"Plug 'easymotion/vim-easymotion'
+" The missing motion for Vim
+Plug 'justinmk/vim-sneak'
+" Enable repeating supported plugin maps with .
+Plug 'tpope/vim-repeat'
 "" A plugin for visually displaying indent levels
 "Plugin 'nathanaelkane/vim-indent-guides'
 "" A syntax checking plugin
 "Plugin 'scrooloose/syntastic'
 "" Provides automatic closing of quotes, parenthesis, brackets, etc.
 "Plugin 'Raimondi/delimitMate'
-"" Plugin for intensely orgasmic commenting
-"Plugin 'scrooloose/nerdcommenter'
-"" Plugin provides mappings to easily delete, change and add such surroundings in pairs
-"Plugin 'tpope/vim-surround'
 "" Snippets files for various programming languages
 "Plugin 'honza/vim-snippets'
 "" The ultimate snippet solution for Vim
 "Plugin 'SirVer/ultisnips'
-"" Provides a much simpler way to use some motions
-"Plugin 'easymotion/vim-easymotion'
-"" Enable repeating supported plugin maps with .
-"Plugin 'tpope/vim-repeat'
 "" Plugin to visualize your Vim undo tree
 "Plugin 'sjl/gundo.vim'
 "" Plugin that simplifies the transition between multiline and single-line code
@@ -345,5 +334,4 @@ call plug#end()
 ""Plugin 'fisadev/vim-ctrlp-cmdpalette'
 "" Easy text manupilation for vim
 ""Plugin 't9md/vim-textmanip'
-"
-"call vundle#end()
+call plug#end()
