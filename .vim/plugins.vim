@@ -82,6 +82,10 @@ Plug 'tpope/vim-repeat'
 Plug 'henrik/vim-indexed-search'
 " Improved incremental searching for Vim
 "Plug 'haya14busa/incsearch.vim'
+" Lean & mean status/tabline for vim that's light as air
+Plug 'bling/vim-airline'
+" A collection of themes for vim-airline
+Plug 'vim-airline/vim-airline-themes'
 "" A plugin for visually displaying indent levels
 "Plugin 'nathanaelkane/vim-indent-guides'
 "" A syntax checking plugin
@@ -167,10 +171,6 @@ Plug 'henrik/vim-indexed-search'
 "Plugin 'FooSoft/vim-argwrap'
 "" Projectionist provides granular project configuration using "projections".
 "Plugin 'tpope/vim-projectionist'
-"" Lean & mean status/tabline for vim that's light as air
-"Plugin 'bling/vim-airline'
-"" A collection of themes for vim-airline
-"Plugin 'vim-airline/vim-airline-themes'
 "" Fast and Easy Find and Replace Across Multiple Files
 "" Come back to it later and try to resolve the issue with Ag on windows, where
 "" it doesn't recognize --ignore parameter
