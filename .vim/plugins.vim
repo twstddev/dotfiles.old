@@ -213,17 +213,17 @@ Plug 'kana/vim-textobj-user'
 
 " Provides support for expanding abbreviations similar
 Plug 'mattn/emmet-vim'
-"" HTML5 + inline SVG omnicomplete function, indent and syntax for Vim
-"Plugin 'othree/html5.vim'
-"" Vim syntax for LESS
-"Plugin 'groenewege/vim-less'
-"" Highlight colors in css files
-"Plugin 'skammer/vim-css-color'
-"" Vim syntax file for scss (Sassy CSS)
-"Plugin 'cakebaker/scss-syntax.vim'
-"" Add CSS3 syntax support to vim's built-in `syntax/css.vim`
-"Plugin 'hail2u/vim-css3-syntax'
-"
+" HTML5 + inline SVG omnicomplete function, indent and syntax for Vim
+Plug 'othree/html5.vim'
+" Vim syntax file for scss (Sassy CSS)
+Plug 'cakebaker/scss-syntax.vim'
+" Add CSS3 syntax support to vim's built-in `syntax/css.vim`
+Plug 'hail2u/vim-css3-syntax'
+" Highlight colors in css files ( this plugin causes slight lag on scroll )
+Plug 'ap/vim-css-color'
+" Vim syntax for LESS
+"Plug 'groenewege/vim-less'
+
 "" Javascript
 "
 "" Enhanced javascript syntax file for Vim
