@@ -229,14 +229,18 @@ Plug 'ap/vim-css-color'
 " Vim syntax for LESS
 "Plug 'groenewege/vim-less'
 
-"" Javascript
-"
-"" Enhanced javascript syntax file for Vim
-"Plugin 'jelera/vim-javascript-syntax'
-"" Vastly improved Javascript indentation and syntax support in Vim
-"Plugin 'pangloss/vim-javascript'
-"" Syntax for JavaScript libraries
-"Plugin 'othree/javascript-libraries-syntax.vim'
+" Javascript
+
+" Vastly improved Javascript indentation and syntax support in Vim
+Plug 'pangloss/vim-javascript'
+" YAJS.vim: Yet Another JavaScript Syntax for Vim ( watch performance of this
+" plugin. readme says it tend to be slow )
+"Plug 'othree/yajs.vim'
+" Enhanced javascript syntax file for Vim ( switch to this plugin if yajs is
+" slow )
+Plug 'jelera/vim-javascript-syntax'
+" Syntax for JavaScript libraries
+Plug 'othree/javascript-libraries-syntax.vim'
 "" Tools and environment to make Vim superb for developing with Node.js
 "Plugin 'moll/vim-node'
 "" React JSX syntax highlighting and indenting for vim

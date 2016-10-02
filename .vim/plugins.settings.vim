@@ -166,13 +166,13 @@ imap <C-e> <C-y>,
 " Vim-json
 "let g:vim_json_syntax_conceal = 0
 
-"" Vim-javascript
-""Enable HTML/CSS highlighting in JS
-"let g:javascript_enable_domhtmlcss=1
-"
-"" Vim-javascript-libraries-syntax
-"let g:used_javascript_libs = 'underscore,backbone,angularjs,react,jasmine,chai,angularui,angularuirouter,requirejs,flux,jquery'
-"
+" Vim-javascript
+"Enable HTML/CSS highlighting in JS
+let g:javascript_enable_domhtmlcss=1
+
+" Vim-javascript-libraries-syntax
+let g:used_javascript_libs = 'underscore,backbone,angularjs,react,jasmine,chai,angularui,angularuirouter,requirejs,flux,jquery'
+
 "" Autotag
 "let g:autotagExcludeSuffixes = "tml.xml.text.txt.vim"
 "
