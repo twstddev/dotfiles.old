@@ -480,25 +480,25 @@ let g:pasta_disabled_filetypes = ["python", "coffee", "markdown", "yaml", "slim"
 "" Jsdoc
 "nnoremap <leader>Jsd :JsDoc<CR>
 "
-"" Vim-ruby
-"" Reference of text objects
-"" am, im target method
-"" aM, iM target class
-"" Hihglight ruby operators
-"let ruby_operators = 1
-"" Enable ruby completion
-"let g:rubycomplete_buffer_loading = 1
-"" Parse classes and methods
-"let g:rubycomplete_classes_in_global = 3
-"" Enable rails completion
-"let g:rubycomplete_rails = 1
-"" Parse gemfile too
-"let g:rubycomplete_load_gemfile = 1
-"
-"" Vim textobject rubyblock
-"" Reference text objects
-"" ir, ar target ruby block ( anything that has end )
-"
+" Vim-ruby
+" Reference of text objects
+" am, im target method
+" aM, iM target class
+" Hihglight ruby operators
+let ruby_operators = 1
+" Enable ruby completion
+let g:rubycomplete_buffer_loading = 1
+" Parse classes and methods
+let g:rubycomplete_classes_in_global = 3
+" Enable rails completion
+let g:rubycomplete_rails = 1
+" Parse gemfile too
+let g:rubycomplete_load_gemfile = 1
+
+" Vim textobject rubyblock
+" Reference text objects
+" ir, ar target ruby block ( anything that has end )
+
 "" Rubyrefactoring
 "" Reference to useful mappings
 "" ,rap add a parameter to method
@@ -508,13 +508,13 @@ let g:pasta_disabled_filetypes = ["python", "coffee", "markdown", "yaml", "slim"
 "" ,rrlv rename local variable (visual or under cursor)
 "" ,rriv rename instance variable(visual)
 "" ,rem extract method (visual)
-"
-"" Rails
-"" Display development logs
-"nnoremap <leader>ral :Rlog<CR>
-"" Extract part of view->partial, helper->helper or controller -> concern
-"" Provide a name
-"nnoremap <leader>rax :Rextract<space>
+
+" Rails
+" Display development logs
+nnoremap <leader>ral :Rlog<CR>
+" Extract part of view->partial, helper->helper or controller -> concern
+" Provide a name
+nnoremap <leader>rax :Rextract<space>
 "
 "" gitv
 "" For the whole repository

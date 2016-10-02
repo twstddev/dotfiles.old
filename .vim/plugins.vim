@@ -259,27 +259,28 @@ Plug 'ap/vim-css-color'
 "Plugin 'jamescarr/snipmate-nodejs'
 "" Lightweight bag of Vim utilities for Backbone - snipmate snippets, templates and omnicompletion
 "Plugin 'mklabs/vim-backbone'
-"
-"" Ruby
-"
-"" Vim/Ruby Configuration Files
-"Plugin 'vim-ruby/vim-ruby'
-"" Ruby on Rails power tools
-"Plugin 'tpope/vim-rails'
-"" Wisely add 'end' in ruby, endfunction/endif/more
-"Plugin 'tpope/vim-endwise'
-"" Refactoring tool for Ruby in vim
-"Plugin 'ecomba/vim-ruby-refactoring'
-"" A custom text object for selecting ruby blocks
-"Plugin 'nelstrom/vim-textobj-rubyblock'
+
+" Ruby
+
+" Vim/Ruby Configuration Files
+Plug 'vim-ruby/vim-ruby'
+" Ruby on Rails power tools ( this plugin quite slows down the editor, load it
+" only for ruby files. And consider removing it completely in the future )
+Plug 'tpope/vim-rails', { 'for': ['ruby'] }
+" Wisely add 'end' in ruby, endfunction/endif/more
+Plug 'tpope/vim-endwise'
+" Better rspec syntax highlighting for Vim
+Plug 'keith/rspec.vim'
+" Ruby code completion
+"Plug 'osyo-manga/vim-monster'
+" This plugin allows rapid toggling between the two different styles of ruby blocks
+"Plug 'jgdavey/vim-blockle'
+" A custom text object for selecting ruby blocks
+"Plug 'nelstrom/vim-textobj-rubyblock'
+" Refactoring tool for Ruby in vim
+"Plug 'ecomba/vim-ruby-refactoring'
 "" Vim plugin that searches http://apidock.com Ruby, Rails, and RSpec docs from within Vim
 "Plugin 'mileszs/apidock.vim'
-"" This plugin allows rapid toggling between the two different styles of ruby blocks
-"Plugin 'jgdavey/vim-blockle'
-"" Ruby code completion
-""Plugin 'osyo-manga/vim-monster'
-"" Better rspec syntax highlighting for Vim
-"Plugin 'keith/rspec.vim'
 "
 "" Misc
 "
