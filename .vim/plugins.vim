@@ -113,6 +113,13 @@ Plug 'godlygeek/csapprox'
 " Script for text filtering and alignment ( keep it because some other plugins
 " require it. puppet )
 Plug 'godlygeek/tabular'
+
+if g:ycm_supported
+    " A code-completion engine for Vim ( the plugin is very useful but it makes the whole editor slow )
+    "Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
+    Plug 'Valloric/YouCompleteMe'
+endif
+
 "" A plugin for visually displaying indent levels
 "Plugin 'nathanaelkane/vim-indent-guides'
 "" A syntax checking plugin
@@ -137,8 +144,6 @@ Plug 'godlygeek/tabular'
 "Plugin 'ludovicchabant/vim-gutentags'
 "" Vim plugin that displays tags in a window, ordered by scope
 "Plugin 'majutsushi/tagbar'
-"" A code-completion engine for Vim
-"Plugin 'Valloric/YouCompleteMe'
 "" Asynchronous build and test dispatcher
 "Plugin 'tpope/vim-dispatch'
 "" A simple function navigator for ctrlp.vim
@@ -335,4 +340,10 @@ Plug 'kchmck/vim-coffee-script'
 ""Plugin 'fisadev/vim-ctrlp-cmdpalette'
 "" Easy text manupilation for vim
 ""Plugin 't9md/vim-textmanip'
+
+augroup load_on_insert
+    autocmd!
+    autocmd InsertEnter * call plug#load()
+                \| autocmd! load_on_insert
+augroup END
 call plug#end()

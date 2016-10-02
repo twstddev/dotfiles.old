@@ -336,38 +336,40 @@ vmap <leader>ta :Tabularize /
 "let g:gutentags_project_root = [".gtags"]
 "" By some reason on windows ctags ignore wildcard
 "let g:gutentags_exclude = ["*.min.js"]
-"
-"" Youcompleteme
-"set completeopt-=preview
-"" Display suggestions on first character
-"let g:ycm_min_num_of_chars_for_completion = 1
-"" Collect information from tags as well
-"let g:ycm_collect_identifiers_from_tags_files = 1
-"" Collect information from the programming language syntax keywords known to
-"" vim
-"let g:ycm_seed_identifiers_with_syntax = 1
-"" Make others onmicompletion engines work better with YCM
-"" Have to keep it enabled for now, since the performance with eclim is just
-"" way too bad
-"let g:ycm_cache_omnifunc = 1
-"" Goto within the same buffer
-"let g:ycm_goto_buffer_command = 'same-buffer'
-"" Configure shortcuts
-"nnoremap <leader>Jg :YcmCompleter GoTo<CR>
-"nnoremap <leader>Jdc :YcmCompleter GoToDeclaration<CR>
-"nnoremap <leader>Jdf :YcmCompleter GoToDefinition<CR>
-"nnoremap <leader>Jr :YcmCompleter GoToReferences<CR>
-"nnoremap <leader>Ji :YcmCompleter GoToImplementation<CR>
-"nnoremap <leader>Jt :YcmCompleter GetType<CR>
-"nnoremap <leader>Jp :YcmCompleter GetParent<CR>
-"nnoremap <leader>JD :YcmCompleter GetDoc<CR>
-"nnoremap <leader>JR :YcmCompleter RefactorRename<SPACE>
-"" Enable omnicomplete for various languages
-"autocmd FileType python set omnifunc=pythoncomplete#Complete
-"autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-"autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-"autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-"
+
+if g:ycm_supported
+    " Youcompleteme
+    set completeopt-=preview
+    " Display suggestions on first character
+    let g:ycm_min_num_of_chars_for_completion = 1
+    " Collect information from tags as well
+    let g:ycm_collect_identifiers_from_tags_files = 1
+    " Collect information from the programming language syntax keywords known to
+    " vim
+    let g:ycm_seed_identifiers_with_syntax = 1
+    " Make others onmicompletion engines work better with YCM
+    " Have to keep it enabled for now, since the performance with eclim is just
+    " way too bad
+    let g:ycm_cache_omnifunc = 1
+    " Goto within the same buffer
+    let g:ycm_goto_buffer_command = 'same-buffer'
+    " Configure shortcuts
+    nnoremap <leader>Jg :YcmCompleter GoTo<CR>
+    nnoremap <leader>Jdc :YcmCompleter GoToDeclaration<CR>
+    nnoremap <leader>Jdf :YcmCompleter GoToDefinition<CR>
+    nnoremap <leader>Jr :YcmCompleter GoToReferences<CR>
+    nnoremap <leader>Ji :YcmCompleter GoToImplementation<CR>
+    nnoremap <leader>Jt :YcmCompleter GetType<CR>
+    nnoremap <leader>Jp :YcmCompleter GetParent<CR>
+    nnoremap <leader>JD :YcmCompleter GetDoc<CR>
+    nnoremap <leader>JR :YcmCompleter RefactorRename<SPACE>
+    " Enable omnicomplete for various languages
+    autocmd FileType python set omnifunc=pythoncomplete#Complete
+    autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+    autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+    autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+endif
+
 "Yankring
 let g:yankring_history_dir = "~/.vim/history"
 let g:yankring_history_file = "yank"
