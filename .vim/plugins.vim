@@ -241,22 +241,22 @@ Plug 'pangloss/vim-javascript'
 Plug 'jelera/vim-javascript-syntax'
 " Syntax for JavaScript libraries
 Plug 'othree/javascript-libraries-syntax.vim'
-"" Tools and environment to make Vim superb for developing with Node.js
-"Plugin 'moll/vim-node'
+" Tools and environment to make Vim superb for developing with Node.js
+Plug 'moll/vim-node'
+" Typescript syntax files for Vim
+Plug 'leafgarland/typescript-vim'
+" List of JavaScript ES6 snippets and syntax highlighting for vim
+Plug 'isRuslan/vim-es6'
+" Generate JSDoc to your JavaScript code
+Plug 'heavenshell/vim-jsdoc'
+" AngularJS with Vim
+Plug 'burnettk/vim-angular'
 "" React JSX syntax highlighting and indenting for vim
 "Plugin 'mxw/vim-jsx'
 "" Jasmine Plugin for Vim
 "Plugin 'claco/jasmine.vim'
-"" Typescript syntax files for Vim
-"Plugin 'leafgarland/typescript-vim'
 "" Text objects for functions in javascript.
 "Plugin 'thinca/vim-textobj-function-javascript'
-"" List of JavaScript ES6 snippets and syntax highlighting for vim
-"Plugin 'isRuslan/vim-es6'
-"" Generate JSDoc to your JavaScript code
-"Plugin 'heavenshell/vim-jsdoc'
-"" AngularJS with Vim
-"Plugin 'burnettk/vim-angular'
 "" Snippets files for AngularJS including JavaScript, HTML, CoffeeScript and HAML
 "Plugin 'matthewsimo/angular-vim-snippets'
 "" Various snippets for developing node.js from vim

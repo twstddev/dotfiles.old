@@ -20,8 +20,10 @@ else
     set guifont=DejaVu_Sans_Mono_For_Powerline:h9:cANSI,Lucida_Console:h9
 endif
 
-"Remember size and position of the window
-au GUIEnter * simalt ~x
+if !has( "gui_macvim" )
+    "Remember size and position of the window
+    au gUIEnter * simalt ~x
+endif
 
 "
 " To enable the saving and restoring of screen positions.

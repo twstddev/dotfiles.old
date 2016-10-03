@@ -477,9 +477,9 @@ let g:pasta_disabled_filetypes = ["python", "coffee", "markdown", "yaml", "slim"
 "" Allow Jsx in javascript files
 "let g:jsx_ext_required = 0
 "
-"" Jsdoc
-"nnoremap <leader>Jsd :JsDoc<CR>
-"
+" Jsdoc
+nnoremap <leader>Jsd :JsDoc<CR>
+
 " Vim-ruby
 " Reference of text objects
 " am, im target method
