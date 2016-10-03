@@ -253,6 +253,11 @@ let g:EclimBaseDir = "~/.vim"
 let g:EclimCompletionMethod = 'omnifunc'
 " Update eclipse local history for better experience while pairing with Java programmers who use Eclipse
 let g:EclimKeepLocalHistory = 1
+" Turn of ultisnips querying, because it causes lag when buffers are opened or
+" switched ( as well don't forget to patch youcompleteme.py and remote call to
+" _AddUltiSnipsDataIfNeeded. this are just insanely slow and useless )
+let g:ycm_use_ultisnips_completer = 0
+
 " Useful mappings
 nnoremap <leader>epr :ProjectRefresh<CR>
 nnoremap <leader>epR :ProjectRefreshAll<CR>
