@@ -49,7 +49,7 @@ nmap <leader>8 <Plug>AirlineSelectTab8
 nmap <leader>9 <Plug>AirlineSelectTab9
 " Control extensions that are loaded on startup in order to make the load
 " faster
-let g:airline_extensions = ['tabline']
+let g:airline_extensions = ['tabline', 'ctrlp']
 
 " NERDTree
 " Enable on Ctrl + N
@@ -99,7 +99,7 @@ let NERDTreeAutoDeleteBuffer = 1
 "" Close Gundo window when reverting
 "let g:gundo_close_on_revert = 1
 "
-"" Multiple Cursors
+" Multiple Cursors
 "let g:multi_cursor_use_default_mapping=0
 "let g:multi_cursor_start_key = 'g<C-m>'
 "let g:multi_cursor_start_word_key = '<C-m>'
@@ -107,22 +107,22 @@ let NERDTreeAutoDeleteBuffer = 1
 "let g:multi_cursor_prev_key='<C-p>'
 "let g:multi_cursor_skip_key='<C-x>'
 "let g:multi_cursor_quit_key='<C-c>'
-"
-"" CtrlP
-"" Set searching from current pwd
-"let g:ctrlp_working_path_mode = 'rw'
-"" Don't jump to already open window
-"let g:ctrlp_switch_buffer = 0
-"" Add funky extensions
-"let g:ctrlp_extensions = ['funky','tag','buffertag','changes']
-"" Files that represent a project root
-"let g:ctrlp_root_markers = [".project"]
-"" Create shortcuts for ctrlp helpers
-"nnoremap <leader>cB :CtrlPBuffer<Cr>
-"nnoremap <leader>cr :CtrlPMRU<Cr>
-"nnoremap <leader>cT :CtrlPTag<Cr>
-"nnoremap <leader>ct :CtrlPBufTag<Cr>
-"nnoremap <leader>cC :CtrlPChange<Cr>
+
+" CtrlP
+" Set searching from current pwd
+let g:ctrlp_working_path_mode = 'rw'
+" Don't jump to already open window
+let g:ctrlp_switch_buffer = 0
+" Add funky extensions
+let g:ctrlp_extensions = ['funky','tag','buffertag','changes']
+" Files that represent a project root
+let g:ctrlp_root_markers = [".project"]
+" Create shortcuts for ctrlp helpers
+nnoremap <leader>cB :CtrlPBuffer<Cr>
+nnoremap <leader>cr :CtrlPMRU<Cr>
+nnoremap <leader>cT :CtrlPTag<Cr>
+nnoremap <leader>ct :CtrlPBufTag<Cr>
+nnoremap <leader>cC :CtrlPChange<Cr>
 "
 "" CtrlP Funky
 "" Enable function search on ,cf
@@ -136,29 +136,29 @@ let NERDTreeAutoDeleteBuffer = 1
 "" Include rspec definitions 
 "let g:ctrlp_funky_ruby_rspec = 1
 "
-"" Ag (the_silver_searcher)
-"if executable('ag')
-"    " Use ag over grep
-"    set grepprg=ag\ --nogroup\ --nocolor
-"
-"    " Use ag in CtrlP for listing files. Lightning fast and respects
-"    " .gitignore
-"    let g:ctrlp_user_command = 'ag -l --nocolor -g "" %s '
-"
-"    " ag is fast enough that CtrlP doesn't need to cache
-"    let g:ctrlp_use_caching = 0
-"endif
-"
-"" bind \ (backward slash) to grep shortcut
-""command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
-"nnoremap <leader>g :LAg!<SPACE>
-"
-"" bind K to grep word under cursor
-"nnoremap K :LAg! <cword><CR>
-"
-"" UltiSnips
-"let g:UltiSnipsEnableSnipMate = 1
-"let g:UltiSnipsExpandTrigger = "<c-j>"
+" Ag (the_silver_searcher)
+if executable('ag')
+    " Use ag over grep
+    set grepprg=ag\ --nogroup\ --nocolor
+
+    " Use ag in CtrlP for listing files. Lightning fast and respects
+    " .gitignore
+    let g:ctrlp_user_command = 'ag -l --nocolor -g "" %s '
+
+    " ag is fast enough that CtrlP doesn't need to cache
+    let g:ctrlp_use_caching = 0
+endif
+
+" bind \ (backward slash) to grep shortcut
+"command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+nnoremap <leader>g :LAg!<SPACE>
+
+" bind K to grep word under cursor
+nnoremap K :LAg! <cword><CR>
+
+" UltiSnips
+let g:UltiSnipsEnableSnipMate = 1
+let g:UltiSnipsExpandTrigger = "<c-j>"
 
 " Emmet
 imap <C-e> <C-y>,
@@ -176,12 +176,12 @@ let g:used_javascript_libs = 'underscore,backbone,angularjs,react,jasmine,chai,a
 "" Autotag
 "let g:autotagExcludeSuffixes = "tml.xml.text.txt.vim"
 "
-"" Gitgutter
-"let g:gitgutter_map_keys = 0
-"" Realtime mode causes to many cmd popups on windows. Let's just disable it
-"let g:gitgutter_realtime = 0
-"let g:gitgutter_eager = 0
-"
+" Gitgutter
+let g:gitgutter_map_keys = 0
+" Realtime mode causes to many cmd popups on windows. Let's just disable it
+let g:gitgutter_realtime = 0
+let g:gitgutter_eager = 0
+
 " Surround
 " Wrap the token under the cursor in #{} ( use # )
 let g:surround_35 = "#{\r}"
@@ -197,19 +197,19 @@ let g:surround_61 = "<%= \r %>"
 "" Bring cursor focus to tagbar automatically
 "let g:tagbar_autofocus = 1
 "
-"" Fugitive
-"" Mappings
-"nnoremap <silent> <leader>Gs :Gstatus<CR>
-"nnoremap <silent> <leader>Gd :Gdiff<CR>
-"nnoremap <silent> <leader>Gc :Gcommit<CR>
-"nnoremap <silent> <leader>Gb :Gblame<CR>
-"nnoremap <silent> <leader>Gl :Glog<CR>
-"nnoremap <silent> <leader>GL :Gpull<CR>
-"nnoremap <silent> <leader>Gp :Gpush<CR>
-"nnoremap <silent> <leader>Gr :Gread<CR>
-"nnoremap <silent> <leader>Gw :Gwrite<CR>
-"nnoremap <silent> <leader>Ge :Gedit<CR>
-"
+" Fugitive
+" Mappings
+nnoremap <silent> <leader>Gs :Gstatus<CR>
+nnoremap <silent> <leader>Gd :Gdiff<CR>
+nnoremap <silent> <leader>Gc :Gcommit<CR>
+nnoremap <silent> <leader>Gb :Gblame<CR>
+nnoremap <silent> <leader>Gl :Glog<CR>
+nnoremap <silent> <leader>GL :Gpull<CR>
+nnoremap <silent> <leader>Gp :Gpush<CR>
+nnoremap <silent> <leader>Gr :Gread<CR>
+nnoremap <silent> <leader>Gw :Gwrite<CR>
+nnoremap <silent> <leader>Ge :Gedit<CR>
+
 "" Indent guides
 "" Set guides width to a narrow value
 "let g:indent_guides_guide_size = 1
@@ -246,83 +246,83 @@ let g:delimitMate_expand_cr = 1
     "autocmd User IncSearchLeave ShowSearchIndex
 "augroup END
 
-"" Eclim
-"" Windows version requires this to be set specifically
-"let g:EclimBaseDir = "~/.vim"
-"" Play nicely with YouCompleteMe
-"let g:EclimCompletionMethod = 'omnifunc'
-"" Update eclipse local history for better experience while pairing with Java programmers who use Eclipse
-"let g:EclimKeepLocalHistory = 1
-"" Useful mappings
-"nnoremap <leader>epr :ProjectRefresh<CR>
-"nnoremap <leader>epR :ProjectRefreshAll<CR>
-"" List current project warnings and errors
-"nnoremap <leader>epP :ProjectProblems<CR>
-"" List only project errors
-"nnoremap <leader>epp :ProjectProblems!<CR>
-"" Build current Eclipse project
-"nnoremap <leader>epb :ProjectBuild<CR>
-"" Run current Eclipse project
-"nnoremap <leader>epx :ProjectRun<CR>
-"" Show list of run configurations for the current project
-"nnoremap <leader>epX :ProjectRunList<CR>
-"" Display suggestions for the currently highlighted error
-"nnoremap <leader>ejC :JavaCorrect<CR>
-"" Create or update JavaDoc comment
-"nnoremap <leader>ejdc :JavaDocComment<CR>
-"" Preview JavaDoc for the word under cursor
-"nnoremap <leader>ejdp :JavaDocPreview<CR>
-"" Format current line or selection, to format the whole file do :%JavaFormat
-"nnoremap <leader>ejf :JavaFormat<CR>
-"" Rename symbol under cursor
-"nnoremap <leader>ejrr :JavaRename<SPACE>
-"" Move top level class or interface
-"nnoremap <leader>ejrm :JavaMove<SPACE>
-"" Undo refactoring changes
-"nnoremap <leader>ejru :RefactorUndo<CR>
-"" Show class hierarchy
-"nnoremap <leader>ejh :JavaHierarchy<CR>
-"" Show call hierarchy
-"nnoremap <leader>ejch :JavaCallHierarchy<CR>
-"" Show call hierarchy with calees
-"nnoremap <leader>ejcH :JavaCallHierarchy!<CR>
-"" Import package for the symbol under cursor
-"nnoremap <leader>eji :JavaImport<CR>
-"" Organize all imports
-"nnoremap <leader>ejI :JavaImportOrganize<CR>
-"" Create new Generic
-"nnoremap <leader>ejN :JavaNew<SPACE>
-"" Create new Class
-"nnoremap <leader>ejnc :JavaNew class<SPACE>
-"" Create new Interface
-"nnoremap <leader>ejni :JavaNew interface<SPACE>
-"" Create new Abstract
-"nnoremap <leader>ejna :JavaNew abstract<SPACE>
-"" Create new Enum
-"nnoremap <leader>ejne :JavaNew enum<SPACE>
-"" Generate constructor. As well works with selection that covers class fields
-"nnoremap <leader>ejgc :JavaConstructor<CR>
-"xnoremap <leader>ejgc :JavaConstructor<CR>
-"" Generate getter and setter for the field under cursor
-"nnoremap <leader>ejga :JavaGetSet<CR>
-"" Generate getter for the field under cursor
-"nnoremap <leader>ejgg :JavaGet<CR>
-"" Generate setter for the field under cursor
-"nnoremap <leader>ejgs :JavaSet<CR>
-"" Generate implementation
-"nnoremap <leader>ejgi :JavaImpl<CR>
-"" Generate delegate
-"nnoremap <leader>ejgd :JavaDelegate<CR>
-"" Perform a generic Java Search
-"nnoremap <leader>ejS :JavaSearch -p<space>
-"" Perform generic search for the symbol under cursor
-"nnoremap <leader>ejsa :JavaSearch -x all<CR>
-"" Search for declaration
-"nnoremap <leader>ejsd :JavaSearch -x declaration<CR>
-"" Search for implementation
-"nnoremap <leader>ejsi :JavaSearch -x implementors<CR>
-"" Search for references
-"nnoremap <leader>ejsr :JavaSearch -x references<CR>
+" Eclim
+" Windows version requires this to be set specifically
+let g:EclimBaseDir = "~/.vim"
+" Play nicely with YouCompleteMe
+let g:EclimCompletionMethod = 'omnifunc'
+" Update eclipse local history for better experience while pairing with Java programmers who use Eclipse
+let g:EclimKeepLocalHistory = 1
+" Useful mappings
+nnoremap <leader>epr :ProjectRefresh<CR>
+nnoremap <leader>epR :ProjectRefreshAll<CR>
+" List current project warnings and errors
+nnoremap <leader>epP :ProjectProblems<CR>
+" List only project errors
+nnoremap <leader>epp :ProjectProblems!<CR>
+" Build current Eclipse project
+nnoremap <leader>epb :ProjectBuild<CR>
+" Run current Eclipse project
+nnoremap <leader>epx :ProjectRun<CR>
+" Show list of run configurations for the current project
+nnoremap <leader>epX :ProjectRunList<CR>
+" Display suggestions for the currently highlighted error
+nnoremap <leader>ejC :JavaCorrect<CR>
+" Create or update JavaDoc comment
+nnoremap <leader>ejdc :JavaDocComment<CR>
+" Preview JavaDoc for the word under cursor
+nnoremap <leader>ejdp :JavaDocPreview<CR>
+" Format current line or selection, to format the whole file do :%JavaFormat
+nnoremap <leader>ejf :JavaFormat<CR>
+" Rename symbol under cursor
+nnoremap <leader>ejrr :JavaRename<SPACE>
+" Move top level class or interface
+nnoremap <leader>ejrm :JavaMove<SPACE>
+" Undo refactoring changes
+nnoremap <leader>ejru :RefactorUndo<CR>
+" Show class hierarchy
+nnoremap <leader>ejh :JavaHierarchy<CR>
+" Show call hierarchy
+nnoremap <leader>ejch :JavaCallHierarchy<CR>
+" Show call hierarchy with calees
+nnoremap <leader>ejcH :JavaCallHierarchy!<CR>
+" Import package for the symbol under cursor
+nnoremap <leader>eji :JavaImport<CR>
+" Organize all imports
+nnoremap <leader>ejI :JavaImportOrganize<CR>
+" Create new Generic
+nnoremap <leader>ejN :JavaNew<SPACE>
+" Create new Class
+nnoremap <leader>ejnc :JavaNew class<SPACE>
+" Create new Interface
+nnoremap <leader>ejni :JavaNew interface<SPACE>
+" Create new Abstract
+nnoremap <leader>ejna :JavaNew abstract<SPACE>
+" Create new Enum
+nnoremap <leader>ejne :JavaNew enum<SPACE>
+" Generate constructor. As well works with selection that covers class fields
+nnoremap <leader>ejgc :JavaConstructor<CR>
+xnoremap <leader>ejgc :JavaConstructor<CR>
+" Generate getter and setter for the field under cursor
+nnoremap <leader>ejga :JavaGetSet<CR>
+" Generate getter for the field under cursor
+nnoremap <leader>ejgg :JavaGet<CR>
+" Generate setter for the field under cursor
+nnoremap <leader>ejgs :JavaSet<CR>
+" Generate implementation
+nnoremap <leader>ejgi :JavaImpl<CR>
+" Generate delegate
+nnoremap <leader>ejgd :JavaDelegate<CR>
+" Perform a generic Java Search
+nnoremap <leader>ejS :JavaSearch -p<space>
+" Perform generic search for the symbol under cursor
+nnoremap <leader>ejsa :JavaSearch -x all<CR>
+" Search for declaration
+nnoremap <leader>ejsd :JavaSearch -x declaration<CR>
+" Search for implementation
+nnoremap <leader>ejsi :JavaSearch -x implementors<CR>
+" Search for references
+nnoremap <leader>ejsr :JavaSearch -x references<CR>
 
 " Matchit
 let b:match_ignorecase = 1
@@ -331,11 +331,11 @@ let b:match_ignorecase = 1
 nmap <leader>ta :Tabularize /
 vmap <leader>ta :Tabularize /
 
-"" Gutentags
-"set statusline+=%{gutentags#statusline('[Generating\ tags]')}
-"let g:gutentags_project_root = [".gtags"]
-"" By some reason on windows ctags ignore wildcard
-"let g:gutentags_exclude = ["*.min.js"]
+" Gutentags
+set statusline+=%{gutentags#statusline('[Generating\ tags]')}
+let g:gutentags_project_root = [".gtags"]
+" By some reason on windows ctags ignore wildcard
+let g:gutentags_exclude = ["*.min.js"]
 
 if g:ycm_supported
     " Youcompleteme
@@ -456,11 +456,11 @@ let g:rooter_silent_chdir = 1
 " Pasta
 let g:pasta_disabled_filetypes = ["python", "coffee", "markdown", "yaml", "slim", "nerdtree", "tagbar"]
 
-"" Ctrlp tjump
-"nnoremap <c-]> :CtrlPtjump<cr>
-"vnoremap <c-]> :CtrlPtjumpVisual<cr>
-"" Behave as the default shortcut by default
-"let g:ctrlp_tjump_only_silent = 1
+" Ctrlp tjump
+nnoremap <c-]> :CtrlPtjump<cr>
+vnoremap <c-]> :CtrlPtjumpVisual<cr>
+" Behave as the default shortcut by default
+let g:ctrlp_tjump_only_silent = 1
 "
 "" Ctrlp modified
 "nnoremap <leader>cg :CtrlPBranch<CR>
@@ -535,5 +535,9 @@ let g:sneak#use_ic_scs = 1
 let g:sneak#streak = 1
 nmap s <Plug>(SneakStreak)
 nmap S <Plug>(SneakStreakBackward)
+
+" Grepper
+"nnoremap <silent> <leader>g :Grepper -tool ag<cr>
+"nnoremap K :Grepper -tool ag -cword -noprompt<cr>
 
 "" }

@@ -120,34 +120,50 @@ if g:ycm_supported
     Plug 'Valloric/YouCompleteMe'
 endif
 
-"" A plugin for visually displaying indent levels
-"Plugin 'nathanaelkane/vim-indent-guides'
+" A Vim plugin that always highlights the enclosing html/xml tags
+Plug 'Valloric/MatchTagAlways'
+" A vim plugin to display the indention levels with thin vertical lines
+Plug 'Yggdroot/indentLine'
+" Fuzzy file, buffer, mru, tag, etc finder ( this plugin should add async
+" support hopefully soon )
+Plug 'ctrlpvim/ctrlp.vim'
+" CtrlP extension for fuzzy-search in tag matches
+Plug 'ivalkeen/vim-ctrlp-tjump'
+" Multiple cursors and selection support ( review need for this plugin later,
+" since I don't really use it often )
+"Plug 'terryma/vim-multiple-cursors'
 "" A syntax checking plugin
 "Plugin 'scrooloose/syntastic'
-"" Snippets files for various programming languages
-"Plugin 'honza/vim-snippets'
-"" The ultimate snippet solution for Vim
-"Plugin 'SirVer/ultisnips'
+" A Vim plugin that manages your tag files
+Plug 'ludovicchabant/vim-gutentags'
+" Helps you win at grep. ( does really work as expected, review later )
+"Plug 'mhinz/vim-grepper'
+" Vim plugin for the_silver_searcher, 'ag'
+Plug 'rking/ag.vim'
+" Snippets files for various programming languages
+Plug 'honza/vim-snippets'
+" The ultimate snippet solution for Vim ( these are quite slow, look for
+" alternative in the futuer )
+Plug 'SirVer/ultisnips'
+"" A simple function navigator for ctrlp.vim
+"Plugin 'tacahiroy/ctrlp-funky'
+" Better Diff options for Vim
+Plug 'chrisbra/vim-diff-enhanced'
+" A vim plugin to perform diffs on blocks of code
+"Plug 'AndrewRadev/linediff.vim'
+
+"" A plugin for visually displaying indent levels
+"Plugin 'nathanaelkane/vim-indent-guides'
 "" Plugin to visualize your Vim undo tree
 "Plugin 'sjl/gundo.vim'
 "" Plugin that simplifies the transition between multiline and single-line code
 "Plugin 'AndrewRadev/splitjoin.vim'
 "" Easy text exchange operator
 "Plugin 'tommcdo/vim-exchange'
-"" Multiple cursors and selection support
-"Plugin 'terryma/vim-multiple-cursors'
-"" Fuzzy file, buffer, mru, tag, etc finder
-"Plugin 'ctrlpvim/ctrlp.vim'
-"" Vim plugin for the_silver_searcher, 'ag'
-"Plugin 'rking/ag.vim'
-"" A Vim plugin that manages your tag files
-"Plugin 'ludovicchabant/vim-gutentags'
 "" Vim plugin that displays tags in a window, ordered by scope
 "Plugin 'majutsushi/tagbar'
 "" Asynchronous build and test dispatcher
 "Plugin 'tpope/vim-dispatch'
-"" A simple function navigator for ctrlp.vim
-"Plugin 'tacahiroy/ctrlp-funky'
 "" Smart selection of the closest text object
 "Plugin 'gcmt/wildfire.vim'
 "" Start a * or # search from a visual block
@@ -161,16 +177,8 @@ endif
 "Plugin 'PeterRincker/vim-argumentative'
 "" Run your tests at the speed of thought
 "Plugin 'janko-m/vim-test'
-"" A vim plugin to perform diffs on blocks of code
-"Plugin 'AndrewRadev/linediff.vim'
 "" Swap your windows without ruining your layout
 "Plugin 'wesQ3/vim-windowswap'
-"" A Vim plugin that always highlights the enclosing html/xml tags
-"Plugin 'Valloric/MatchTagAlways'
-"" CtrlP extension for fuzzy-search in tag matches
-"Plugin 'ivalkeen/vim-ctrlp-tjump'
-"" Better Diff options for Vim
-"Plugin 'chrisbra/vim-diff-enhanced'
 "" Easily open locally modified files in your git-versioned projects
 "Plugin 'jasoncodes/ctrlp-modified.vim'
 "" Wrap and unwrap function arguments, lists, and dictionaries in Vim
@@ -197,18 +205,20 @@ Plug 'kana/vim-textobj-user'
 "" ===========
 "" Git support
 "" ===========
-"" A Git wrapper so awesome, it should be illegal
-"Plugin 'tpope/vim-fugitive'
-"" A Vim plugin which shows a git diff in the gutter (sign column) and stages/reverts hunks
-"Plugin 'airblade/vim-gitgutter'
+" A Git wrapper so awesome, it should be illegal
+Plug 'tpope/vim-fugitive'
+" A Vim plugin which shows a git diff in the gutter (sign column) and stages/reverts hunks
+Plug 'airblade/vim-gitgutter'
+" Fugitive extension to manage and merge Git branches
+Plug 'idanarye/vim-merginal'
+" A git commit browser
+Plug 'junegunn/gv.vim'
 "" This is a vimscript for creating gists
 ""Plugin 'mattn/gist-vim'
 "" A 'gitk clone' plugin for the text editor Vim
 "Plugin 'gregsexton/gitv'
 "" Vim Git runtime files
 "Plugin 'tpope/vim-git'
-"" Fugitive extension to manage and merge Git branches
-"Plugin 'idanarye/vim-merginal'
 
 " ===================
 " Syntax and languages
