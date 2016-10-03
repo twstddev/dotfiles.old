@@ -54,7 +54,7 @@ Plug 'easysid/mod8.vim'
 Plug 'jscappini/material.vim'
 Plug 'trusktr/seti.vim'
 " Lean & mean status/tabline for vim that's light as air
-Plug 'paranoida/vim-airlineish'
+"Plug 'paranoida/vim-airlineish'
 
 " ==============
 " Utility helpers for other plugins
@@ -83,9 +83,11 @@ Plug 'henrik/vim-indexed-search'
 " Improved incremental searching for Vim
 "Plug 'haya14busa/incsearch.vim'
 " Lean & mean status/tabline for vim that's light as air
-Plug 'bling/vim-airline'
+"Plug 'bling/vim-airline'
 " A collection of themes for vim-airline
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline-themes'
+" A light and configurable statusline/tabline for Vim
+Plug 'itchyny/lightline.vim'
 " Provides automatic closing of quotes, parenthesis, brackets, etc.
 Plug 'Raimondi/delimitMate'
 " Extended % matching for HTML, LaTeX, and many other languages
