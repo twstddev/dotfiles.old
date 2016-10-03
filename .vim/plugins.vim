@@ -123,7 +123,7 @@ if g:ycm_supported
 endif
 
 " A Vim plugin that always highlights the enclosing html/xml tags
-Plug 'Valloric/MatchTagAlways'
+"Plug 'Valloric/MatchTagAlways'
 " A vim plugin to display the indention levels with thin vertical lines
 Plug 'Yggdroot/indentLine'
 " Fuzzy file, buffer, mru, tag, etc finder ( this plugin should add async
@@ -137,7 +137,7 @@ Plug 'ivalkeen/vim-ctrlp-tjump'
 "" A syntax checking plugin
 "Plugin 'scrooloose/syntastic'
 " A Vim plugin that manages your tag files
-Plug 'ludovicchabant/vim-gutentags'
+"Plug 'ludovicchabant/vim-gutentags'
 " Helps you win at grep. ( does really work as expected, review later )
 "Plug 'mhinz/vim-grepper'
 " Vim plugin for the_silver_searcher, 'ag'
@@ -210,7 +210,7 @@ Plug 'kana/vim-textobj-user'
 " A Git wrapper so awesome, it should be illegal
 Plug 'tpope/vim-fugitive'
 " A Vim plugin which shows a git diff in the gutter (sign column) and stages/reverts hunks
-Plug 'airblade/vim-gitgutter'
+"Plug 'airblade/vim-gitgutter'
 " Fugitive extension to manage and merge Git branches
 Plug 'idanarye/vim-merginal'
 " A git commit browser
@@ -263,6 +263,7 @@ Plug 'isRuslan/vim-es6'
 Plug 'heavenshell/vim-jsdoc'
 " AngularJS with Vim
 Plug 'burnettk/vim-angular'
+
 "" React JSX syntax highlighting and indenting for vim
 "Plugin 'mxw/vim-jsx'
 "" Jasmine Plugin for Vim
