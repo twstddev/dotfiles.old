@@ -545,4 +545,11 @@ nmap S <Plug>(SneakStreakBackward)
 "nnoremap <silent> <leader>g :Grepper -tool ag<cr>
 "nnoremap K :Grepper -tool ag -cword -noprompt<cr>
 
+" Lightline
+let g:lightline = {
+        \ 'colorscheme': 'wombat',
+        \ 'separator': { 'left': '', 'right': ''  },
+        \ 'subseparator': { 'left': '', 'right': ''  }
+        \ }
+
 "" }
