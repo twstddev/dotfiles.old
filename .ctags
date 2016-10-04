@@ -5,6 +5,10 @@
 --exclude=*.js.map
 --exclude=bower_components
 --exclude=tmp
+--exclue=bundle
+--exclue=dist
+--exclue=build
+--exclue=typings
 
 --extra=+q
 --fields=+i+a+S+l
