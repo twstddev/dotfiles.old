@@ -133,7 +133,7 @@ nnoremap <leader>cC :CtrlPChange<Cr>
 "let g:ctrlp_funky_ruby_classes = 1
 "" Include ruby module definitions
 "let g:ctrlp_funky_ruby_modules = 1
-"" Include rspec definitions 
+"" Include rspec definitions
 "let g:ctrlp_funky_ruby_rspec = 1
 "
 " Ag (the_silver_searcher)
@@ -550,9 +550,50 @@ let g:grepper = {
 
 " Lightline
 let g:lightline = {
-        \ 'colorscheme': 'wombat',
+        \ 'colorscheme': 'Tomorrow_Night_Eighties',
         \ 'separator': { 'left': '', 'right': ''  },
-        \ 'subseparator': { 'left': '', 'right': ''  }
+        \ 'subseparator': { 'left': '', 'right': ''  },
+        \ 'active': {
+            \ 'left': [ [ 'mode', 'paste' ],
+            \           [ 'readonly', 'filename', 'modified' ],
+            \           [ 'ctrlp' ] ],
+            \ 'right': [ [ 'lineinfo' ],
+            \            [ 'percent' ],
+            \            [ 'fileformat', 'fileencoding', 'filetype' ] ]
+        \ },
+        \ 'component_expand': {
+            \ 'ctrlp': 'CtrlpStatus'
+        \ },
+        \ 'component_type': {
+            \ 'ctrlp': 'warning'
         \ }
+        \ }
+
+" function that returns display info for ctrlp plugin
+function! CtrlpStatus()
+    if expand('%:t') =~ 'ControlP' && has_key(g:lightline, 'ctrlp_item')
+        return [g:lightline.ctrlp_prev, g:lightline.ctrlp_item, g:lightline.ctrlp_next]
+    else
+        return [' ']
+    endif
+endfunction
+
+" hooks called by ctrlp i assume???
+let g:ctrlp_status_func = {
+  \ 'main': 'CtrlPStatusFunc_1',
+  \ 'prog': 'CtrlPStatusFunc_2',
+  \ }
+
+function! CtrlPStatusFunc_1(focus, byfname, regex, prev, item, next, marked)
+  let g:lightline.ctrlp_regex = a:regex
+  let g:lightline.ctrlp_prev = a:prev
+  let g:lightline.ctrlp_item = a:item
+  let g:lightline.ctrlp_next = a:next
+  return lightline#statusline(0)
+endfunction
+
+function! CtrlPStatusFunc_2(str)
+  return lightline#statusline(0)
+endfunction
 
 "" }
