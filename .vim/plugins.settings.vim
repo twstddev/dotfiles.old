@@ -151,10 +151,10 @@ endif
 
 " bind \ (backward slash) to grep shortcut
 "command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
-nnoremap <leader>g :LAg!<SPACE>
+"nnoremap <leader>g :LAg!<SPACE>
 
 " bind K to grep word under cursor
-nnoremap K :LAg! <cword><CR>
+"nnoremap K :LAg! <cword><CR>
 
 " UltiSnips
 let g:UltiSnipsEnableSnipMate = 1
@@ -337,10 +337,10 @@ nmap <leader>ta :Tabularize /
 vmap <leader>ta :Tabularize /
 
 " Gutentags
-set statusline+=%{gutentags#statusline('[Generating\ tags]')}
-let g:gutentags_project_root = [".gtags"]
-" By some reason on windows ctags ignore wildcard
-let g:gutentags_exclude = ["*.min.js"]
+"set statusline+=%{gutentags#statusline('[Generating\ tags]')}
+"let g:gutentags_project_root = [".gtags"]
+"" By some reason on windows ctags ignore wildcard
+"let g:gutentags_exclude = ["*.min.js"]
 
 if g:ycm_supported
     " Youcompleteme
@@ -542,8 +542,11 @@ nmap s <Plug>(SneakStreak)
 nmap S <Plug>(SneakStreakBackward)
 
 " Grepper
-"nnoremap <silent> <leader>g :Grepper -tool ag<cr>
-"nnoremap K :Grepper -tool ag -cword -noprompt<cr>
+nnoremap <silent> <leader>g :Grepper<cr>
+nnoremap K :Grepper -tool ag -cword -noprompt<cr>
+let g:grepper = {
+        \'tools': ['ag', 'git', 'grep']
+        \}
 
 " Lightline
 let g:lightline = {

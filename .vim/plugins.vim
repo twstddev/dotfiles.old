@@ -139,7 +139,7 @@ Plug 'ivalkeen/vim-ctrlp-tjump'
 " A Vim plugin that manages your tag files
 "Plug 'ludovicchabant/vim-gutentags'
 " Helps you win at grep. ( does really work as expected, review later )
-"Plug 'mhinz/vim-grepper'
+Plug 'mhinz/vim-grepper'
 " Vim plugin for the_silver_searcher, 'ag'
 Plug 'rking/ag.vim'
 " Snippets files for various programming languages
@@ -153,6 +153,8 @@ Plug 'SirVer/ultisnips'
 Plug 'chrisbra/vim-diff-enhanced'
 " A vim plugin to perform diffs on blocks of code
 "Plug 'AndrewRadev/linediff.vim'
+" Open a Quickfix item in a window you choose.
+Plug 'yssl/QFEnter'
 
 "" A plugin for visually displaying indent levels
 "Plugin 'nathanaelkane/vim-indent-guides'
@@ -210,7 +212,7 @@ Plug 'kana/vim-textobj-user'
 " A Git wrapper so awesome, it should be illegal
 Plug 'tpope/vim-fugitive'
 " A Vim plugin which shows a git diff in the gutter (sign column) and stages/reverts hunks
-"Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 " Fugitive extension to manage and merge Git branches
 Plug 'idanarye/vim-merginal'
 " A git commit browser
