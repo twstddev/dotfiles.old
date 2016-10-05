@@ -70,8 +70,6 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
 " Plugin provides mappings to easily delete, change and add such surroundings in pairs
 Plug 'tpope/vim-surround'
-" Provides a much simpler way to use some motions
-"Plug 'easymotion/vim-easymotion'
 " The missing motion for Vim
 Plug 'justinmk/vim-sneak'
 " Enable repeating supported plugin maps with .
@@ -110,7 +108,6 @@ Plug 'godlygeek/tabular'
 
 if g:ycm_supported
     " A code-completion engine for Vim ( the plugin is very useful but it makes the whole editor slow )
-    "Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
     Plug 'Valloric/YouCompleteMe'
 endif
 
@@ -128,8 +125,6 @@ Plug 'ivalkeen/vim-ctrlp-tjump'
 Plug 'ludovicchabant/vim-gutentags'
 " Helps you win at grep. ( does really work as expected, review later )
 Plug 'mhinz/vim-grepper'
-" Vim plugin for the_silver_searcher, 'ag'
-Plug 'rking/ag.vim'
 " Snippets files for various programming languages
 Plug 'honza/vim-snippets'
 " The ultimate snippet solution for Vim ( these are quite slow, look for
@@ -139,6 +134,8 @@ Plug 'SirVer/ultisnips'
 Plug 'chrisbra/vim-diff-enhanced'
 " Open a Quickfix item in a window you choose.
 Plug 'yssl/QFEnter'
+" A plugin for asynchronous :make using Neovim's job-control functionality
+Plug 'neomake/neomake', { 'branch': 'vim-async' }
 
 " ============
 " Text Objects
@@ -171,7 +168,7 @@ Plug 'othree/html5.vim'
 " Vim syntax file for scss (Sassy CSS)
 Plug 'cakebaker/scss-syntax.vim'
 " Add CSS3 syntax support to vim's built-in `syntax/css.vim` ( disable this
-" plugin for now, it's slows down opening of html files )
+" plugin for now, it slows down opening of html files )
 "Plug 'hail2u/vim-css3-syntax'
 " Highlight colors in css files ( this plugin causes slight lag on scroll )
 Plug 'ap/vim-css-color'
@@ -214,6 +211,10 @@ Plug 'keith/rspec.vim'
 Plug 'rodjek/vim-puppet'
 " CoffeeScript support for vim
 Plug 'kchmck/vim-coffee-script'
+" Locally managed eclim
+if g:eclim_supported
+    Plug g:plug_home . '/eclim'
+endif
 
 augroup load_on_insert
     autocmd!

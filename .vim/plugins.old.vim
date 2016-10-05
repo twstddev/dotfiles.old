@@ -6,6 +6,8 @@
 " Lean & mean status/tabline for vim that's light as air
 "Plug 'paranoida/vim-airlineish'
 
+"" Provides a much simpler way to use some motions
+""Plug 'easymotion/vim-easymotion'
 " A Vim plugin that always highlights the enclosing html/xml tags
 "Plug 'Valloric/MatchTagAlways'
 " Improved incremental searching for Vim
@@ -57,6 +59,8 @@
 "" Come back to it later and try to resolve the issue with Ag on windows, where
 "" it doesn't recognize --ignore parameter
 ""Plugin 'dkprice/vim-easygrep'
+"" Vim plugin for the_silver_searcher, 'ag'
+"Plug 'rking/ag.vim'
 
 
 " Text objects for indented blocks of lines

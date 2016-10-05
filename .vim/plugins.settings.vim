@@ -87,8 +87,6 @@ let g:delimitMate_expand_space = 1
 let g:delimitMate_expand_cr = 1
 
 " Eclim
-" Windows version requires this to be set specifically
-let g:EclimBaseDir = "~/.vim"
 " Play nicely with YouCompleteMe
 let g:EclimCompletionMethod = 'omnifunc'
 " Update eclipse local history for better experience while pairing with Java programmers who use Eclipse
@@ -347,5 +345,9 @@ endfunction
 function! CtrlPStatusFunc_2(str)
   return lightline#statusline(0)
 endfunction
+
+" Neomake
+autocmd! BufWritePost * Neomake
+let g:neomake_open_list = 1
 
 "" }
