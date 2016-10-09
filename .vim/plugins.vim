@@ -135,7 +135,7 @@ Plug 'chrisbra/vim-diff-enhanced'
 " Open a Quickfix item in a window you choose.
 Plug 'yssl/QFEnter'
 " A plugin for asynchronous :make using Neovim's job-control functionality
-Plug 'neomake/neomake', { 'branch': 'vim-async' }
+Plug 'neomake/neomake'
 
 " ============
 " Text Objects
