@@ -352,6 +352,5 @@ endfunction
 autocmd! BufWritePost * Neomake
 " Disable checker for java, use eclim instead
 let g:neomake_java_enabled_makers = []
-let g:neomake_open_list = 1
-
-"" }
+" Open errors list but keep cursor position
+let g:neomake_open_list = 2
