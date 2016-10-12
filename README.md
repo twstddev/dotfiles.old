@@ -2,13 +2,11 @@
 
 ## Vim
 * Install Vim with Python support
-  * **Windows** - http://cream.sourceforge.net ( get vim without cream )
-* Prepare Vundle.vim and install plugins - https://github.com/VundleVim/Vundle.vim
 * Install silver searcher - https://github.com/ggreer/the_silver_searcher
-* Install eclim for java support - http://eclim.org/index.html
+* Install eclim for java support - http://eclim.org/index.html. Install it to .vim/bundle/eclim for vim-plug to manage it.
 * Install needed syntax checkers - https://github.com/scrooloose/syntastic/wiki/Syntax-Checkers
 * Install ctags - http://ctags.sourceforge.net
-* Install youcompleteme with needed completers - https://github.com/Valloric/YouCompleteMe
+* Install youcompleteme with needed completers - https://github.com/Valloric/YouCompleteMe. ( In python/ycm/youcompleteme.py remove call to self._AddUltiSnipsDataIfNeeded( extra_data ) in OnBufferVisit  in order to improve overall performance )
 * Install fonts from - https://github.com/ryanoasis/nerd-fonts ( make sure to install Deja Vu Sans Mono for Windows )
 
 ## ZSH
