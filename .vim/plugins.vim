@@ -53,6 +53,7 @@ Plug 'notpratheek/vim-luna'
 Plug 'easysid/mod8.vim'
 Plug 'jscappini/material.vim'
 Plug 'trusktr/seti.vim'
+Plug 'AlessandroYorba/Despacio'
 
 " ==============
 " Utility helpers for other plugins
