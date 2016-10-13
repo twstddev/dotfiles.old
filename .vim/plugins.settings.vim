@@ -92,10 +92,8 @@ if g:eclim_supported
     let g:EclimCompletionMethod = 'omnifunc'
     " Update eclipse local history for better experience while pairing with Java programmers who use Eclipse
     let g:EclimKeepLocalHistory = 1
-    " Turn of ultisnips querying, because it causes lag when buffers are opened or
-    " switched ( as well don't forget to patch youcompleteme.py and remote call to
-    " _AddUltiSnipsDataIfNeeded. this are just insanely slow and useless )
-    let g:ycm_use_ultisnips_completer = 0
+    " Disable menu items since it slows down opening buffers
+    let g:EclimMenus = 0
 
     " Useful mappings
     nnoremap <leader>epr :ProjectRefresh<CR>
@@ -200,6 +198,10 @@ if g:ycm_supported
     let g:ycm_cache_omnifunc = 1
     " Goto within the same buffer
     let g:ycm_goto_buffer_command = 'same-buffer'
+    " Turn off ultisnips querying, because it causes lag when buffers are opened or
+    " switched ( as well don't forget to patch youcompleteme.py and remote call to
+    " _AddUltiSnipsDataIfNeeded. this are just insanely slow and useless )
+    let g:ycm_use_ultisnips_completer = 0
     " Configure shortcuts
     nnoremap <leader>Jg :YcmCompleter GoTo<CR>
     nnoremap <leader>Jdc :YcmCompleter GoToDeclaration<CR>
