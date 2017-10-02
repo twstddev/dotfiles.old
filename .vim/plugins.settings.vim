@@ -180,7 +180,7 @@ let g:gutentags_project_root = [".gtags"]
 " choose for which projects to generate tags
 let g:gutentags_add_default_project_roots = 0
 " By some reason on windows ctags ignore wildcard
-let g:gutentags_exclude = ["*.min.js"]
+let g:gutentags_ctags_exclude = ["*.min.js"]
 
 if g:ycm_supported
     " Youcompleteme
@@ -356,3 +356,4 @@ autocmd! BufWritePost * Neomake
 let g:neomake_java_enabled_makers = []
 " Open errors list but keep cursor position
 let g:neomake_open_list = 2
+let g:neomake_typescript_enabled_makers = ['tslint', 'tsc']
