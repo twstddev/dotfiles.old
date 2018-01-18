@@ -357,3 +357,6 @@ let g:neomake_java_enabled_makers = []
 " Open errors list but keep cursor position
 let g:neomake_open_list = 2
 let g:neomake_typescript_enabled_makers = ['tslint', 'tsc']
+
+" json plugin
+let g:vim_json_syntax_conceal = 0

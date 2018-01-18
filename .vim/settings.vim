@@ -105,7 +105,7 @@ map <leader>l <C-w>l
 " Use dark background by default
 set background=dark
 " Set color scheme
-:colorscheme material-theme
+:colorscheme mud
 
 " Use system clipboard (make sure vim has clipboard support enabled)
 set clipboard=unnamed

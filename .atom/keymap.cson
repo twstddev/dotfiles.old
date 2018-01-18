@@ -1,0 +1,83 @@
+# Your keymap
+#
+# Atom keymaps work similarly to style sheets. Just as style sheets use
+# selectors to apply styles to elements, Atom keymaps use selectors to associate
+# keystrokes with events in specific contexts. Unlike style sheets however,
+# each selector can only be declared once.
+#
+# You can create a new keybinding in this file by typing "key" and then hitting
+# tab.
+#
+# Here's an example taken from Atom's built-in keymap:
+#
+# 'atom-text-editor':
+#   'enter': 'editor:newline'
+#
+# 'atom-workspace':
+#   'ctrl-shift-p': 'core:move-up'
+#   'ctrl-p': 'core:move-down'
+#
+# You can find more information about keymaps in these guides:
+# * http://flight-manual.atom.io/using-atom/sections/basic-customization/#customizing-keybindings
+# * http://flight-manual.atom.io/behind-atom/sections/keymaps-in-depth/
+#
+# If you're having trouble with your keybindings not working, try the
+# Keybinding Resolver: `Cmd+.` on macOS and `Ctrl+.` on other platforms. See the
+# Debugging Guide for more information:
+# * http://flight-manual.atom.io/hacking-atom/sections/debugging/#check-the-keybindings
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# http://flight-manual.atom.io/using-atom/sections/basic-customization/#configuring-with-cson
+'body':
+  'ctrl-,': 'application:show-settings'
+  'ctrl-j': 'core:move-down'
+  'ctrl-k': 'core:move-up'
+  'ctrl-t': 'command-palette:toggle'
+  'ctrl-w c': 'pane:close'
+  'ctrl-w q': 'core:close'
+  'ctrl-g t': 'pane:show-next-item'
+  'ctrl-g T': 'pane:show-previous-item'
+  'ctrl-p': 'fuzzy-finder:toggle-file-finder'
+  'ctrl-w h': 'window:focus-pane-on-left'
+  'ctrl-w k': 'window:focus-pane-on-above'
+  'ctrl-w j': 'window:focus-pane-on-below'
+  'ctrl-w l': 'window:focus-pane-on-right'
+  'ctrl-n': 'tree-view:toggle'
+
+'atom-text-editor.vim-mode-plus.normal-mode':
+  'y s': 'vim-mode-plus:surround'
+  'd s': 'vim-mode-plus:delete-surround'
+  'c s': 'vim-mode-plus:change-surround'
+  's': 'vim-sneak:letter'
+  'S': 'vim-sneak:letter'
+  ', g': 'project-find:show'
+
+'atom-text-editor.vim-mode-plus.visual-mode':
+  's': 'vim-sneak:letter-select'
+  'S': 'vim-sneak:letter-select'
+  'ctrl-c': 'vim-mode-plus:reset-normal-mode'
+
+'atom-text-editor':
+  'ctrl-t': 'command-palette:toggle'
+  'ctrl-k': 'core:move-up'
+
+'atom-text-editor:not([mini])':
+  'ctrl-j': 'snippets:expand'
+
+"atom-text-editor.vim-mode-plus:not(.insert-mode)":
+  ', h': 'window:focus-pane-on-left'
+  ', k': 'window:focus-pane-on-above'
+  ', j': 'window:focus-pane-on-below'
+  ', l': 'window:focus-pane-on-right'
+
+'.tree-view':
+  ', l': 'window:focus-pane-on-right'
+
+"atom-text-editor:not(.insert-mode)":
+  'ctrl-c': 'core:cancel'
+
+'.command-palette':
+  'ctrl-t': 'command-palette:toggle'
+  'ctrl-c': 'command-palette:toggle'

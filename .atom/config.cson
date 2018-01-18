@@ -1,0 +1,67 @@
+"*":
+  "autocomplete-plus":
+    backspaceTriggersAutocomplete: true
+    confirmCompletion: "tab"
+    minimumWordLength: 2
+  "bracket-matcher": {}
+  core:
+    allowPendingPaneItems: false
+    audioBeep: false
+    automaticallyUpdate: false
+    disabledPackages: [
+      "welcome"
+      "autosave"
+      "background-tips"
+      "exception-reporting"
+      "github"
+      "go-to-line"
+      "link"
+      "metrics"
+      "open-on-github"
+      "styleguide"
+      "project-manager"
+    ]
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      ".keep"
+      "._*"
+      "*.pyc"
+      "Thumbs.db"
+    ]
+    packagesWithKeymapsDisabled: []
+    restorePreviousWindowsOnStart: "no"
+    telemetryConsent: "no"
+  editor:
+    fontSize: 13
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
+    tabType: "soft"
+  "ex-mode":
+    gdefault: true
+    splitbelow: true
+    splitright: true
+  "exception-reporting":
+    userId: "964f2fbb-6087-4ba4-ba90-95a4b2e1f98a"
+  "find-and-replace":
+    closeFindPanelAfterSearch: true
+    projectSearchResultsPaneSplitDirection: "down"
+    scrollToResultOnLiveSearch: true
+  "fuzzy-finder": {}
+  "git-diff":
+    showIconsInEditorGutter: true
+  jumpy: {}
+  "markdown-preview":
+    useGitHubStyle: true
+  "project-viewer":
+    disclaimer:
+      v121: false
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  "vim-mode-plus":
+    useSmartcaseForSearch: true
+  "vim-sneak":
+    replaceCharacters: "abcdefghijklmnopqrstuvwxyz"
