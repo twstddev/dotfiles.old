@@ -125,7 +125,8 @@ Plug 'ivalkeen/vim-ctrlp-tjump'
 " A Vim plugin that manages your tag files
 Plug 'ludovicchabant/vim-gutentags'
 " Helps you win at grep. ( does really work as expected, review later )
-Plug 'mhinz/vim-grepper', { 'commit': 'de4ab1864e6e381ba73c0f3badf31ce302e15e5e' }
+"Plug 'mhinz/vim-grepper', { 'commit': 'de4ab1864e6e381ba73c0f3badf31ce302e15e5e' }
+Plug 'mhinz/vim-grepper'
 " Snippets files for various programming languages
 Plug 'honza/vim-snippets'
 " The ultimate snippet solution for Vim ( these are quite slow, look for
