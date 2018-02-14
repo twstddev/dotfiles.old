@@ -94,6 +94,13 @@ if g:eclim_supported
     let g:EclimKeepLocalHistory = 1
     " Disable menu items since it slows down opening buffers
     let g:EclimMenus = 0
+    " Disable validation for anything but Java
+    let g:JavascriptValidate = 0
+    let g:CssValidate = 0
+    let g:DtdValidate = 0
+    let g:HtmlValidate = 0
+    let g:XmlValidate = 0
+    let g:XsdValidate = 0
 
     " Useful mappings
     nnoremap <leader>epr :ProjectRefresh<CR>
@@ -351,7 +358,7 @@ function! CtrlPStatusFunc_2(str)
 endfunction
 
 " Neomake
-autocmd! BufWritePost * Neomake
+"autocmd! BufWritePost * Neomake
 " Disable checker for java, use eclim instead
 let g:neomake_java_enabled_makers = []
 " Open errors list but keep cursor position
@@ -360,3 +367,9 @@ let g:neomake_typescript_enabled_makers = ['tslint', 'tsc']
 
 " json plugin
 let g:vim_json_syntax_conceal = 0
+
+" Ale
+let g:ale_list_window_size = 4
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_open_list = 1
+let g:ale_lint_on_insert_leave = 0
