@@ -369,6 +369,7 @@ let g:neomake_typescript_enabled_makers = ['tslint', 'tsc']
 let g:vim_json_syntax_conceal = 0
 
 " Ale
+let g:ale_linters = { 'java': [] }
 let g:ale_list_window_size = 4
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_open_list = 1
