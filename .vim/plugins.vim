@@ -176,6 +176,7 @@ Plug 'cakebaker/scss-syntax.vim'
 "Plug 'hail2u/vim-css3-syntax'
 " Highlight colors in css files ( this plugin causes slight lag on scroll )
 Plug 'ap/vim-css-color'
+Plug 'digitaltoad/vim-pug'
 
 " Javascript
 
