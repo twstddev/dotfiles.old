@@ -140,6 +140,17 @@ Plug 'yssl/QFEnter'
 "Plug 'neomake/neomake'
 " Asynchronous Lint Engine
 Plug 'w0rp/ale'
+" Dark powered asynchronous completion framework for neovim/Vim8
+"Plug 'Shougo/deoplete.nvim'
+"Plug 'roxma/nvim-yarp'
+"Plug 'roxma/vim-hug-neovim-rpc'
+"Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next' }
+"Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+
+"Plug 'prabirshrestha/async.vim'
+"Plug 'prabirshrestha/vim-lsp'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 
 " ============
 " Text Objects

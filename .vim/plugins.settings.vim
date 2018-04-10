@@ -23,6 +23,7 @@ nnoremap <leader>cr :CtrlPMRU<Cr>
 nnoremap <leader>cT :CtrlPTag<Cr>
 nnoremap <leader>ct :CtrlPBufTag<Cr>
 nnoremap <leader>cC :CtrlPChange<Cr>
+let g:ctrlp_map = '<c-t>'
 
 " Ag (the_silver_searcher)
 if executable('ag')
@@ -36,6 +37,11 @@ if executable('ag')
     " ag is fast enough that CtrlP doesn't need to cache
     let g:ctrlp_use_caching = 0
 endif
+
+"if executable('ripgrep')
+    "let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
+    "let g:ctrlp_use_caching = 0
+"endif
 
 " UltiSnips
 let g:UltiSnipsEnableSnipMate = 1
@@ -189,9 +195,10 @@ let g:gutentags_add_default_project_roots = 0
 " By some reason on windows ctags ignore wildcard
 let g:gutentags_ctags_exclude = ["*.min.js"]
 
+set completeopt-=preview
+
 if g:ycm_supported
     " Youcompleteme
-    set completeopt-=preview
     " Display suggestions on first character
     let g:ycm_min_num_of_chars_for_completion = 1
     " Collect information from tags as well
@@ -219,6 +226,8 @@ if g:ycm_supported
     nnoremap <leader>Jp :YcmCompleter GetParent<CR>
     nnoremap <leader>JD :YcmCompleter GetDoc<CR>
     nnoremap <leader>JR :YcmCompleter RefactorRename<SPACE>
+    nnoremap <leader>Ju :YcmCompleter RestartServer<CR>
+
     " Enable omnicomplete for various languages
     autocmd FileType python set omnifunc=pythoncomplete#Complete
     autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
@@ -374,3 +383,83 @@ let g:ale_list_window_size = 4
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_open_list = 1
 let g:ale_lint_on_insert_leave = 0
+
+" Deoplete
+"let g:deoplete#enable_at_startup = 1
+"let g:deoplete#complete_method = 'omnifunc'
+"let g:deoplete#auto_complete_delay = 0
+
+
+" Use Tab to navigate through completions
+"inoremap <expr><Tab>  pumvisible() ?   "\<C-n>"  : "\<Tab>"
+"inoremap <expr><S-Tab>    pumvisible() ?   "\<C-p>"  : "\<S-Tab>"
+
+" Force completion on ctrl space
+"inoremap <silent><expr> <C-Space>
+            "\ pumvisible() ? "\<C-n>" :
+            "\ <SID>check_back_space() ? "\<C-Space>" :
+            "\ deoplete#mappings#manual_complete()
+
+"function! s:check_back_space() abort
+    "let col = col('.') - 1
+    "return !col || getline('.')[col - 1]  =~ '\s'
+"endfunction
+
+" Start completing at first character
+let g:deoplete#auto_complete_start_length = 1
+"let g:deoplete#enable_refresh_always = 1
+"let g:deoplete#omni#functions = {}
+"let g:deoplete#omni#functions.typescript = 'lsp#complete'
+"let g:deoplete#omni#functions.java = 'lsp#complete'
+
+" Lsp
+if executable('javascript-typescript-stdio')
+   au User lsp_setup call lsp#register_server({
+        \ 'name': 'javascript-typescript-stdio',
+        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'javascript-typescript-stdio']},
+        \ 'whitelist': ['typescript'],
+        \ })
+endif
+
+if executable('jdtls')
+   au User lsp_setup call lsp#register_server({
+        \ 'name': 'jdtls',
+        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'jdtls']},
+        \ 'whitelist': ['java'],
+        \ })
+endif
+
+" Language Client
+let g:LanguageClient_diagnosticsEnable = 0
+
+" Configure shortcuts
+"nnoremap <leader>Jt :call LanguageClient_textDocument_hover()<CR>
+"nnoremap <leader>Jdf :call LanguageClient_textDocument_definition()<CR>
+"nnoremap <leader>JR :call LanguageClient_textDocument_rename()<CR>
+"nnoremap <leader>JD :call LanguageClient_textDocument_documentSymbol()<CR>
+"nnoremap <leader>Jr :call LanguageClient_textDocument_references()<CR> :lopen <CR>
+
+" Configure completions for languages
+let g:LanguageClient_serverCommands = {}
+
+let g:LanguageClient_serverCommands.typescript = ['javascript-typescript-stdio']
+"autocmd FileType typescript setlocal omnifunc=LanguageClient#complete
+"autocmd FileType typescript setlocal omnifunc=lsp#complete
+
+let g:LanguageClient_serverCommands.java = ['jdtls']
+"autocmd FileType java setlocal omnifunc=LanguageClient#complete
+"autocmd FileType java setlocal omnifunc=lsp#complete
+
+"let g:LanguageClient_serverCommands.ruby = ['language_server-ruby']
+"autocmd FileType ruby setlocal omnifunc=LanguageClient#complete
+
+"let g:LanguageClient_serverCommands.javascript = ['javascript-typescript-stdio']
+"autocmd FileType javascript setlocal omnifunc=LanguageClient#complete
+
+" FZF
+"let $FZF_DEFAULT_COMMAND = 'rg --smart-case --files --hidden --follow --line-number --no-heading --glob "!.git/*"'
+let $FZF_DEFAULT_COMMAND = 'rg --no-messages --smart-case --files --hidden --glob "!.git/*"'
+let g:fzf_layout = { 'down': '~20%' }
+nnoremap <c-p> :Files<CR>
+nnoremap <leader>cL :BLines<CR>
+nnoremap <leader>cS :Snippets<CR>
