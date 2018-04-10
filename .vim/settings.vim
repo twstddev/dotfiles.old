@@ -31,7 +31,7 @@ set tabstop=4
 " Use 4 spaces when you press >>, << or ==
 set shiftwidth=4
 " Copy the indentation from the previous line when starting a new line
-set autoindent 
+set autoindent
 " Expand tabs to spaces
 set expandtab
 
@@ -51,7 +51,7 @@ set number
 set hlsearch
 " Move cursor while typing search pattern
 set incsearch
-" Enable case sensitive search if search pattern contains 
+" Enable case sensitive search if search pattern contains
 " at least one upper case letter
 set smartcase
 " Ignore case sensitivity in search patterns
@@ -75,7 +75,7 @@ set cursorline
 " Set a line break, so vim won't break words in the middle when wrapping
 set linebreak
 " Display a wrapper line separator in front of the wrapped lines
-let &showbreak='» '  
+let &showbreak='» '
 " Continue wrapped line on the indentation as the main line
 set breakindent
 
@@ -198,5 +198,8 @@ augroup CursorLine
     au BufWinEnter * setlocal cursorline
     au WinLeave * setlocal nocursorline
 augroup END
+
+" disable c-c for sql files
+let g:omni_sql_no_default_maps = 1
 
 " }
