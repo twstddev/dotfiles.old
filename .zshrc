@@ -1,45 +1,101 @@
-# Load antigen
-source ~/.antigen/antigen.zsh
+### Added by Zplugin's installer
+source '/home/twstd/.zplugin/bin/zplugin.zsh'
+autoload -Uz _zplugin
+(( ${+_comps} )) && _comps[zplugin]=_zplugin
+### End of Zplugin's installer chunk
 
-# Use oh-my-zsh as default repository
-antigen use oh-my-zsh
+zplugin snippet OMZ::lib/functions.zsh
 
-# Add colors to man pages
-antigen bundle colored-man-pages
-# Add bower support
-antigen bundle bower
-# Add ruby bundler support
-antigen bundle bundler
-# Gem completion plugin
-antigen bundle gem
-# Add aliases and functions for git
-antigen bundle git
-# Add maven aliases and completion
-antigen bundle mvn
-# Add npm aliases and completion
-antigen bundle npm
-# Enhanced tmux support
-antigen bundle tmux
-# Enhanced tmuxinator support
-antigen bundle tmuxinator
-# Add vagrant completion
-antigen bundle vagrant
-# Add vi like behaviour
-antigen bundle vi-mode
+zplugin ice wait"0" lucid
+zplugin snippet OMZ::lib/directories.zsh
 
-# Fish-like syntax highlighting bundle
-antigen bundle zsh-users/zsh-syntax-highlighting
-# Add plugin that helps remembering aliases
-antigen bundle djui/alias-tips
+zplugin ice wait"0" lucid
+zplugin snippet OMZ::lib/completion.zsh
 
-# Set default theme
-antigen theme af-magic
+zplugin ice wait"0" lucid
+zplugin snippet OMZ::lib/grep.zsh
 
-# Tell antigen that you are done.
-antigen apply
+zplugin ice wait"0" lucid
+zplugin snippet OMZ::lib/history.zsh
+
+zplugin ice wait"0" lucid
+zplugin snippet OMZ::lib/misc.zsh
+
+#zplugin ice wait"0" lucid
+#zplugin snippet OMZ::lib/theme-and-appearance.zsh
+
+zplugin ice wait"0" blockf
+zplugin light zsh-users/zsh-completions
+
+zplugin ice wait"1" atload"_zsh_autosuggest_start"
+zplugin light zsh-users/zsh-autosuggestions
+
+zplugin ice wait"0"
+# zplugin light zsh-users/zsh-syntax-highlighting
+zplugin light zdharma/fast-syntax-highlighting
+
+zplugin ice wait"0"
+zplugin snippet OMZ::plugins/git/git.plugin.zsh
+
+zplugin ice wait"1"
+zplugin snippet OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh
+
+zplugin ice wait"0"
+zplugin snippet OMZ::plugins/common-aliases/common-aliases.plugin.zsh
+
+#zplugin ice wait"1"
+#zplugin snippet OMZ::plugins/vi-mode/vi-mode.plugin.zsh
+
+zplugin ice wait"1"
+zplugin light djui/alias-tips
+
+#zplugin light denysdovhan/spaceship-prompt
+zplugin ice pick"async.zsh" src"pure.zsh"
+zplugin light sindresorhus/pure
+
+zplugin ice atclone"dircolors -b LS_COLORS > clrs.zsh" atpull'%atclone' pick"clrs.zsh"
+zplugin light trapd00r/LS_COLORS
+
+# configure autosuggest
+#bindkey '^ ' autosuggest-accept
+
+# Disable beeping
+unsetopt beep
+
+# use vim mode
+bindkey -v
+
+# configure ls
+# Find the option for using colors in ls, depending on the version
+if [[ "$OSTYPE" == darwin* ]]; then
+  # this is a good alias, it works by default just using $LSCOLORS
+  ls -G . &>/dev/null && alias ls='ls -G'
+
+  # only use coreutils ls if there is a dircolors customization present ($LS_COLORS or .dircolors file)
+  # otherwise, gls will use the default color scheme which is ugly af
+  [[ -n "$LS_COLORS" || -f "$HOME/.dircolors" ]] && gls --color -d . &>/dev/null && alias ls='gls --color=tty'
+else
+  # For GNU ls, we use the default ls color theme. They can later be overwritten by themes.
+  if [[ -z "$LS_COLORS" ]]; then
+    (( $+commands[dircolors] )) && eval "$(dircolors -b)"
+  fi
+
+  ls --color -d . &>/dev/null && alias ls='ls --color=tty' || { ls -G . &>/dev/null && alias ls='ls -G' }
+
+  # Take advantage of $LS_COLORS for completion as well.
+  zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+fi
+
+setopt auto_cd
+setopt multios
+setopt prompt_subst
+
+# configure bindings
+bindkey '^R' history-incremental-search-backward
 
 # Load local zsh config if available
 if [[ -a ~/.zshrc.local ]]
 then
   source ~/.zshrc.local
 fi
+
