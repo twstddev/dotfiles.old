@@ -167,4 +167,4 @@ zle -N fshow fshow
 bindkey '^gb' fbr
 bindkey '^gc' fco
 bindkey '^gl' fshow
-bindkey '^f' fzf-file-widget
+bindkey '^i' fzf-file-widget
