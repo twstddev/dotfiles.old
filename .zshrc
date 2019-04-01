@@ -1,5 +1,5 @@
 ### Added by Zplugin's installer
-source '/home/twstd/.zplugin/bin/zplugin.zsh'
+source "$HOME/.zplugin/bin/zplugin.zsh"
 autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
 ### End of Zplugin's installer chunk
@@ -100,6 +100,7 @@ then
 fi
 
 [ -f /usr/share/autojump/autojump.sh ] && . /usr/share/autojump/autojump.sh
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -166,3 +167,4 @@ zle -N fshow fshow
 bindkey '^gb' fbr
 bindkey '^gc' fco
 bindkey '^gl' fshow
+bindkey '^f' fzf-file-widget
