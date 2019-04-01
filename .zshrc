@@ -54,6 +54,10 @@ zplugin light trapd00r/LS_COLORS
 zplugin ice wait"1" lucid as"program" pick"bin/git-dsf"
 zplugin light zdharma/zsh-diff-so-fancy
 
+export NVM_LAZY_LOAD=true
+zplugin ice wait"0" lucid
+zplugin light lukechilds/zsh-nvm
+
 # configure autosuggest
 #bindkey '^ ' autosuggest-accept
 
